@@ -68,10 +68,10 @@ dsj7419@gmail.com
 
 ## 10. License and attribution
 
-This Code of Conduct is distributed under a [Creative Commons Attribution-ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/).
+This Code of Conduct is distributed under a [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Portions of text derived from the [Django Code of Conduct](https://www.djangoproject.com/conduct/) and the [Geek Feminism Anti-Harassment Policy](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy).
 
-- **[Revision 2.3](https://www.contributor-covenant.org/version/2/3/code_of_conduct)**
+- **[Revision 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)**
 - **[homepage](https://www.contributor-covenant.org)**
 - For answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
