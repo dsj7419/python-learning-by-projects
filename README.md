@@ -63,7 +63,7 @@ This course is structured into different modules, each focusing on a particular 
 
 ## Getting Started
 
-[Start your Python journey here](01-Getting_Started/README.md) by setting up your development environment and working on the first project!
+[Start your Python journey here](01-getting-started/README.md) by setting up your development environment and working on the first project!
 
 ## Contributing
 
