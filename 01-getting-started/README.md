@@ -180,7 +180,7 @@ Stay tuned! We'll be adding a quiz here to test your knowledge and understanding
 
 ## Next Steps
 
-Congratulations on completing your first chapter and project! 🎉 Navigate to the [next chapter](../02-Variables_and_Data_Types/README.md) to continue your Python journey.
+Congratulations on completing your first chapter and project! 🎉 Navigate to the [next chapter](../02-variables-and-data-types/README.md) to continue your Python journey.
 
 ## Additional Resources
 

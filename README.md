@@ -8,15 +8,15 @@ This course is structured into different modules, each focusing on a particular 
 
 ## Course Structure
 
-1. **[Getting Started](01-Getting_Started/README.md)**
+1. **[Getting Started](01-getting-started/README.md)**
    - Environment Setup, Writing a Python Script
    - *Project: Hello, World! & Magic 8-Ball Simulator*
 
-2. **[Variables and Data Types](02-Variables_and_Data_Types/README.md)**
+2. **[Variables and Data Types](02-variables-and-data-types/README.md)**
    - Variables, Data Types
    - *Project: Simple Calculator*
 
-3. **[Control Flow](03-Control_Flow/README.md)**
+3. **[Control Flow](03-control-flow/README.md)**
    - Conditionals, Loops
    - *Project: Adventure Game*
 
@@ -52,7 +52,7 @@ This course is structured into different modules, each focusing on a particular 
     - Git Basics, GitHub, Collaboration
     - *Project: Collaborative Document Editor*
 
-12. **[Final Project](12-Final_Project/README.md)**
+12. **[Final Project](12-final-project/README.md)**
     - Integrating Learned Concepts
     - *Project: Full-Stack Web Application*
 
