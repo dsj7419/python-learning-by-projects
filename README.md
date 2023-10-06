@@ -14,7 +14,7 @@ This course is structured into different modules, each focusing on a particular 
 
 2. **[Variables and Data Types](02-variables-and-data-types/README.md)**
    - Variables, Data Types
-   - *Project: Simple Calculator*
+   - *Project: Greeting Card*
 
 3. **[Control Flow](03-control-flow/README.md)**
    - Conditionals, Loops
