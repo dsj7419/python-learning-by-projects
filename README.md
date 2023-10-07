@@ -28,21 +28,21 @@ This course is structured into different modules, each focusing on a particular 
    - File I/O, Working with Paths
    - *Project: Note-Keeping App*
 
-6. **[Exception Handling](06-exception-handling/README.md)**
-   - Try/Except, Raising Exceptions
-   - *Project: Robust Data Entry System*
+6. **[Regular Expressions](06-regular-expressions/README.md)**
+   - Pattern Matching, Data Extraction
+   - *Project: Data Scraper*
 
-7. **[Object-Oriented Programming](07-object-oriented-programming/README.md)**
+7. **[Exception Handling](07-exception-handling/README.md)**
+   - Try/Except, Raising Exceptions
+   - *Project: Basic Data Entry System*
+
+8. **[Object-Oriented Programming](08-object-oriented-programming/README.md)**
    - Classes, Objects, Inheritance
    - *Project: Library Management System*
 
-8. **[External Libraries and Visualization](08-external-libraries/README.md)**
+9. **[External Libraries and Visualization](09-external-libraries/README.md)**
    - Using Libraries, Basic Data Visualization
    - *Project: Data Visualization with Matplotlib*
-
-9. **[Regular Expressions](09-regular-expressions/README.md)**
-   - Pattern Matching, Data Extraction
-   - *Project: Data Scraper*
 
 10. **[Testing and Debugging](10-testing-debugging/README.md)**
     - Unit Tests, Debugging Techniques

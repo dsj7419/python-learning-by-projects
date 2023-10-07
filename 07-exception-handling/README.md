@@ -237,7 +237,7 @@ In this snippet:
 
 This example demonstrates the application of exception handling to manage user input effectively and ensure a smooth user experience despite erroneous inputs.
 
-## Project: Robust Data Entry System
+## Project: Basic Data Entry System
 
 ### Objective
 
@@ -275,7 +275,9 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 ## Next Steps
 
-Congratulations on completing Chapter 6! 🎉 Now, navigate to the [next chapter](../07-object-oriented-programming/README.md) to continue your Python journey.
+Congratulations on completing Chapter 6! 🎉 Now, navigate to the [next chapter](../08-object-oriented-programming/README.md) to continue your Python journey.
+
+## Additional Resources
 
 ## Additional Resources
 
