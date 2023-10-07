@@ -252,7 +252,7 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 Congrats on completing the chapter on Regular Expressions! 🎉 You've armed yourself with a powerful tool to manage and extract data from text, opening up vast possibilities in data processing and analysis.
 
-In the [next chapter](07-object-oriented-programming/README.md), we’ll dive into Object-Oriented Programming, exploring concepts like classes, objects, inheritance, and more, that will elevate your programming capabilities, enabling you to design robust and scalable software.
+In the [next chapter](07-exception-handling/README.md), we’ll dive into Object-Oriented Programming, exploring concepts like classes, objects, inheritance, and more, that will elevate your programming capabilities, enabling you to design robust and scalable software.
 
 ## Additional Resources
 
