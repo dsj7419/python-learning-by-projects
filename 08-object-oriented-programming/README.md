@@ -374,4 +374,97 @@ In the above example, `Shape` acts as a base class, and `Circle` and `Square` ar
 
 Feel free to modify the example, add more shapes, and try to implement the concepts learned in this chapter!
 
+## Project: Library Management System
+
+### Objective
+
+Create a robust, scalable, and user-friendly library management system that effectively manages books, patrons, and library staff, ensuring efficient operation and data integrity using the principles and concepts learned in object-oriented programming.
+
+### Requirements
+
+#### A. Book Class
+Create a class to manage book entities with attributes and methods including but not limited to:
+
+- **Attributes**: Title, Author, ISBN Number, Publication Year, and Status (Available, Checked Out, Reserved, etc.)
+- **Methods**: Check Availability, Update Status, Display Book Information.
+
+#### B. Patron Class
+Develop a class to manage patrons with attributes and methods to:
+
+- **Attributes**: Name, Member ID, Borrowed Books.
+- **Methods**: Borrow Book, Return Book, View Borrowed Books, Reserve Book.
+
+#### C. Library Staff Class
+Implement a class for library staff members that includes attributes and methods to:
+
+- **Attributes**: Name, Employee ID.
+- **Methods**: Add or Remove Books, Check Book Status, Manage Patron Accounts, View Borrowed Books.
+
+#### D. Library Class
+Create a class that encapsulates the entire library system, managing the interactions between books, patrons, and staff with methods for:
+
+- Checking In and Checking Out Books.
+- Reserving Books.
+- Adding New Patrons.
+- Managing Staff.
+- Displaying Library Catalog.
+- Displaying Borrowed Books.
+
+### Guidance
+
+#### 1. Data Management
+- Ensure data consistency for all entities, implementing encapsulation and abstraction to safeguard data integrity.
+- Utilize file I/O operations or a database system to persistently store and manage library data across sessions.
+
+#### 2. User Interaction
+- Implement a user-friendly interface through which users (patrons and staff) can interact with the system, ensuring that users can perform necessary operations with ease and clarity.
+- Provide clear feedback and instructions to the users to prevent input errors and guide them through processes like book borrowing, returning, and reservation.
+
+#### 3. OOP Principles
+- Leverage inheritance and polymorphism to minimize code redundancy, enhance code reusability, and simplify the codebase.
+- Ensure that your classes adhere to the SOLID principles to promote maintainability, scalability, and robustness of the system.
+
+#### 4. Testing
+- Thoroughly test each class and method to ensure they perform as expected, paying special attention to edge cases and invalid inputs.
+- Consider utilizing unit tests to automate the testing of your classes and methods, ensuring that future changes do not unintentionally introduce bugs.
+
+#### 5. Documentation
+- Ensure that your code is well-documented, providing comments and docstrings to explain the purpose and functionality of classes and methods.
+- Include a README file to guide users and developers in setting up, using, and contributing to the project.
+
+### Example Implementation
+
+Feel free to refer to the code skeleton provided in the chapter's `/code/` folder to get started! An example solution will be provided in the `/code/answer/` folder to reference once you have attempted the project. Ensure to experiment, explore, and potentially introduce additional features to enhance your project further!
+
+## Quiz
+
+*Note: This section will be updated with a quiz to test your understanding of object-oriented programming concepts.*
+
+## Next Steps
+
+1. **Implement the Project**: Leverage the concepts learned to implement the library management system. Pay attention to the requirements and try to implement as many features as possible. 
+2. **Explore Advanced OOP Concepts**: Dive deeper into OOP concepts like meta-classes, decorators, and context managers to enhance your OOP skills in Python.
+3. **Join a Developer Community**: Engage with a developer community to discuss and explore more about OOP, seek guidance, and participate in relevant discussions.
+
+## Additional Resources
+
+1. **Books**:
+   - "Python 3 Object-Oriented Programming" by Dusty Phillips.
+   - "Object-Oriented Thought Process" by Matt Weisfeld.
+
+2. **Online Courses**:
+   - [Coursera: Object Oriented Programming in Python](https://www.coursera.org/specializations/python-3-programming)
+   - [edX: Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-to-computer-science-and-programming-7)
+
+3. **Websites**:
+   - [Real Python](https://realpython.com/): Offers numerous tutorials and articles related to Python and OOP.
+   - [Geeks for Geeks Python Programming Language](https://www.geeksforgeeks.org/python-programming-language/): Provides a wide range of examples and articles explaining Python concepts, including OOP.
+
+4. **Forums**:
+   - [Stack Overflow](https://stackoverflow.com/): A vast community of developers where you can ask questions and share your knowledge about Python and OOP.
+   - [Reddit’s r/learnpython](https://www.reddit.com/r/learnpython/): A subreddit dedicated to learning Python where you can seek advice and help.
+
+Remember to continually practice and implement the knowledge gained to become proficient in object-oriented programming in Python.
+
+Happy Coding! 🚀
 

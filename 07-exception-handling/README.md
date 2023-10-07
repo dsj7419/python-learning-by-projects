@@ -279,8 +279,6 @@ Congratulations on completing Chapter 6! 🎉 Now, navigate to the [next chapter
 
 ## Additional Resources
 
-## Additional Resources
-
 - [Python Docs: Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
 - [Real Python: Exception Handling](https://realpython.com/python-exceptions/)
 

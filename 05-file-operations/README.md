@@ -231,7 +231,7 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 ## Next Steps
 
-Congratulations on completing Chapter 5! 🎉 Now, navigate to the [next chapter](../06-exception-handling/README.md) to continue your Python journey.
+Congratulations on completing Chapter 5! 🎉 Now, navigate to the [next chapter](../06-regular-expressions/README.md) to continue your Python journey.
 
 ## Additional Resources
 
