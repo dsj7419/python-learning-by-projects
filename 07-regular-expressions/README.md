@@ -1,7 +1,7 @@
 
 # Chapter 6: Regular Expressions
 
-Welcome to Chapter 6, where we explore Regular Expressions in Python! 🎯 In this chapter, we'll dive deep into pattern matching and data extraction using regular expressions, enhancing our ability to process textual data. Furthermore, we'll work on a project: Data Scraper, which will leverage our new skills to extract meaningful data from textual content.
+Welcome to Chapter 7, where we explore Regular Expressions in Python! 🎯 In this chapter, we'll dive deep into pattern matching and data extraction using regular expressions, enhancing our ability to process textual data. Furthermore, we'll work on a project: Data Scraper, which will leverage our new skills to extract meaningful data from textual content.
 
 ## Table of Contents
 
@@ -252,7 +252,7 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 Congrats on completing the chapter on Regular Expressions! 🎉 You've armed yourself with a powerful tool to manage and extract data from text, opening up vast possibilities in data processing and analysis.
 
-In the [next chapter](07-exception-handling/README.md), we’ll be talking about exception handling and how to handled unexpected events in your code.
+In the [next chapter](08-exception-handling/README.md), we’ll be talking about exception handling and how to handled unexpected events in your code.
 
 ## Additional Resources
 

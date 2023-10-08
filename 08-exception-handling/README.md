@@ -1,7 +1,7 @@
 
 # Chapter 7: Exception Handling
 
-Welcome to Chapter 7, where we dive deep into Exception Handling in Python! 🚑 In this chapter, we'll explore how Python deals with unexpected events—exceptions. By learning about exception handling, you will be able to create robust programs that can gracefully handle unexpected events without crashing. We'll also work on a project that requires a robust data entry system, ensuring data integrity and reliability.
+Welcome to Chapter 8, where we dive deep into Exception Handling in Python! 🚑 In this chapter, we'll explore how Python deals with unexpected events—exceptions. By learning about exception handling, you will be able to create robust programs that can gracefully handle unexpected events without crashing. We'll also work on a project that requires a robust data entry system, ensuring data integrity and reliability.
 
 ## Table of Contents
 
@@ -275,7 +275,7 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 ## Next Steps
 
-Congratulations on completing Chapter 6! In the [next chapter](08-object-oriented-programming/README.md), we’ll dive into Object-Oriented Programming, exploring concepts like classes, objects, inheritance, and more, that will elevate your programming capabilities, enabling you to design robust and scalable software.
+Congratulations on completing Chapter 6! In the [next chapter](09-object-oriented-programming/README.md), we’ll dive into Object-Oriented Programming, exploring concepts like classes, objects, inheritance, and more, that will elevate your programming capabilities, enabling you to design robust and scalable software.
 
 ## Additional Resources
 

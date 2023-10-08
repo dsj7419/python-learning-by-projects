@@ -1,4 +1,4 @@
-# Chapter 12: Final Project
+# Chapter 13: Final Project
 
 ## Introduction
 In our final chapter, we embrace a journey through an all-encompassing project that neatly ties together the multitude of concepts explored throughout this course. From data retrieval and processing to visualization and distribution, this project will test and solidify your Python skills, providing a comprehensive revision of the topics covered in previous chapters.

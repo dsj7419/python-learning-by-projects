@@ -1,7 +1,7 @@
 
-# Chapter 11: Version Control with Git
+# Chapter 12: Version Control with Git
 
-Welcome to Chapter 11! In this chapter, we dive into version control using Git, exploring its fundamental concepts, utilizing GitHub for remote repositories, and understanding the collaborative aspects of using Git in a team.
+Welcome to Chapter 12! In this chapter, we dive into version control using Git, exploring its fundamental concepts, utilizing GitHub for remote repositories, and understanding the collaborative aspects of using Git in a team.
 
 ## Table of Contents
 
@@ -319,7 +319,7 @@ Quizzes will be added at a later date.
 
 ## Next Steps
 
-Congratulations on completing this chapter! In the next chapter, we will work on our final project of this series... [Go to Chapter 12](12-final-project/README.md).
+Congratulations on completing this chapter! In the next chapter, we will work on our final project of this series... [Go to Chapter 13](13-final-project/README.md).
 
 ## Additional Resources
 

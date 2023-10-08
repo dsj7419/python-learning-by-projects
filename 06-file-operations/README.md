@@ -1,7 +1,7 @@
 
 # Chapter 5: File Operations
 
-Welcome to Chapter 5, where we delve into the world of file operations in Python! 📁 In this chapter, we'll explore various methods of file input/output (I/O) and path management. Additionally, we'll embark on a project to create our very own Note-Keeping App!
+Welcome to Chapter 6, where we delve into the world of file operations in Python! 📁 In this chapter, we'll explore various methods of file input/output (I/O) and path management. Additionally, we'll embark on a project to create our very own Note-Keeping App!
 
 ## Table of Contents
 
@@ -231,7 +231,7 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 ## Next Steps
 
-Congratulations on completing Chapter 5! 🎉 Now, navigate to the [next chapter](../06-regular-expressions/README.md) to continue your Python journey.
+Congratulations on completing Chapter 5! 🎉 Now, navigate to the [next chapter](../07-regular-expressions/README.md) to continue your Python journey.
 
 ## Additional Resources
 

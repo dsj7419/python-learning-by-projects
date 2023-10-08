@@ -1,4 +1,3 @@
-
 # Chapter 4: Data Structures
 
 Welcome to Chapter 4, where we delve into the world of data structures! 📚 In this segment, we'll explore key Python data structures like lists, dictionaries, and sets. Additionally, we'll employ these concepts to build a functional and practical To-Do List Application as our project!
@@ -305,7 +304,7 @@ Stay tuned! We'll be adding a quiz here to test your knowledge and understanding
 
 ## Next Steps
 
-Congratulations on completing Chapter 4 and building your To-Do List Application! 🎉 Navigate to the [next chapter](../05-file-operations/README.md) to explore file operations in Python.
+Congratulations on completing Chapter 4 and building your To-Do List Application! 🎉 Navigate to the [next chapter](../05-modular-programming/README.md) to explore how to keep organized by using modular programming.
 
 ## Additional Resources
 
