@@ -12,6 +12,11 @@ Welcome to the exciting journey of learning Python through hands-on projects! ðŸ
   - [Installing an IDE](#installing-an-ide)
 - [Your First Python Script: Hello, World!](#your-first-python-script-hello-world)
 - [Lesson Plan](#lesson-plan)
+   - [User Input](#1-user-input)
+   - [Random Selection](#2-random-selection)
+   - [Output to Console](#3-output-to-console)
+   - [Basic Input Validation](#4-basic-input-validation)
+- [Mini-Example: Bringing it all together](#mini-example-bringing-it-all-together)
 - [Project: Magic 8-Ball Simulator](#project-magic-8-ball-simulator)
   - [Objective](#objective)
   - [Requirements](#requirements)
@@ -122,7 +127,7 @@ else:
     print("This is not a number.")
 ```
 
-### Bringing It All Together: Mini-Example
+### Mini-Example: Bringing It All Together
 Let's build a mini-program that utilizes all the concepts above. Imagine a program that asks the user to guess a fruit from a list and tells them whether they are correct.
 
 ```python

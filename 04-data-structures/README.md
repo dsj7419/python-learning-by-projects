@@ -6,6 +6,10 @@ Welcome to Chapter 4, where we delve into the world of data structures! 📚 In 
 
 - [Introduction](#introduction)
 - [Lesson Plan](#lesson-plan)
+  - [Lists](#1-lists)
+  - [Dictionaries](#2-dictionaries)
+  - [Sets](#3-sets)
+- [Mini-Example: ](#mini-example-bringing-it-all-together)
 - [Project: To-Do List Application](#project-to-do-list-application)
   - [Objective](#objective)
   - [Requirements](#requirements)
@@ -182,7 +186,7 @@ Notice in the above example, even though the number `3` appears twice, when the 
 
 In the context of programming, sets can be incredibly useful for operations that require the elimination of duplicate entries, and for algorithms that need to check if an item is a member of a collection efficiently, among other use-cases.
 
-### Bringing It All Together: Mini-Example
+### Mini-Example: Bringing It All Together
 
 In this illustrative example, we will craft a straightforward contact book application that integrates lists, dictionaries, and the foundational concepts from chapters 1, 2, and 3. This application will allow us to manage a list of contacts, each with a name and phone number.
 

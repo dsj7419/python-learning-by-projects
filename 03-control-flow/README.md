@@ -7,6 +7,9 @@ Welcome back, Python learners! 🚀 In this chapter, we'll dive deep into the ex
 
 - [Introduction](#introduction)
 - [Lesson Plan](#lesson-plan)
+  - [Conditionals](#1-conditionals)
+  - [Loops](#2-loops)
+- [Mini-Example: Bringing it all together](#mini-example-bringing-it-all-together)
 - [Project: Adventure Game](#project-adventure-game)
   - [Objective](#objective)
   - [Requirements](#requirements)
@@ -85,7 +88,7 @@ for number in range(10):
 
 **Practicality:** Control statements like `break` and `continue` offer us greater control over loop execution, enabling us to manage iterations effectively.
 
-### Bringing It All Together: Mini-Example
+### Mini-Example: Bringing It All Together
 In this comprehensive mini-example, we'll create a small quiz game that encapsulates concepts from Chapters 1 and 2, in addition to the present chapter. This game will prompt the user to guess a number, giving them multiple tries until they either succeed or choose to quit, and will include input validation to ensure a smooth user experience.
 
 ```python

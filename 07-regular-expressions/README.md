@@ -1,5 +1,5 @@
 
-# Chapter 6: Regular Expressions
+# Chapter 7: Regular Expressions
 
 Welcome to Chapter 7, where we explore Regular Expressions in Python! 🎯 In this chapter, we'll dive deep into pattern matching and data extraction using regular expressions, enhancing our ability to process textual data. Furthermore, we'll work on a project: Data Scraper, which will leverage our new skills to extract meaningful data from textual content.
 
@@ -8,6 +8,8 @@ Welcome to Chapter 7, where we explore Regular Expressions in Python! 🎯 In th
 - [Introduction](#introduction)
 - [Lesson Plan](#lesson-plan)
     - [Pattern Matching](#pattern-matching)
+    - [Data Extraction](#2-data-extraction)
+    - [RegEx in Python](#3-regex-in-python)
 - [Mini-Example: Basic Pattern Matching](#mini-example-basic-pattern-matching)
 - [Project: Data Scraper](#project-data-scraper)
     - [Objective](#objective)
