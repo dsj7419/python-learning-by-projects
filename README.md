@@ -26,35 +26,39 @@ This course is structured into different modules, each focusing on a particular 
    - Lists, Dictionaries, Sets
    - *Project: To-Do List Application*
 
-5. **[File Operations](05-file-operations/README.md)**
+5. **[Modular Programming](05-modular-programming/README.md)**
+   - Benefits, Creating Modules, Importing Modules
+   - *Project: Calculator*
+
+6. **[File Operations](06-file-operations/README.md)**
    - File I/O, Working with Paths
    - *Project: Note-Keeping App*
 
-6. **[Regular Expressions](06-regular-expressions/README.md)**
+7. **[Regular Expressions](07-regular-expressions/README.md)**
    - Pattern Matching, Data Extraction
    - *Project: Data Scraper*
 
-7. **[Exception Handling](07-exception-handling/README.md)**
+8. **[Exception Handling](08-exception-handling/README.md)**
    - Try/Except, Raising Exceptions
    - *Project: Basic Data Entry System*
 
-8. **[Object-Oriented Programming](08-object-oriented-programming/README.md)**
+9. **[Object-Oriented Programming](09-object-oriented-programming/README.md)**
    - Classes, Objects, Inheritance
    - *Project: Library Management System*
 
-9. **[External Libraries and Visualization](09-external-libraries/README.md)**
+10. **[External Libraries and Visualization](10-external-libraries/README.md)**
    - Using Libraries, Basic Data Visualization
    - *Project: Data Visualization with Matplotlib*
 
-10. **[Testing and Debugging](10-testing-debugging/README.md)**
+11. **[Testing and Debugging](11-testing-debugging/README.md)**
     - Unit Tests, Debugging Techniques
     - *Project: Testing a Shopping Cart System*
 
-11. **[Version Control with Git](11-version-control/README.md)**
+12. **[Version Control with Git](12-version-control/README.md)**
     - Git Basics, GitHub, Collaboration
     - *Project: Collaborative Document Editor*
 
-12. **[Final Project](12-final-project/README.md)**
+13. **[Final Project](13-final-project/README.md)**
     - Integrating Learned Concepts
     - *Automated Report Generation and Distribution System*
 
