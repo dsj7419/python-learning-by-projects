@@ -188,4 +188,7 @@ Congratulations on completing your first chapter and project! 🎉 Navigate to t
 - [VSCode Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 - [Python Virtual Environments Tutorial](https://realpython.com/python-virtual-environments-a-primer/)
 
+---
 Happy Coding! 🚀
+
+[Back to Main](../README.md)
