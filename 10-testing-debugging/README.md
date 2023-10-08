@@ -290,7 +290,7 @@ Feel free to refer to the code skeleton provided in the chapter's `/code/` folde
 
 ## Quiz
 
-Stay tuned! We'll be adding a quiz here to test your knowledge and understanding of the concepts learned in this chapter.
+Quizzes will be added at a later date.
 
 ## Next Steps
 
@@ -302,5 +302,6 @@ Congratulations on completing this chapter! In the next chapter, we will explore
 - [Python Debugging (pdb)](https://docs.python.org/3/library/pdb.html)
 
 ---
-
 Happy Coding! 🚀
+
+[Back to Main](../README.md)

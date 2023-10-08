@@ -212,7 +212,7 @@ Feel free to refer to the code skeleton provided in the chapter's `/code/` folde
 
 ## Quiz
 
-Quizzes will be added at a later date.
+Stay tuned! We'll be adding a quiz here to test your knowledge and understanding of the concepts learned in this chapter.
 
 ## Next Steps
 
@@ -226,5 +226,6 @@ Congratulations on completing this chapter! In the next chapter, we will explore
 - [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/): This resource provides a wide range of Matplotlib visualizations along with the code snippets to recreate them, serving as a great starting point for your data visualization journey.
 
 ---
-
 Happy Coding! 🚀
+
+[Back to Main](../README.md)

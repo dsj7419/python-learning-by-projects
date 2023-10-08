@@ -132,7 +132,7 @@ Feel free to peek into the chapter's `/code/` folder if you need some inspiratio
 
 ## Quiz
 
-A quiz will be available soon to test your understanding of variables and data types in Python.
+Stay tuned! We'll be adding a quiz here to test your knowledge and understanding of the concepts learned in this chapter.
 
 ## Next Steps
 
@@ -144,4 +144,7 @@ Kudos on completing Chapter 2 and creating your personalized greeting card! 🎉
 - [W3Schools Python Variables](https://www.w3schools.com/python/python_variables.asp)
 - [Real Python: Python Variables](https://realpython.com/python-variables/)
 
+---
 Happy Coding! 🚀
+
+[Back to Main](../README.md)

@@ -172,7 +172,7 @@ Construct an interactive, text-based adventure game where the user navigates thr
 
 ## Quiz
 
-Stay tuned! A quiz to validate your knowledge on control flow in Python is on the way.
+Stay tuned! We'll be adding a quiz here to test your knowledge and understanding of the concepts learned in this chapter.
 
 ## Next Steps
 
@@ -184,4 +184,7 @@ Fantastic job on reaching the end of Chapter 3! 🎉 Ready for more adventures? 
 - [W3Schools: Python Conditions and If statements](https://www.w3schools.com/python/python_conditions.asp)
 - [GeeksforGeeks: Loops in Python](https://www.geeksforgeeks.org/loops-in-python/)
 
+---
 Happy Coding! 🚀
+
+[Back to Main](../README.md)

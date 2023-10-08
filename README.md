@@ -56,7 +56,7 @@ This course is structured into different modules, each focusing on a particular 
 
 12. **[Final Project](12-final-project/README.md)**
     - Integrating Learned Concepts
-    - *Project: Full-Stack Web Application*
+    - *Automated Report Generation and Distribution System*
 
 ## How to Use This Repository
 

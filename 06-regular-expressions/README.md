@@ -252,7 +252,7 @@ Stay tuned! A quiz will be added here to assess your understanding of the concep
 
 Congrats on completing the chapter on Regular Expressions! 🎉 You've armed yourself with a powerful tool to manage and extract data from text, opening up vast possibilities in data processing and analysis.
 
-In the [next chapter](07-exception-handling/README.md), we’ll dive into Object-Oriented Programming, exploring concepts like classes, objects, inheritance, and more, that will elevate your programming capabilities, enabling you to design robust and scalable software.
+In the [next chapter](07-exception-handling/README.md), we’ll be talking about exception handling and how to handled unexpected events in your code.
 
 ## Additional Resources
 
@@ -264,4 +264,7 @@ In the [next chapter](07-exception-handling/README.md), we’ll dive into Object
 
 Feel free to explore and dive deep - regular expressions are a vast topic and there's always more to learn!
 
+---
 Happy Coding! 🚀
+
+[Back to Main](../README.md)

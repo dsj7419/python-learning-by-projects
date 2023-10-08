@@ -8,3 +8,10 @@ __pycache__/
 venv/
 env/
 myenv/
+
+# all zip files
+*.zip
+
+# project files not to be shared
+report.pdf
+average_scores.png
