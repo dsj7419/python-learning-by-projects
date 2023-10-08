@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 
 # Data related to planets in our solar system
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
