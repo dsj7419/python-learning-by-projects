@@ -1,5 +1,5 @@
 
-# Chapter 5: File Operations
+# Chapter 6: File Operations
 
 Welcome to Chapter 6, where we delve into the world of file operations in Python! 📁 In this chapter, we'll explore various methods of file input/output (I/O) and path management. Additionally, we'll embark on a project to create our very own Note-Keeping App!
 

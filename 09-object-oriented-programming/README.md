@@ -1,7 +1,7 @@
 
-# Chapter 8: Object-Oriented Programming
+# Chapter 9: Object-Oriented Programming
 
-Welcome to Chapter 8, where we delve into Object-Oriented Programming (OOP) in Python! 🚀 OOP is a programming paradigm that uses objects and classes, enabling a structured approach to simplify complex program structures. In this chapter, we’ll unravel the concepts of classes, objects, inheritance, and more, while also applying these concepts in a hands-on project: Library Management System.
+Welcome to Chapter 9, where we delve into Object-Oriented Programming (OOP) in Python! 🚀 OOP is a programming paradigm that uses objects and classes, enabling a structured approach to simplify complex program structures. In this chapter, we’ll unravel the concepts of classes, objects, inheritance, and more, while also applying these concepts in a hands-on project: Library Management System.
 
 ## Table of Contents
 
@@ -441,6 +441,8 @@ Feel free to refer to the code skeleton provided in the chapter's `/code/` folde
 *Note: This section will be updated with a quiz to test your understanding of object-oriented programming concepts.*
 
 ## Next Steps
+
+This is an extremely important topic. While you are clear to proceed to the [next chapter](10-external-libraries/README.md), it's important to continue on this topic as well. Here's some recommendations:
 
 1. **Implement the Project**: Leverage the concepts learned to implement the library management system. Pay attention to the requirements and try to implement as many features as possible. 
 2. **Explore Advanced OOP Concepts**: Dive deeper into OOP concepts like meta-classes, decorators, and context managers to enhance your OOP skills in Python.

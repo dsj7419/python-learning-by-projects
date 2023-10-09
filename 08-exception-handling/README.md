@@ -1,5 +1,5 @@
 
-# Chapter 7: Exception Handling
+# Chapter 8: Exception Handling
 
 Welcome to Chapter 8, where we dive deep into Exception Handling in Python! 🚑 In this chapter, we'll explore how Python deals with unexpected events—exceptions. By learning about exception handling, you will be able to create robust programs that can gracefully handle unexpected events without crashing. We'll also work on a project that requires a robust data entry system, ensuring data integrity and reliability.
 

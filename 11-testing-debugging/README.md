@@ -1,7 +1,7 @@
 
-# Chapter 10: Testing and Debugging
+# Chapter 11: Testing and Debugging
 
-Welcome to Chapter 10 of our Python Learning Journey!
+Welcome to Chapter 11 of our Python Learning Journey!
 
 In this exciting chapter, we will unravel the mysteries behind Testing and Debugging in Python. Every developer, whether a novice or a seasoned expert, encounters bugs and unexpected behaviors in their code. Therefore, acquiring skills to systematically identify, diagnose, and fix these issues is paramount to ensuring our applications run smoothly and reliably.
 
@@ -294,7 +294,7 @@ Quizzes will be added at a later date.
 
 ## Next Steps
 
-Congratulations on completing this chapter! In the next chapter, we will explore... [Go to Chapter 11](11-version-control/README.md).
+Congratulations on completing this chapter! In the next chapter, we will explore... [Go to Chapter 12](12-version-control/README.md).
 
 ## Additional Resources
 

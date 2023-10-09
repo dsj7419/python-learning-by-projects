@@ -1,5 +1,5 @@
 
-# Chapter 9: External Libraries and Visualization
+# Chapter 10: External Libraries and Visualization
 
 In this chapter, we will explore the utilization of external libraries in Python, focusing on data visualization using Matplotlib. Visualization plays a crucial role in data analysis, providing a graphical representation of data that can reveal patterns, trends, and insights that might not be apparent from raw data alone.
 
@@ -216,7 +216,7 @@ Stay tuned! We'll be adding a quiz here to test your knowledge and understanding
 
 ## Next Steps
 
-Congratulations on completing this chapter! In the next chapter, we will explore various aspects of testing and debugging in Python to ensure that our code is running as expected and is free of errors. These practices help in maintaining code quality and optimizing performance. [Go to Chapter 10 - Testing and Debugging](10-testing-debugging/README.md).
+Congratulations on completing this chapter! In the next chapter, we will explore various aspects of testing and debugging in Python to ensure that our code is running as expected and is free of errors. These practices help in maintaining code quality and optimizing performance. [Go to Chapter 11 - Testing and Debugging](11-testing-debugging/README.md).
 
 ## Additional Resources
 

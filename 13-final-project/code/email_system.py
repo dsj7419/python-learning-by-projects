@@ -1,9 +1,9 @@
-import os  
-import smtplib  
-from email.mime.multipart import MIMEMultipart  
-from email.mime.text import MIMEText  
-from email.mime.base import MIMEBase  
-from email import encoders  
+import os  # For accessing environment variables
+import smtplib  # Simple Mail Transfer Protocol client session object
+from email.mime.multipart import MIMEMultipart  # For constructing MIME multipart message
+from email.mime.text import MIMEText  # MIME-styled text
+from email.mime.base import MIMEBase  # Generic MIME base class
+from email import encoders  # For encoding the attachment
 
 def get_email_credentials():
     """
