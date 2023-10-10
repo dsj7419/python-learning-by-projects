@@ -393,7 +393,7 @@ Feel free to refer to the code skeleton provided in the chapter's `/code/` folde
 
 ## Quiz
 
-Take our lesson one quiz [here!](https://youengage.me/p/6524c8108e2ad5010006c51a)
+Take our lesson one quiz [here!](https://youengage.me/p/6524c8108e2ad5010006c51a) (Right-click and choose "Open link in new tab" to avoid leaving GitHub)
 
 ## Next Steps
 
