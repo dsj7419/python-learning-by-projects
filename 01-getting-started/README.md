@@ -393,7 +393,7 @@ Feel free to refer to the code skeleton provided in the chapter's `/code/` folde
 
 ## Quiz
 
-Stay tuned! We'll be adding a quiz here to test your knowledge and understanding of the concepts learned in this chapter.
+Take our lesson one quick [here!](https://youengage.me/p/6524c8108e2ad5010006c51a)
 
 ## Next Steps
 
