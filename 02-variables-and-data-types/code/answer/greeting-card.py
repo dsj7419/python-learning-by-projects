@@ -1,23 +1,17 @@
 # Personalized Greeting Card Generator
 
-# Function to validate if the input is a number
-def is_valid_number(input_str):
-    try:
-        int(input_str)  # Try converting the input to an integer
-        return True
-    except ValueError:  # Catch the exception if it's not a number
-        return False
-
 # Get user's name
 name = input("Enter your name: ")
 
 # Get user's age and validate the input
 age_str = input("Enter your age: ")
-while not is_valid_number(age_str):  # Repeat until valid input is received
+
+# Basic Input Validation: Ensure age is a digit
+while not age_str.isdigit():
     print("Invalid input. Please enter a number.")
     age_str = input("Enter your age: ")
 
-# Convert age to integer
+# Type Conversion: Convert age to integer
 age = int(age_str)
 
 # Generate a personalized greeting card
