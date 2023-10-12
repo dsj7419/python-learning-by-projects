@@ -291,7 +291,7 @@ In this project, we aim to consolidate our understanding of Python data structur
 
 ### Let's Get Coding!
 
-- **Starting Point:** Refer to the code skeleton provided in the chapter's `/code/starter/` folder to embark on this project with a structured approach. The skeleton code provides a framework that you'll build upon to create your To-Do List Application.
+- **Starting Point:** Refer to the code skeleton provided in the chapter's `/code/` folder to embark on this project with a structured approach. The skeleton code provides a framework that you'll build upon to create your To-Do List Application.
 - **Solution:** If you're curious about one of the possible solutions or need some inspiration, feel free to peek into the `/code/answer/` folder after giving it a good go yourself!
 
 ### Tips
