@@ -1,4 +1,3 @@
-
 function getLetterGrade(percentage) {
     if (percentage >= 90) return 'A';
     else if (percentage >= 80) return 'B';
@@ -45,11 +44,9 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-    // Use innerHTML to interpret HTML tags and entities
     questionElement.innerHTML = question.question;  
     question.answers.forEach(answer => {
         const button = document.createElement('button');
-        // Use innerHTML here as well
         button.innerHTML = answer.text;  
         button.classList.add('btn');
         if (answer.correct) {
@@ -58,6 +55,20 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
+}
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
 
 function resetState() {
@@ -70,7 +81,15 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
-    if (correct) score++;
+    if (correct) {
+        score++;
+        document.getElementById('answer-feedback').innerHTML = '<span style="color: green;">&#10004; Correct:</span> ' + shuffledQuestions[currentQuestionIndex].reason;
+    } else {
+        document.getElementById('answer-feedback').innerHTML = '<span style="color: red;">&#10008; Incorrect:</span> ' + shuffledQuestions[currentQuestionIndex].reason;
+    }
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+    });
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButtonElement.classList.remove('hide');
@@ -82,9 +101,8 @@ function selectAnswer(e) {
 function showScore() {
     questionContainerElement.classList.add('hide');
     resultContainerElement.classList.remove('hide');
-    // Ensure score is displayed using total questions from shuffledQuestions
     let percentage = (score / shuffledQuestions.length) * 100;
-    let grade = getLetterGrade(percentage);  // Define this function to determine letter grade
+    let grade = getLetterGrade(percentage);
     finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;  
 }
 
@@ -93,14 +111,14 @@ nextButtonElement.addEventListener('click', () => {
     setNextQuestion();
 });
 
-
 document.getElementById('back-to-lesson').addEventListener('click', () => {
     window.location.href = 'https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/README.md#quiz';
 });
 
-
 document.getElementById('restart').addEventListener('click', () => {
+    currentQuestionIndex = 0;
+    score = 0;
     resultContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
-    startQuiz();
+    startQuiz(shuffledQuestions);
 });
