@@ -54,27 +54,27 @@ function updateProgressBar() {
 }
 
 function showQuestion(question) {
-    questionElement.innerHTML = question.question;  
+    if (question.code) {
+        questionElement.innerHTML = question.question + "<br><br><pre><code>" + question.code + "</code></pre>";
+    } else {
+        questionElement.innerHTML = question.question;
+    }
+    
     const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
     
-    // Define the labels
     const labels = ['a)', 'b)', 'c)', 'd)'];
     
     shuffledAnswers.forEach((answer, index) => {
         const button = document.createElement('button');
         
-        // Use the labels array to prepend the label to the answer text
         let answerText = labels[index] + ' ';
         if (answer.code) {
-            // If there's code, format it as a code block
             answerText += '<pre><code>' + answer.code + '</code></pre>';
         } else {
-            // Otherwise, use the text as-is
             answerText += answer.text;
         }
         
         button.innerHTML = answerText;
-
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;

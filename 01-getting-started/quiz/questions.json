@@ -40,7 +40,7 @@
         "reason": "The `print()` function can output various data types, such as strings, integers, and floats, by converting them into a string representation."
     },
     {
-        "question": "What will the following code snippet output?<br><br><code>print(&quot;Hello&quot;, &quot;World&quot;, sep=&quot;-&quot;)</code>",
+        "question": "What will the following code snippet output?<br><br><pre><code>print(&quot;Hello&quot;, &quot;World&quot;, sep=&quot;-&quot;)</code></pre>",
         "type": "multiple",
         "answers": [
             {"text": "Hello World", "correct": false},
