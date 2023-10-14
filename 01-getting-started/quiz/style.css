@@ -93,15 +93,6 @@ body {
     background-color: #dc3545;
 }
 
-.btn:active {
-    background-color: #1a5980;
-}
-
-.btn:disabled {
-    background-color: #a0a0a0;
-    cursor: not-allowed;
-}
-
 #answer-feedback {
     margin-top: 10px;
     font-weight: bold;
