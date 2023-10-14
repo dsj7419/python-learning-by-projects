@@ -116,32 +116,42 @@ body {
 
 code, pre {
     color: #333;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
 }
 
 code {
-    font-family: 'Courier New', monospace;
+    display: inline-block;
     background-color: #f8f8f8;
     padding: 2px 5px;
     border-radius: 3px;
+    margin: 0;
 }
 
 pre {
+    display: block;
     background-color: #f8f8f8;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     overflow-x: auto;
-    max-width: 100%;  
+    max-width: 100%;
     white-space: pre-wrap;
     word-wrap: break-word;
-    white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
+    text-align: left; 
+    white-space: pre;
 }
 
 pre code {
+    display: block;
     background-color: transparent;
     padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.btn code, .btn pre {
+    color: #fff;  /* Change color of text in code within buttons */
 }
 
 @media only screen and (max-width: 600px) {

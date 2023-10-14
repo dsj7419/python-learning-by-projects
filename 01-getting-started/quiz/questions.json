@@ -3,22 +3,10 @@
         "question": "Which function is used to capture user input in Python?",
         "type": "multiple",
         "answers": [
-            {
-                "text": "a) get()",
-                "correct": false
-            },
-            {
-                "text": "b) input()",
-                "correct": true
-            },
-            {
-                "text": "c) read()",
-                "correct": false
-            },
-            {
-                "text": "d) fetch()",
-                "correct": false
-            }
+            {"text": "get()", "correct": false},
+            {"text": "input()", "correct": true},
+            {"text": "read()", "correct": false},
+            {"text": "fetch()", "correct": false}
         ],
         "reason": "The `input()` function is used to capture user input as a string in Python."
     },
@@ -26,14 +14,8 @@
         "question": "The random.choice() function is used to select a random item from a dictionary.",
         "type": "truefalse",
         "answers": [
-            {
-                "text": "True",
-                "correct": false
-            },
-            {
-                "text": "False",
-                "correct": true
-            }
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
         ],
         "reason": "The `random.choice()` function can be used with a sequence like a list, tuple, or string. Dictionaries are not considered sequences."
     },
@@ -41,22 +23,10 @@
         "question": "What does the input() function return?",
         "type": "multiple",
         "answers": [
-            {
-                "text": "a) Integer",
-                "correct": false
-            },
-            {
-                "text": "b) Float",
-                "correct": false
-            },
-            {
-                "text": "c) String",
-                "correct": true
-            },
-            {
-                "text": "d) Boolean",
-                "correct": false
-            }
+            {"text": "Integer", "correct": false},
+            {"text": "Float", "correct": false},
+            {"text": "String", "correct": true},
+            {"text": "Boolean", "correct": false}
         ],
         "reason": "The `input()` function always returns the user input as a string."
     },
@@ -64,14 +34,8 @@
         "question": "The print() function can only output strings.",
         "type": "truefalse",
         "answers": [
-            {
-                "text": "True",
-                "correct": false
-            },
-            {
-                "text": "False",
-                "correct": true
-            }
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
         ],
         "reason": "The `print()` function can output various data types, such as strings, integers, and floats, by converting them into a string representation."
     },
@@ -79,22 +43,10 @@
         "question": "What will the following code snippet output?<br><br><code>print(&quot;Hello&quot;, &quot;World&quot;, sep=&quot;-&quot;)</code>",
         "type": "multiple",
         "answers": [
-            {
-                "text": "a) Hello World",
-                "correct": false
-            },
-            {
-                "text": "b) HelloWorld",
-                "correct": false
-            },
-            {
-                "text": "c) Hello-World",
-                "correct": true
-            },
-            {
-                "text": "d) Hello_World",
-                "correct": false
-            }
+            {"text": "Hello World", "correct": false},
+            {"text": "HelloWorld", "correct": false},
+            {"text": "Hello-World", "correct": true},
+            {"text": "Hello_World", "correct": false}
         ],
         "reason": "The `sep` parameter in the `print()` function specifies the separator between the output values. In this case, it is a hyphen."
     },
@@ -102,37 +54,19 @@
         "question": "Which of the following code snippets will continuously ask the user for a number until a valid input is provided?",
         "type": "multiple",
         "answers": [
-            {
-                "text": "a) ```while True:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break```",
-                "correct": true
-            },
-            {
-                "text": "b) ```while False:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break```",
-                "correct": false
-            },
-            {
-                "text": "c) ```while True:\n    user_input = input('Enter a number:')\n    if not user_input.isnumeric():\n        break```",
-                "correct": false
-            },
-            {
-                "text": "d) ```while user_input.isnumeric():\n    user_input = input('Enter a number:')```",
-                "correct": false
-            }
+            {"code": "while True:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break", "correct": true},
+            {"code": "while False:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break", "correct": false},
+            {"code": "while True:\n    user_input = input('Enter a number:')\n    if not user_input.isnumeric():\n        break", "correct": false},
+            {"code": "while user_input.isnumeric():\n    user_input = input('Enter a number:')", "correct": false}
         ],
-        "reason": "Option a) utilizes a ```while True``` loop that will continuously prompt the user until ```user_input.isnumeric()``` is True, at which point it will ```break``` out of the loop."
+        "reason": "Option a) utilizes a `while True` loop that will continuously prompt the user until `user_input.isnumeric()` is True, at which point it will `break` out of the loop."
     },
     {
         "question": "The random.seed() function ensures that the random number generated is different every time the code is run.",
         "type": "truefalse",
         "answers": [
-            {
-                "text": "True",
-                "correct": false
-            },
-            {
-                "text": "False",
-                "correct": true
-            }
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
         ],
         "reason": "The `random.seed()` function is used to initialize the random number generator. Providing a specific seed value will produce the same sequence of random numbers each run."
     },
@@ -140,22 +74,10 @@
         "question": "What does the sep parameter do in the print() function?",
         "type": "multiple",
         "answers": [
-            {
-                "text": "a) Separates values with a specific character.",
-                "correct": true
-            },
-            {
-                "text": "b) Checks the spelling of the output.",
-                "correct": false
-            },
-            {
-                "text": "c) Encrypts the output.",
-                "correct": false
-            },
-            {
-                "text": "d) Converts output to uppercase.",
-                "correct": false
-            }
+            {"text": "Separates values with a specific character.", "correct": true},
+            {"text": "Checks the spelling of the output.", "correct": false},
+            {"text": "Encrypts the output.", "correct": false},
+            {"text": "Converts output to uppercase.", "correct": false}
         ],
         "reason": "The `sep` parameter in the `print()` function specifies the separator between the output values."
     },
@@ -163,14 +85,8 @@
         "question": "The random.choice() function can be used to select a random character from a string.",
         "type": "truefalse",
         "answers": [
-            {
-                "text": "True",
-                "correct": true
-            },
-            {
-                "text": "False",
-                "correct": false
-            }
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
         ],
         "reason": "The `random.choice()` function can select a random element from a sequence, and strings are sequences of characters in Python."
     },
@@ -178,22 +94,10 @@
         "question": "Which of the following is NOT a valid string method in Python?",
         "type": "multiple",
         "answers": [
-            {
-                "text": "a) .isnumeric()",
-                "correct": false
-            },
-            {
-                "text": "b) .isalpha()",
-                "correct": false
-            },
-            {
-                "text": "c) .islowercase()",
-                "correct": true
-            },
-            {
-                "text": "d) .isupper()",
-                "correct": false
-            }
+            {"text": ".isnumeric()", "correct": false},
+            {"text": ".isalpha()", "correct": false},
+            {"text": ".islowercase()", "correct": true},
+            {"text": ".isupper()", "correct": false}
         ],
         "reason": "There is no string method named `.islowercase()` in Python."
     }

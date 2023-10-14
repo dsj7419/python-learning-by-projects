@@ -56,11 +56,24 @@ function updateProgressBar() {
 function showQuestion(question) {
     questionElement.innerHTML = question.question;  
     const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
-    shuffledAnswers.forEach(answer => {
+    
+    // Define the labels
+    const labels = ['a)', 'b)', 'c)', 'd)'];
+    
+    shuffledAnswers.forEach((answer, index) => {
         const button = document.createElement('button');
         
-        // Replace backticks with <code> tags
-        button.innerHTML = answer.text.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>').replace(/`([^`]+)`/g, '<code>$1</code>');  
+        // Use the labels array to prepend the label to the answer text
+        let answerText = labels[index] + ' ';
+        if (answer.code) {
+            // If there's code, format it as a code block
+            answerText += '<pre><code>' + answer.code + '</code></pre>';
+        } else {
+            // Otherwise, use the text as-is
+            answerText += answer.text;
+        }
+        
+        button.innerHTML = answerText;
 
         button.classList.add('btn');
         if (answer.correct) {
