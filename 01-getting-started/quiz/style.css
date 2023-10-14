@@ -17,13 +17,15 @@ body {
     text-align: center;
 }
 
-code {
+#question code {
     display: block;
     background-color: #f8f8f8;
+    font-family: 'Courier New', monospace;
     padding: 10px;
     border-radius: 5px;
     margin: 10px 0;
 }
+
 
 .btn-grid {
     display: grid;
@@ -39,6 +41,10 @@ code {
     color: white;
     padding: 10px 15px;
     font-size: 16px;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #245a80;
 }
 
 #next-button {
