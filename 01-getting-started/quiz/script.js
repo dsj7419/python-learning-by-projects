@@ -46,6 +46,14 @@ function setNextQuestion() {
     updateProgressBar();
 }
 
+function resetState() {
+    nextButtonElement.classList.add('hide');
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.firstChild.disabled = false; // Re-enable the button
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+    }
+}
+
 function updateProgressBar() {
     const progressBar = document.getElementById('progress-bar');
     const progressPercentage = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
@@ -125,6 +133,10 @@ function selectAnswer(e) {
             if (button.dataset.correct) setStatusClass(button, true);
         });
     }
+
+    Array.from(answerButtonsElement.children).forEach(button => {
+        button.disabled = true;
+    });
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButtonElement.classList.remove('hide');

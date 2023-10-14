@@ -35,7 +35,7 @@ body {
 
 #question code {
     display: block;
-    background-color: #f8f8f8;
+    background-color: #333;
     font-family: 'Courier New', monospace;
     padding: 10px;
     border-radius: 5px;
@@ -93,10 +93,20 @@ body {
     background-color: #dc3545;
 }
 
+.btn:active {
+    background-color: #1a5980;
+}
+
+.btn:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
 #answer-feedback {
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
 #progress-bar-container {
@@ -157,6 +167,7 @@ pre code {
 
 .btn code, .btn pre {
     color: #fff;
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {
