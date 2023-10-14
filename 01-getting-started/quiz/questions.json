@@ -103,23 +103,23 @@
         "type": "multiple",
         "answers": [
             {
-                "text": "a) <code>while True:<br>&nbsp;&nbsp;user_input = input(&quot;Enter a number: &quot;)<br>&nbsp;&nbsp;if user_input.isnumeric():<br>&nbsp;&nbsp;&nbsp;&nbsp;break</code>",
+                "text": "a) ```while True:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break```",
                 "correct": true
             },
             {
-                "text": "b) <code>while False:<br>&nbsp;&nbsp;user_input = input(&quot;Enter a number: &quot;)<br>&nbsp;&nbsp;if user_input.isnumeric():<br>&nbsp;&nbsp;&nbsp;&nbsp;break</code>",
+                "text": "b) ```while False:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break```",
                 "correct": false
             },
             {
-                "text": "c) <code>while True:<br>&nbsp;&nbsp;user_input = input(&quot;Enter a number: &quot;)<br>&nbsp;&nbsp;if not user_input.isnumeric():<br>&nbsp;&nbsp;&nbsp;&nbsp;break</code>",
+                "text": "c) ```while True:\n    user_input = input('Enter a number:')\n    if not user_input.isnumeric():\n        break```",
                 "correct": false
             },
             {
-                "text": "d) <code>while user_input.isnumeric():<br>&nbsp;&nbsp;user_input = input(&quot;Enter a number: &quot;)</code>",
+                "text": "d) ```while user_input.isnumeric():\n    user_input = input('Enter a number:')```",
                 "correct": false
             }
         ],
-        "reason": "Option a) utilizes a `while True` loop that will continuously prompt the user until `user_input.isnumeric()` is True, at which point it will `break` out of the loop."
+        "reason": "Option a) utilizes a ```while True``` loop that will continuously prompt the user until ```user_input.isnumeric()``` is True, at which point it will ```break``` out of the loop."
     },
     {
         "question": "The random.seed() function ensures that the random number generated is different every time the code is run.",

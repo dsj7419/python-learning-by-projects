@@ -58,7 +58,10 @@ function showQuestion(question) {
     const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
     shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
-        button.innerHTML = answer.text;  
+        
+        // Replace backticks with <code> tags
+        button.innerHTML = answer.text.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>').replace(/`([^`]+)`/g, '<code>$1</code>');  
+
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;

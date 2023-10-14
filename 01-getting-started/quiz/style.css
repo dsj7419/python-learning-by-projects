@@ -106,3 +106,22 @@ body {
     width: 0%; /* Initially, it should be 0% */
 }
 
+code {
+    font-family: 'Courier New', monospace;
+    background-color: #f8f8f8;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
