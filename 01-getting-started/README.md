@@ -393,7 +393,7 @@ Feel free to refer to the code skeleton provided in the chapter's `/code/` folde
 
 ## Quiz
 
-Take our lesson one quiz [here!](https://youengage.me/p/6524c8108e2ad5010006c51a) (Right-click and choose "Open link in new tab" to avoid leaving GitHub)
+Take our lesson one quiz [Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/01-getting-started/quiz/)
 
 ## Next Steps
 

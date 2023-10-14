@@ -8,23 +8,21 @@ const finalScoreElement = document.getElementById('final-score');
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 
-// Example questions
-const questions = [
-    {
-        question: "What is the capital of France?",
-        answers: [
-            { text: "Paris", correct: true },
-            { text: "London", correct: false },
-            { text: "Berlin", correct: false },
-            { text: "Madrid", correct: false }
-        ]
-    },
-    // Additional questions...
-];
+fetch('questions.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(questions => {
+        startQuiz(questions);
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
 
-startQuiz();
-
-function startQuiz() {
+function startQuiz(questions) {
     score = 0;
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
@@ -38,10 +36,12 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question;
+    // Use innerHTML to interpret HTML tags and entities
+    questionElement.innerHTML = question.question;  
     question.answers.forEach(answer => {
         const button = document.createElement('button');
-        button.innerText = answer.text;
+        // Use innerHTML here as well
+        button.innerHTML = answer.text;  
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
@@ -73,7 +73,8 @@ function selectAnswer(e) {
 function showScore() {
     questionContainerElement.classList.add('hide');
     resultContainerElement.classList.remove('hide');
-    finalScoreElement.textContent = `Your score: ${score}/${questions.length}`;
+    // Ensure score is displayed using total questions from shuffledQuestions
+    finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length}`;  
 }
 
 nextButtonElement.addEventListener('click', () => {
