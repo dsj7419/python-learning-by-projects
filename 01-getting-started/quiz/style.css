@@ -114,6 +114,10 @@ body {
     width: 0%; /* Initially, it should be 0% */
 }
 
+code, pre {
+    color: #333;
+}
+
 code {
     font-family: 'Courier New', monospace;
     background-color: #f8f8f8;
@@ -128,7 +132,11 @@ pre {
     overflow-x: auto;
     max-width: 100%;  
     white-space: pre-wrap;
-    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
 }
 
 pre code {
@@ -141,4 +149,3 @@ pre code {
         grid-template-columns: 1fr;
     }
 }
-
