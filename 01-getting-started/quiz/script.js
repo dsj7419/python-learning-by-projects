@@ -34,7 +34,14 @@ function startQuiz(questions) {
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
+    document.getElementById('progress-bar-container').classList.remove('hide');
     setNextQuestion();
+}
+
+function updateProgressBar() {
+    const progressBar = document.getElementById('progress-bar');
+    const progress = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
+    progressBar.style.width = progress + '%';
 }
 
 function setNextQuestion() {
@@ -45,7 +52,8 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerHTML = question.question;  
-    question.answers.forEach(answer => {
+    const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
+    shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
         button.innerHTML = answer.text;  
         button.classList.add('btn');
@@ -81,15 +89,23 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
+    const currentQuestion = shuffledQuestions[currentQuestionIndex];
+
+    document.getElementById('answer-feedback').innerHTML = '';
+
     if (correct) {
         score++;
-        document.getElementById('answer-feedback').innerHTML = '<span style="color: green;">&#10004; Correct:</span> ' + shuffledQuestions[currentQuestionIndex].reason;
+        document.getElementById('answer-feedback').innerHTML = `<span style="color: green;">&#10004; Correct!</span> ${currentQuestion.reason}`;
+        setStatusClass(selectedButton, true);
     } else {
-        document.getElementById('answer-feedback').innerHTML = '<span style="color: red;">&#10008; Incorrect:</span> ' + shuffledQuestions[currentQuestionIndex].reason;
+        document.getElementById('answer-feedback').innerHTML = `<span style="color: red;">&#10008; Incorrect:</span> ${currentQuestion.reason}`;
+        setStatusClass(selectedButton, false);
+        
+        // Highlight the correct answer in green
+        Array.from(answerButtonsElement.children).forEach(button => {
+            if (button.dataset.correct) setStatusClass(button, true);
+        });
     }
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct);
-    });
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButtonElement.classList.remove('hide');
@@ -103,6 +119,7 @@ function showScore() {
     resultContainerElement.classList.remove('hide');
     let percentage = (score / shuffledQuestions.length) * 100;
     let grade = getLetterGrade(percentage);
+    document.getElementById('progress-bar-container').classList.add('hide');
     finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;  
 }
 
