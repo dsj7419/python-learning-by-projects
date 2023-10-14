@@ -39,10 +39,13 @@ const startQuiz = async () => {
 }
 
 const setNextQuestion = () => {
+    document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
     answerFeedback.classList.add('hide');
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
     updateProgressBar();
+    document.getElementById('restart').style.display = 'none';
+    document.getElementById('back-to-lesson').style.display = 'none';
 }
 
 const resetState = () => {
@@ -92,18 +95,24 @@ const clearStatusClass = (element) => {
 
 const selectAnswer = (e) => {
     const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
+    const correct = selectedButton.dataset.correct === "true"; // Ensure correct is a boolean
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
 
     answerFeedback.classList.remove('hide');
-    answerFeedback.innerHTML = `<span style="color: ${correct ? 'green' : 'red'};">${correct ? '&#10004;' : '&#10008;'} ${correct ? 'Correct!' : 'Incorrect:'}</span> ${currentQuestion.reason}`;
-    setStatusClass(selectedButton, correct);
 
-    Array.from(answerButtonsElement.children).forEach(button => {
-        button.disabled = true;
-        if (button.dataset.correct) setStatusClass(button, true);
-    });
-
+    if (correct) {
+        score++;
+        answerFeedback.innerHTML = `<span style="color: green;">&#10004; Correct!</span> ${currentQuestion.reason}`;
+        setStatusClass(selectedButton, true);
+    } else {
+        answerFeedback.innerHTML = `<span style="color: red;">&#10008; Incorrect:</span> ${currentQuestion.reason}`;
+        setStatusClass(selectedButton, false);
+        
+        // Highlight the correct answer in green
+        Array.from(answerButtonsElement.children).forEach(button => {
+            if (button.dataset.correct === "true") setStatusClass(button, true); // Ensure correct comparison
+        });
+    }
     // Simplify next button setup.
     nextButtonElement.innerText = shuffledQuestions.length > currentQuestionIndex + 1 ? 'Next' : 'Finish';
     nextButtonElement.classList.remove('hide');
@@ -121,7 +130,9 @@ const showScore = () => {
     const percentage = (score / shuffledQuestions.length) * 100;
     const grade = getLetterGrade(percentage);
     progressBarContainer.classList.add('hide');
-    finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;  
+    finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;
+    document.getElementById('restart').style.display = 'inline-block';
+    document.getElementById('back-to-lesson').style.display = 'inline-block';
 }
 
 // Event listener for the 'Next' button.
