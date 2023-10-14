@@ -38,16 +38,16 @@ function startQuiz(questions) {
     setNextQuestion();
 }
 
-function updateProgressBar() {
-    const progressBar = document.getElementById('progress-bar');
-    const progress = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
-    progressBar.style.width = progress + '%';
-}
-
 function setNextQuestion() {
     document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.value = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
 }
 
 function showQuestion(question) {
