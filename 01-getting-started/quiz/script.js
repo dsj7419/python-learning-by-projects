@@ -40,6 +40,7 @@ function startQuiz(questions) {
 
 function setNextQuestion() {
     document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
+    document.getElementById('answer-feedback').classList.add('hide');
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
     updateProgressBar();
@@ -47,7 +48,9 @@ function setNextQuestion() {
 
 function updateProgressBar() {
     const progressBar = document.getElementById('progress-bar');
-    progressBar.value = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
+    const progressPercentage = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
+    console.log('Updating progress bar:', progressPercentage);
+    progressBar.style.width = progressPercentage + '%';
 }
 
 function showQuestion(question) {
