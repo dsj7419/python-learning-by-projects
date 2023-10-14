@@ -44,7 +44,7 @@ body {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin: 20px 0;
 }
@@ -59,9 +59,12 @@ body {
     transition: background-color 0.3s ease;
     white-space: normal; 
     word-wrap: break-word;  
-    overflow: hidden;
-    height: auto; 
+    overflow-y: auto;
+    height: 60px; 
     min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn:hover, .btn:focus {
@@ -123,6 +126,7 @@ code, pre {
     overflow-x: auto;
     max-width: 100%;
     word-wrap: break-word;
+    white-space: normal;
 }
 
 code {

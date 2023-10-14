@@ -113,9 +113,21 @@ const selectAnswer = (e) => {
             if (button.dataset.correct === "true") setStatusClass(button, true); // Ensure correct comparison
         });
     }
-    // Simplify next button setup.
-    nextButtonElement.innerText = shuffledQuestions.length > currentQuestionIndex + 1 ? 'Next' : 'Finish';
+    if (currentQuestionIndex === shuffledQuestions.length - 1) {
+        nextButtonElement.innerText = 'Finish';
+        nextButtonElement.removeEventListener('click', goToNextQuestion);
+        nextButtonElement.addEventListener('click', finishQuiz);
+    } else {
+        nextButtonElement.innerText = 'Next';
+        nextButtonElement.removeEventListener('click', finishQuiz);
+        nextButtonElement.addEventListener('click', goToNextQuestion);
+    }
     nextButtonElement.classList.remove('hide');
+}
+
+const goToNextQuestion = () => {
+    currentQuestionIndex++;
+    setNextQuestion();
 }
 
 const finishQuiz = () => {
@@ -136,11 +148,6 @@ const showScore = () => {
 }
 
 // Event listener for the 'Next' button.
-nextButtonElement.addEventListener('click', () => {
-    currentQuestionIndex++;
-    setNextQuestion();
-});
-
 document.getElementById('back-to-lesson').addEventListener('click', () => {
     window.location.href = 'https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/README.md#quiz';
 });
