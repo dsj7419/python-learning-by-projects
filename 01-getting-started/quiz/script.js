@@ -91,7 +91,7 @@ function selectAnswer(e) {
     const correct = selectedButton.dataset.correct;
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
 
-    document.getElementById('answer-feedback').innerHTML = '';
+    document.getElementById('answer-feedback').classList.remove('hide');
 
     if (correct) {
         score++;
@@ -110,8 +110,16 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButtonElement.classList.remove('hide');
     } else {
-        showScore();
+        nextButtonElement.innerText = 'Finish';  // Change button text to 'Finish'
+        nextButtonElement.classList.remove('hide');
+        nextButtonElement.addEventListener('click', finishQuiz);  // Add event listener to finish the quiz
     }
+}
+
+function finishQuiz() {
+    showScore();
+    nextButtonElement.innerText = 'Next'; 
+    nextButtonElement.removeEventListener('click', finishQuiz);  
 }
 
 function showScore() {
