@@ -44,9 +44,10 @@ body {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     margin: 20px 0;
+    width: 100%;
 }
 
 .btn {
@@ -57,10 +58,17 @@ body {
     padding: 10px 15px;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    white-space: normal; 
+    word-wrap: break-word;  
+    overflow: hidden;
 }
 
 .btn:hover, .btn:focus {
     background-color: #245a80;
+}
+
+.btn code {
+    background-color: #e8e8e8;
 }
 
 #next-button {
@@ -118,10 +126,19 @@ pre {
     border-radius: 5px;
     padding: 10px;
     overflow-x: auto;
+    max-width: 100%;  
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 pre code {
     background-color: transparent;
     padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
