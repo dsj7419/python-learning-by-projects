@@ -1,3 +1,11 @@
+
+function getLetterGrade(percentage) {
+    if (percentage >= 90) return 'A';
+    else if (percentage >= 80) return 'B';
+    else if (percentage >= 70) return 'C';
+    else if (percentage >= 60) return 'D';
+    else return 'F';
+}
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -31,6 +39,7 @@ function startQuiz(questions) {
 }
 
 function setNextQuestion() {
+    document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
@@ -74,7 +83,9 @@ function showScore() {
     questionContainerElement.classList.add('hide');
     resultContainerElement.classList.remove('hide');
     // Ensure score is displayed using total questions from shuffledQuestions
-    finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length}`;  
+    let percentage = (score / shuffledQuestions.length) * 100;
+    let grade = getLetterGrade(percentage);  // Define this function to determine letter grade
+    finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;  
 }
 
 nextButtonElement.addEventListener('click', () => {
@@ -82,7 +93,14 @@ nextButtonElement.addEventListener('click', () => {
     setNextQuestion();
 });
 
+
+document.getElementById('back-to-lesson').addEventListener('click', () => {
+    window.location.href = 'https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/README.md#quiz';
+});
+
+
 document.getElementById('restart').addEventListener('click', () => {
     resultContainerElement.classList.add('hide');
+    questionContainerElement.classList.remove('hide');
     startQuiz();
 });
