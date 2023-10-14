@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Python Quiz</title>
+    <title>Quiz</title>
 </head>
 <body>
-    <main id="quiz-container">
-        <section id="question-container">
-            <h1 id="question-number" aria-live="polite"></h1>
-            <div id="question" role="heading" aria-level="2">Question text will go here</div>
-            <div id="answer-buttons" class="btn-grid" role="group" aria-labelledby="question">
-            </div>
-            <div id="answer-feedback" class="hide" role="status" aria-live="assertive"></div>
-        </section>
-
-        <button id="next-button" class="btn hide">Next</button>
-
-        <aside id="progress-bar-container" class="hide" aria-live="polite">
+    <div id="quiz-container">
+        <div id="progress-bar-container" class="hide">
             <div id="progress-bar"></div>
-        </aside>
-    </main>
-
-<section id="result-container" class="hide">
-    <h2 id="final-score">Your score: </h2>
-    <button class="btn" id="restart">Restart</button>
-    <button class="btn" id="back-to-lesson">Back to Lesson</button>
-</section> 
-    
+        </div>
+        <div id="question-container">
+            <p id="question-number"></p>
+            <div id="question">Question text will go here</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <div id="answer-feedback" class="hide"></div>
+        </div>
+        <div id="result-container" class="hide">
+            <h2 id="final-score">Your score: </h2>
+            <button class="btn" id="restart">Restart</button>
+            <button class="btn" id="back-to-lesson">Back to Lesson</button>
+        </div>
+        <button id="next-button" class="btn hide">Next</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

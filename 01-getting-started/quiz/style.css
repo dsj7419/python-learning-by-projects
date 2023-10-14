@@ -22,10 +22,6 @@ body {
     background-color: #f8f8f8;
 }
 
-nav {
-    text-align: center;
-}
-
 #quiz-container {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
@@ -48,14 +44,10 @@ nav {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 16px;
     margin: 20px 0;
-}
-
-:root {
-    --gap-size: 16px;
-    --columns: 2;
+    width: 100%;
 }
 
 .btn {
@@ -68,13 +60,9 @@ nav {
     transition: background-color 0.3s ease;
     white-space: normal; 
     word-wrap: break-word;  
-    max-width: calc((100% - (var(--gap-size) * (var(--columns) - 1))) / var(--columns));
-    overflow-wrap: break-word;
-    height: 60px; 
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    height: auto; 
+    min-height: 40px;
 }
 
 .btn:hover, .btn:focus {
@@ -87,8 +75,6 @@ nav {
 
 #next-button {
     background-color: #2d98f3;
-    margin: 0 auto;
-    display: block;
 }
 
 #result-container {
@@ -111,7 +97,7 @@ nav {
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.1em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #progress-bar-container {
@@ -138,7 +124,6 @@ code, pre {
     overflow-x: auto;
     max-width: 100%;
     word-wrap: break-word;
-    white-space: normal;
 }
 
 code {
