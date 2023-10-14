@@ -44,10 +44,9 @@ body {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
     margin: 20px 0;
-    width: 100%;
 }
 
 .btn {
@@ -97,7 +96,7 @@ body {
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #progress-bar-container {

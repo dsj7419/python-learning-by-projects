@@ -1,167 +1,130 @@
-function getLetterGrade(percentage) {
-    if (percentage >= 90) return 'A';
-    else if (percentage >= 80) return 'B';
-    else if (percentage >= 70) return 'C';
-    else if (percentage >= 60) return 'D';
-    else return 'F';
+// Utilize 'const' and 'let' for variable declarations.
+const getLetterGrade = (percentage) => {
+    // Simplify the if-else chain using ternary operators.
+    return percentage >= 90 ? 'A' : 
+           percentage >= 80 ? 'B' : 
+           percentage >= 70 ? 'C' : 
+           percentage >= 60 ? 'D' : 'F';
 }
+
+// Extract HTML elements once and use them throughout the script.
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const nextButtonElement = document.getElementById('next-button');
 const resultContainerElement = document.getElementById('result-container');
 const finalScoreElement = document.getElementById('final-score');
+const progressBarContainer = document.getElementById('progress-bar-container');
+const progressBar = document.getElementById('progress-bar');
+const answerFeedback = document.getElementById('answer-feedback');
 
-let shuffledQuestions, currentQuestionIndex;
-let score = 0;
+let shuffledQuestions, currentQuestionIndex, score;
 
-fetch('questions.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(questions => {
-        startQuiz(questions);
-    })
-    .catch(error => {
+// Utilize async/await syntax for asynchronous operations.
+const startQuiz = async () => {
+    try {
+        const response = await fetch('questions.json');
+        if (!response.ok) throw new Error('Network response was not ok' + response.statusText);
+        const questions = await response.json();
+
+        score = 0;
+        shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+        currentQuestionIndex = 0;
+        questionContainerElement.classList.remove('hide');
+        progressBarContainer.classList.remove('hide');
+        setNextQuestion();
+    } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
-    });
-
-function startQuiz(questions) {
-    score = 0;
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
-    questionContainerElement.classList.remove('hide');
-    document.getElementById('progress-bar-container').classList.remove('hide');
-    setNextQuestion();
+    }
 }
 
-function setNextQuestion() {
-    document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
-    document.getElementById('answer-feedback').classList.add('hide');
+const setNextQuestion = () => {
+    answerFeedback.classList.add('hide');
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
     updateProgressBar();
 }
 
-function resetState() {
+const resetState = () => {
     nextButtonElement.classList.add('hide');
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.firstChild.disabled = false; // Re-enable the button
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-    }
+    // Re-enable buttons and remove them.
+    Array.from(answerButtonsElement.children).forEach(button => {
+        button.disabled = false;
+        button.remove();
+    });
 }
 
-function updateProgressBar() {
-    const progressBar = document.getElementById('progress-bar');
+const updateProgressBar = () => {
     const progressPercentage = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
-    console.log('Updating progress bar:', progressPercentage);
     progressBar.style.width = progressPercentage + '%';
 }
 
-function showQuestion(question) {
-    if (question.code) {
-        questionElement.innerHTML = question.question + "<br><br><pre><code>" + question.code + "</code></pre>";
-    } else {
-        questionElement.innerHTML = question.question;
-    }
+const showQuestion = (question) => {
+    // Utilize template literals for string concatenation.
+    questionElement.innerHTML = question.code ? 
+        `${question.question}<br><br><pre><code>${question.code}</code></pre>` : 
+        question.question;
     
     const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
-    
     const labels = ['a)', 'b)', 'c)', 'd)'];
     
     shuffledAnswers.forEach((answer, index) => {
         const button = document.createElement('button');
-        
-        let answerText = labels[index] + ' ';
-        if (answer.code) {
-            answerText += '<pre><code>' + answer.code + '</code></pre>';
-        } else {
-            answerText += answer.text;
-        }
-        
-        button.innerHTML = answerText;
+        // Use destructuring for better readability.
+        const {code, text, correct} = answer;
+        button.innerHTML = `${labels[index]} ${code ? `<pre><code>${code}</code></pre>` : text}`;
         button.classList.add('btn');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
+        // Utilize dataset properties directly instead of conditionally.
+        button.dataset.correct = correct;
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
 }
 
-function setStatusClass(element, correct) {
-    clearStatusClass(element);
-    if (correct) {
-        element.classList.add('correct');
-    } else {
-        element.classList.add('wrong');
-    }
+const setStatusClass = (element, correct) => {
+    // Simplify class manipulation by using classList methods and conditional (ternary) operator.
+    element.classList.add(correct ? 'correct' : 'wrong');
 }
 
-function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
+const clearStatusClass = (element) => {
+    element.classList.remove('correct', 'wrong');
 }
 
-function resetState() {
-    nextButtonElement.classList.add('hide');
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-    }
-}
-
-function selectAnswer(e) {
+const selectAnswer = (e) => {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
 
-    document.getElementById('answer-feedback').classList.remove('hide');
-
-    if (correct) {
-        score++;
-        document.getElementById('answer-feedback').innerHTML = `<span style="color: green;">&#10004; Correct!</span> ${currentQuestion.reason}`;
-        setStatusClass(selectedButton, true);
-    } else {
-        document.getElementById('answer-feedback').innerHTML = `<span style="color: red;">&#10008; Incorrect:</span> ${currentQuestion.reason}`;
-        setStatusClass(selectedButton, false);
-        
-        // Highlight the correct answer in green
-        Array.from(answerButtonsElement.children).forEach(button => {
-            if (button.dataset.correct) setStatusClass(button, true);
-        });
-    }
+    answerFeedback.classList.remove('hide');
+    answerFeedback.innerHTML = `<span style="color: ${correct ? 'green' : 'red'};">${correct ? '&#10004;' : '&#10008;'} ${correct ? 'Correct!' : 'Incorrect:'}</span> ${currentQuestion.reason}`;
+    setStatusClass(selectedButton, correct);
 
     Array.from(answerButtonsElement.children).forEach(button => {
         button.disabled = true;
+        if (button.dataset.correct) setStatusClass(button, true);
     });
 
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButtonElement.classList.remove('hide');
-    } else {
-        nextButtonElement.innerText = 'Finish';  // Change button text to 'Finish'
-        nextButtonElement.classList.remove('hide');
-        nextButtonElement.addEventListener('click', finishQuiz);  // Add event listener to finish the quiz
-    }
+    // Simplify next button setup.
+    nextButtonElement.innerText = shuffledQuestions.length > currentQuestionIndex + 1 ? 'Next' : 'Finish';
+    nextButtonElement.classList.remove('hide');
 }
 
-function finishQuiz() {
+const finishQuiz = () => {
     showScore();
     nextButtonElement.innerText = 'Next'; 
-    nextButtonElement.removeEventListener('click', finishQuiz);  
+    nextButtonElement.removeEventListener('click', finishQuiz);
 }
 
-function showScore() {
+const showScore = () => {
     questionContainerElement.classList.add('hide');
     resultContainerElement.classList.remove('hide');
-    let percentage = (score / shuffledQuestions.length) * 100;
-    let grade = getLetterGrade(percentage);
-    document.getElementById('progress-bar-container').classList.add('hide');
+    const percentage = (score / shuffledQuestions.length) * 100;
+    const grade = getLetterGrade(percentage);
+    progressBarContainer.classList.add('hide');
     finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;  
 }
 
+// Event listener for the 'Next' button.
 nextButtonElement.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
@@ -176,5 +139,8 @@ document.getElementById('restart').addEventListener('click', () => {
     score = 0;
     resultContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
-    startQuiz(shuffledQuestions);
+    startQuiz();
 });
+
+// Start the quiz when the script loads.
+startQuiz();
