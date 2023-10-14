@@ -50,7 +50,6 @@ const setNextQuestion = () => {
 
 const resetState = () => {
     nextButtonElement.classList.add('hide');
-    // Re-enable buttons and remove them.
     Array.from(answerButtonsElement.children).forEach(button => {
         button.disabled = false;
         button.remove();
