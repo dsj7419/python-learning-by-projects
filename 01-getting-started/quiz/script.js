@@ -113,6 +113,9 @@ const selectAnswer = (e) => {
             if (button.dataset.correct === "true") setStatusClass(button, true); // Ensure correct comparison
         });
     }
+
+    Array.from(answerButtonsElement.children).forEach(button => button.disabled = true);
+
     if (currentQuestionIndex === shuffledQuestions.length - 1) {
         nextButtonElement.innerText = 'Finish';
         nextButtonElement.removeEventListener('click', goToNextQuestion);

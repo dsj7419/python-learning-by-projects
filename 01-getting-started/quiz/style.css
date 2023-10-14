@@ -22,6 +22,10 @@ body {
     background-color: #f8f8f8;
 }
 
+nav {
+    text-align: center;
+}
+
 #quiz-container {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
@@ -59,9 +63,10 @@ body {
     transition: background-color 0.3s ease;
     white-space: normal; 
     word-wrap: break-word;  
-    overflow-y: auto;
+    max-width: calc((100% - (gap size * (columns - 1))) / columns);
+    overflow-wrap: break-word;
     height: 60px; 
-    min-height: 40px;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
