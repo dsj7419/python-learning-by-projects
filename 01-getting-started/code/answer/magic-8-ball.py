@@ -1,6 +1,6 @@
-import random  # Importing the random module
+import random  # Importing the module needed to make random choices
 
-# Predefined list of possible answers
+# A list of possible answers that the Magic 8-Ball can give
 answers = [
     "Yes, definitely.", "Reply hazy, try again.",
     "Ask again later.", "Cannot predict now.",
@@ -8,14 +8,15 @@ answers = [
     "Outlook not so good.", "Very doubtful."
 ]
 
-# Prompt the user for input
+# Asking the user to input a question
 user_question = input("Ask the Magic 8-Ball a question: ")
 
-# Validate the input: Ensure it ends with a question mark
+# Checking if the user's input ends with a question mark
 if user_question.strip().endswith("?"):
-    # Randomly select an answer
+    # If valid, randomly select an answer from the list
     selected_answer = random.choice(answers)
-    # Display the answer
-    print("\\nMagic 8-Ball says:", selected_answer)
+    # Display the chosen answer
+    print("\nMagic 8-Ball says:", selected_answer)
 else:
-    print("\\nPlease ask a valid question (ending with '?').")
+    # If invalid, display an error message
+    print("\nPlease ask a valid question (ending with '?').")
