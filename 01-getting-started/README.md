@@ -440,8 +440,6 @@ Use this interaction as a reference point while developing your own simulator to
 - Test your application rigorously to ensure all components (input, random selection, output) function seamlessly.
 - Consider the user journey, providing guidance and feedback throughout the interaction to craft an immersive experience.
 
-Embark on this adventure with enthusiasm and ingenuity, constructing an application that not only meets the requirements but also showcases your distinctive problem-solving flair.
-
 ## Quiz
 
 Take our lesson one quiz [Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/01-getting-started/quiz/)

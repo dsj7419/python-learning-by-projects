@@ -1,0 +1,110 @@
+[
+    {
+        "question": "Which data type would be most suitable to store the price of an item?",
+        "type": "multiple",
+        "answers": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": true},
+            {"text": "str", "correct": false},
+            {"text": "bool", "correct": false}
+        ],
+        "reason": "Using a `float` allows you to account for both whole and fractional monetary values."
+    },
+    {
+        "question": "Is it valid to add a float and an integer in Python?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Yes, Python allows addition between a float and an integer, and the result is a float."
+    },
+    {
+        "question": "What will be the output of the following code?",
+        "code": "print(int('10') + 5)",
+        "type": "multiple",
+        "answers": [
+            {"text": "15", "correct": true},
+            {"text": "105", "correct": false},
+            {"text": "TypeError", "correct": false},
+            {"text": "10 + 5", "correct": false}
+        ],
+        "reason": "The string '10' is converted to an integer and then added to 5, resulting in 15."
+    },
+    {
+        "question": "Which of the following is not a valid variable name?",
+        "type": "multiple",
+        "answers": [
+            {"text": "_myVar", "correct": false},
+            {"text": "myVar1", "correct": false},
+            {"text": "1myVar", "correct": true},
+            {"text": "my_Var", "correct": false}
+        ],
+        "reason": "Variable names cannot begin with a number."
+    },
+    {
+        "question": "Which of the following will return a boolean value?",
+        "type": "multiple",
+        "answers": [
+            {"text": "int('5')", "correct": false},
+            {"text": "bool('True')", "correct": true},
+            {"text": "float('5.0')", "correct": false},
+            {"text": "str(5)", "correct": false}
+        ],
+        "reason": "The `bool()` function is used to convert a value to a boolean."
+    },
+    {
+        "question": "The modulus operator (%) in Python returns the _____ of the division.",
+        "type": "multiple",
+        "answers": [
+            {"text": "Quotient", "correct": false},
+            {"text": "Remainder", "correct": true},
+            {"text": "Result", "correct": false},
+            {"text": "None of the above", "correct": false}
+        ],
+        "reason": "The modulus operator (%) returns the remainder of a division."
+    },
+    {
+        "question": "What will be the output of the following code?",
+        "code": "print(10 // 3)",
+        "type": "multiple",
+        "answers": [
+            {"text": "3", "correct": true},
+            {"text": "3.3333", "correct": false},
+            {"text": "4", "correct": false},
+            {"text": "0", "correct": false}
+        ],
+        "reason": "The floor division operator (//) returns the largest possible integer from a division result."
+    },
+    {
+        "question": "In Python, a variable cannot be reassigned to a value of a different type.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "In Python, variables can be reassigned to a new value that is of a different type from its current value."
+    },    
+    {
+        "question": "What is the result of the following operation: 7 ** 2?",
+        "type": "multiple",
+        "answers": [
+            {"text": "49", "correct": true},
+            {"text": "14", "correct": false},
+            {"text": "28", "correct": false},
+            {"text": "3.5", "correct": false}
+        ],
+        "reason": "The exponentiation operator (**) calculates the power of a number. So, 7 ** 2 equals 49."
+    },
+    {
+        "question": "Which of the following data types is immutable?",
+        "type": "multiple",
+        "answers": [
+            {"text": "List", "correct": false},
+            {"text": "String", "correct": true},
+            {"text": "Dictionary", "correct": false},
+            {"text": "None of the above", "correct": false}
+        ],
+        "reason": "Strings are immutable in Python. Once a string is created, it cannot be changed."
+    }
+]
