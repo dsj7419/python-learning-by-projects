@@ -170,7 +170,8 @@ window.onload = () => {
 quiz.nextButtonElement.addEventListener('click', quiz.goToNextQuestion);
 
 selectElement('back-to-lesson').addEventListener('click', () => {
-    window.location.href = 'https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/README.md#quiz';
+    const lessonUrl = selectElement('back-to-lesson').dataset.lessonUrl;
+    window.location.href = lessonUrl;
 });
 
 selectElement('restart').addEventListener('click', () => {

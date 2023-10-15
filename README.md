@@ -2,7 +2,7 @@
 
 Welcome to the Project-Based Python Learning Course! This repository, curated by [dsj7419](https://github.com/dsj7419), is designed to provide a hands-on and engaging approach to learning Python through practical projects.
 
-<img src="./images/PythonLearning.png" alt="Python Learning By Projects" width="200"/>
+<img src="./assets/images/PythonLearning.png" alt="Python Learning By Projects" width="200"/>
 
 ## About The Course
 
@@ -64,8 +64,8 @@ This course is structured into different modules, each focusing on a particular 
 
 ## How to Use This Repository
 
-- **Learners:** Navigate through the modules, read the concepts, and work on projects.
-- **Contributors:** Feel free to improve existing content, add new projects, or enhance documentation.
+- **Learners:** Navigate through the modules, read the concepts, and work on projects on the [course website](https://dsj7419.github.io/python-learning-by-projects/). Each lesson is available as a separate page, and quizzes are integrated into the web interface for a seamless learning experience.
+- **Contributors:** Feel free to improve existing content, add new projects, or enhance documentation by interacting with the [GitHub repository](https://github.com/dsj7419/python-learning-by-projects).
 
 ## Getting Started
 
