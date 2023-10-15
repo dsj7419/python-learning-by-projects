@@ -52,6 +52,7 @@ class Quiz {
         updateInnerHTML('question', question.question + (question.code ? `<pre><code>${question.code}</code></pre>` : ''));
         question.answers.forEach(answer => {
             const button = document.createElement('button');
+            button.setAttribute('aria-label', answer.text);
             button.innerHTML = answer.code ? `<pre><code>${answer.code}</code></pre>` : answer.text;
             button.classList.add('btn');
             if (answer.correct) {
@@ -67,16 +68,17 @@ class Quiz {
         const selectedButton = e.target;
         const correct = selectedButton.dataset.correct;
         const feedbackElement = document.getElementById('answer-feedback');
+        feedbackElement.setAttribute('aria-live', 'assertive');
     
         // Ensure feedback is visible
         feedbackElement.classList.remove('hide');
         
         if (correct) {
             this.score++;
-            feedbackElement.innerHTML = `<span style="color: green;">&#10004; Correct:</span> ${this.questions[this.currentQuestionIndex].reason}`;
+            feedbackElement.innerHTML = `<span class="correct-feedback">&#10004; Correct:</span> ${this.questions[this.currentQuestionIndex].reason}`;
         } else {
-            feedbackElement.innerHTML = `<span style="color: red;">&#10008; Incorrect:</span> ${this.questions[this.currentQuestionIndex].reason}`;
-        }
+            feedbackElement.innerHTML = `<span class="incorrect-feedback">&#10008; Incorrect:</span> ${this.questions[this.currentQuestionIndex].reason}`;
+        }        
 
         Array.from(this.answerButtonsElement.children).forEach(button => {
             const isCorrect = button.dataset.correct;
@@ -93,17 +95,21 @@ class Quiz {
             this.nextButtonElement.classList.remove('hide');
             this.nextButtonElement.removeEventListener('click', this.finishQuiz);
             this.nextButtonElement.addEventListener('click', this.goToNextQuestion);
+            this.nextButtonElement.setAttribute('aria-label', 'Next question');
         } else {
             this.nextButtonElement.innerText = 'Finish';
             this.nextButtonElement.classList.remove('hide');
             this.nextButtonElement.removeEventListener('click', this.goToNextQuestion);
             this.nextButtonElement.addEventListener('click', this.finishQuiz);
+            this.nextButtonElement.setAttribute('aria-label', 'Finish the quiz');
         }
+        this.nextButtonElement.focus();
     }
 
     // Finalize the quiz and show the score
     finishQuiz() {
         this.showScore();
+        this.nextButtonElement.classList.add('hide');
         this.nextButtonElement.innerText = 'Next';
         this.nextButtonElement.removeEventListener('click', this.goToNextQuestion);
         this.nextButtonElement.removeEventListener('click', this.finishQuiz);
@@ -122,7 +128,9 @@ class Quiz {
 
     // Update the progress bar
     updateProgressBar() {
+        const progressPercentage = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
         document.getElementById('progress-bar').style.width = ((this.currentQuestionIndex + 1) / this.questions.length) * 100 + '%';
+        updateInnerHTML('progress-text', `You are on question ${this.currentQuestionIndex + 1} of ${this.questions.length}, which is ${progressPercentage.toFixed(0)}% of the quiz.`);
     }
 
     // Set the status of buttons (correct/incorrect)
@@ -138,6 +146,7 @@ class Quiz {
         let percentage = (this.score / this.questions.length) * 100;
         let grade = this.getLetterGrade(percentage);
         document.getElementById('progress-bar-container').classList.add('hide');
+        this.finalScoreElement.setAttribute('aria-live', 'polite');
         this.finalScoreElement.textContent = `Your score: ${this.score}/${this.questions.length} (${percentage}% - Grade: ${grade})`;
     }
 

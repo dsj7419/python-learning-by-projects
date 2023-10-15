@@ -51,7 +51,8 @@ body {
 }
 
 .btn {
-    background-color: #1d72b8;
+    cursor: pointer;
+    background-color: #0056b3;
     border: none;
     border-radius: 5px;
     color: white;
@@ -74,7 +75,7 @@ body {
 }
 
 #next-button {
-    background-color: #2d98f3;
+    background-color: #0056b3;
 }
 
 #result-container {
@@ -90,7 +91,20 @@ body {
 }
 
 .btn.wrong {
-    background-color: #dc3545;
+    background-color: #cc0000;
+}
+
+.btn:focus {
+    outline: 2px solid #245a80;
+    outline-offset: 2px;
+}
+
+.correct-feedback {
+    color: green;
+}
+
+.incorrect-feedback {
+    color: #cc0000;
 }
 
 #answer-feedback {
@@ -159,6 +173,17 @@ pre code {
 .btn code, .btn pre {
     color: #fff;
     pointer-events: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 @media only screen and (max-width: 600px) {
