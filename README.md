@@ -77,7 +77,7 @@ Contributions are always welcome! Please read [CONTRIBUTING](https://github.com/
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/dsj7419/python-learning-by-projects/blob/main/LICENSE.md).
+This project is licensed under the [MIT License](https://github.com/dsj7419/python-learning-by-projects/blob/main/LICENSE).
 
 ## Connect and Discuss
 
