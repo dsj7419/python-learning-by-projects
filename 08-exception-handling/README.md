@@ -285,4 +285,4 @@ Congratulations on completing Chapter 6! In the [next chapter](09-object-oriente
 ---
 Happy Coding! 🚀
 
-[Back to Main](../README.md)
+[Back to Main](https://dsj7419.github.io/python-learning-by-projects/)

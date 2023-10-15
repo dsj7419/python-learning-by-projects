@@ -404,4 +404,4 @@ Kudos on completing Chapter 2 and creating your personalized greeting card! 🎉
 ---
 Happy Coding! 🚀
 
-[Back to Main](../README.md)
+[Back to Main](https://dsj7419.github.io/python-learning-by-projects/)

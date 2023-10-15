@@ -73,11 +73,11 @@ This course is structured into different modules, each focusing on a particular 
 
 ## Contributing
 
-Contributions are always welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started with contributing.
+Contributions are always welcome! Please read [CONTRIBUTING](CONTRIBUTING.html) for guidelines on how to get started with contributing.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.html).
 
 ## Connect and Discuss
 
