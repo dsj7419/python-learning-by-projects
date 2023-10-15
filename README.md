@@ -8,60 +8,6 @@ Welcome to the Project-Based Python Learning Course! This repository, curated by
 
 This course is structured into different modules, each focusing on a particular topic in Python and associated with a project to provide a practical application of the concepts learned.
 
-## Course Structure
-
-1. **[Getting Started](01-getting-started/README.md)**
-   - Environment Setup, Writing a Python Script
-   - *Project: Hello, World! & Magic 8-Ball Simulator*
-
-2. **[Variables and Data Types](02-variables-and-data-types/README.md)**
-   - Variables, Data Types
-   - *Project: Greeting Card*
-
-3. **[Control Flow](03-control-flow/README.md)**
-   - Conditionals, Loops
-   - *Project: Adventure Game*
-
-4. **[Data Structures](04-data-structures/README.md)**
-   - Lists, Dictionaries, Sets
-   - *Project: To-Do List Application*
-
-5. **[Modular Programming](05-modular-programming/README.md)**
-   - Benefits, Creating Modules, Importing Modules
-   - *Project: Calculator*
-
-6. **[File Operations](06-file-operations/README.md)**
-   - File I/O, Working with Paths
-   - *Project: Note-Keeping App*
-
-7. **[Regular Expressions](07-regular-expressions/README.md)**
-   - Pattern Matching, Data Extraction
-   - *Project: Data Scraper*
-
-8. **[Exception Handling](08-exception-handling/README.md)**
-   - Try/Except, Raising Exceptions
-   - *Project: Basic Data Entry System*
-
-9. **[Object-Oriented Programming](09-object-oriented-programming/README.md)**
-   - Classes, Objects, Inheritance
-   - *Project: Library Management System*
-
-10. **[External Libraries and Visualization](10-external-libraries/README.md)**
-   - Using Libraries, Basic Data Visualization
-   - *Project: Data Visualization with Matplotlib*
-
-11. **[Testing and Debugging](11-testing-debugging/README.md)**
-    - Unit Tests, Debugging Techniques
-    - *Project: Testing a Shopping Cart System*
-
-12. **[Version Control with Git](12-version-control/README.md)**
-    - Git Basics, GitHub, Collaboration
-    - *Project: Collaborative Document Editor*
-
-13. **[Final Project](13-final-project/README.md)**
-    - Integrating Learned Concepts
-    - *Automated Report Generation and Distribution System*
-
 ## How to Use This Repository
 
 - **Learners:** Navigate through the modules, read the concepts, and work on projects on the [course website](https://dsj7419.github.io/python-learning-by-projects/). Each lesson is available as a separate page, and quizzes are integrated into the web interface for a seamless learning experience.
@@ -69,7 +15,61 @@ This course is structured into different modules, each focusing on a particular 
 
 ## Getting Started
 
-[Start your Python journey here](01-getting-started/README.md) by setting up your development environment and working on the first project!
+[Start your Python journey here](https://dsj7419.github.io/python-learning-by-projects/01-getting-started/) by setting up your development environment and working on the first project!
+
+## Course Structure
+
+1. **[Getting Started](https://dsj7419.github.io/python-learning-by-projects/01-getting-started/)**
+   - Environment Setup, Writing a Python Script
+   - *Project: Hello, World! & Magic 8-Ball Simulator*
+
+2. **[Variables and Data Types](https://dsj7419.github.io/python-learning-by-projects/02-variables-and-data-types/)**
+   - Variables, Data Types
+   - *Project: Greeting Card*
+
+3. **[Control Flow](https://dsj7419.github.io/python-learning-by-projects/03-control-flow/)**
+   - Conditionals, Loops
+   - *Project: Adventure Game*
+
+4. **[Data Structures](https://dsj7419.github.io/python-learning-by-projects/04-data-structures/)**
+   - Lists, Dictionaries, Sets
+   - *Project: To-Do List Application*
+
+5. **[Modular Programming](https://dsj7419.github.io/python-learning-by-projects/05-modular-programming/)**
+   - Benefits, Creating Modules, Importing Modules
+   - *Project: Calculator*
+
+6. **[File Operations](https://dsj7419.github.io/python-learning-by-projects/06-file-operations/)**
+   - File I/O, Working with Paths
+   - *Project: Note-Keeping App*
+
+7. **[Regular Expressions](https://dsj7419.github.io/python-learning-by-projects/07-regular-expressions/)**
+   - Pattern Matching, Data Extraction
+   - *Project: Data Scraper*
+
+8. **[Exception Handling](https://dsj7419.github.io/python-learning-by-projects/08-exception-handling/)**
+   - Try/Except, Raising Exceptions
+   - *Project: Basic Data Entry System*
+
+9. **[Object-Oriented Programming](https://dsj7419.github.io/python-learning-by-projects/09-object-oriented-programming/)**
+   - Classes, Objects, Inheritance
+   - *Project: Library Management System*
+
+10. **[External Libraries and Visualization](https://dsj7419.github.io/python-learning-by-projects/10-external-libraries/)**
+   - Using Libraries, Basic Data Visualization
+   - *Project: Data Visualization with Matplotlib*
+
+11. **[Testing and Debugging](https://dsj7419.github.io/python-learning-by-projects/11-testing-debugging/)**
+    - Unit Tests, Debugging Techniques
+    - *Project: Testing a Shopping Cart System*
+
+12. **[Version Control with Git](https://dsj7419.github.io/python-learning-by-projects/12-version-control/)**
+    - Git Basics, GitHub, Collaboration
+    - *Project: Collaborative Document Editor*
+
+13. **[Final Project](https://dsj7419.github.io/python-learning-by-projects/13-final-project/)**
+    - Integrating Learned Concepts
+    - *Automated Report Generation and Distribution System*
 
 ## Contributing
 
