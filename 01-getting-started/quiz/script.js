@@ -1,180 +1,176 @@
-function getLetterGrade(percentage) {
-    if (percentage >= 90) return 'A';
-    else if (percentage >= 80) return 'B';
-    else if (percentage >= 70) return 'C';
-    else if (percentage >= 60) return 'D';
-    else return 'F';
-}
-const questionContainerElement = document.getElementById('question-container');
-const questionElement = document.getElementById('question');
-const answerButtonsElement = document.getElementById('answer-buttons');
-const nextButtonElement = document.getElementById('next-button');
-const resultContainerElement = document.getElementById('result-container');
-const finalScoreElement = document.getElementById('final-score');
+import { fetchQuizData, selectElement, updateInnerHTML, toggleClass } from './utils.js';
 
-let shuffledQuestions, currentQuestionIndex;
-let score = 0;
+class Quiz {
+    constructor() {
+        this.questionContainerElement = selectElement('question-container');
+        this.questionElement = selectElement('question');
+        this.answerButtonsElement = selectElement('answer-buttons');
+        this.nextButtonElement = selectElement('next-button');
+        this.resultContainerElement = selectElement('result-container');
+        this.finalScoreElement = selectElement('final-score');
+        this.finishQuiz = this.finishQuiz.bind(this);
+        this.selectAnswer = this.selectAnswer.bind(this);
+        this.goToNextQuestion = this.goToNextQuestion.bind(this);
+        this.questions = [];
+        this.currentQuestionIndex = 0;
+        this.score = 0;
+    }
 
-fetch('questions.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok' + response.statusText);
+    loadAndStartQuiz() {
+        fetchQuizData('questions.json')
+            .then(questions => {
+                this.startQuiz(questions);
+            });
+    }
+
+    startQuiz(questions) {
+        this.score = 0;
+        this.questions = questions.sort(() => Math.random() - 0.5);
+        this.currentQuestionIndex = 0;
+        toggleClass('question-container', 'hide', false);
+        toggleClass('progress-bar-container', 'hide', false);
+        this.setNextQuestion();
+    }
+
+    setNextQuestion() {
+        updateInnerHTML('question-number', `Question ${this.currentQuestionIndex + 1} of ${this.questions.length}`);
+        toggleClass('answer-feedback', 'hide', true);
+        this.resetState();
+        this.showQuestion(this.questions[this.currentQuestionIndex]);
+        this.updateProgressBar();
+    }
+
+    resetState() {
+        toggleClass('next-button', 'hide', true);
+        while (this.answerButtonsElement.firstChild) {
+            this.answerButtonsElement.firstChild.disabled = false;
+            this.answerButtonsElement.removeChild(this.answerButtonsElement.firstChild);
         }
-        return response.json();
-    })
-    .then(questions => {
-        startQuiz(questions);
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
-
-function startQuiz(questions) {
-    score = 0;
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
-    questionContainerElement.classList.remove('hide');
-    document.getElementById('progress-bar-container').classList.remove('hide');
-    setNextQuestion();
-}
-
-function setNextQuestion() {
-    document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
-    document.getElementById('answer-feedback').classList.add('hide');
-    resetState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-    updateProgressBar();
-}
-
-function resetState() {
-    nextButtonElement.classList.add('hide');
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.firstChild.disabled = false; // Re-enable the button
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
-}
 
-function updateProgressBar() {
-    const progressBar = document.getElementById('progress-bar');
-    const progressPercentage = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
-    console.log('Updating progress bar:', progressPercentage);
-    progressBar.style.width = progressPercentage + '%';
-}
-
-function showQuestion(question) {
-    if (question.code) {
-        questionElement.innerHTML = question.question + "<br><br><pre><code>" + question.code + "</code></pre>";
-    } else {
-        questionElement.innerHTML = question.question;
-    }
-    
-    const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
-    
-    const labels = ['a)', 'b)', 'c)', 'd)'];
-    
-    shuffledAnswers.forEach((answer, index) => {
-        const button = document.createElement('button');
-        
-        let answerText = labels[index] + ' ';
-        if (answer.code) {
-            answerText += '<pre><code>' + answer.code + '</code></pre>';
-        } else {
-            answerText += answer.text;
-        }
-        
-        button.innerHTML = answerText;
-        button.classList.add('btn');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-        answerButtonsElement.appendChild(button);
-    });
-}
-
-function setStatusClass(element, correct) {
-    clearStatusClass(element);
-    if (correct) {
-        element.classList.add('correct');
-    } else {
-        element.classList.add('wrong');
-    }
-}
-
-function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
-}
-
-function resetState() {
-    nextButtonElement.classList.add('hide');
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-    }
-}
-
-function selectAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
-    const currentQuestion = shuffledQuestions[currentQuestionIndex];
-
-    document.getElementById('answer-feedback').classList.remove('hide');
-
-    if (correct) {
-        score++;
-        document.getElementById('answer-feedback').innerHTML = `<span style="color: green;">&#10004; Correct!</span> ${currentQuestion.reason}`;
-        setStatusClass(selectedButton, true);
-    } else {
-        document.getElementById('answer-feedback').innerHTML = `<span style="color: red;">&#10008; Incorrect:</span> ${currentQuestion.reason}`;
-        setStatusClass(selectedButton, false);
-        
-        // Highlight the correct answer in green
-        Array.from(answerButtonsElement.children).forEach(button => {
-            if (button.dataset.correct) setStatusClass(button, true);
+    showQuestion(question) {
+        updateInnerHTML('question', question.question + (question.code ? `<pre><code>${question.code}</code></pre>` : ''));
+        question.answers.forEach(answer => {
+            const button = document.createElement('button');
+            button.innerHTML = answer.code ? `<pre><code>${answer.code}</code></pre>` : answer.text;
+            button.classList.add('btn');
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener('click', this.selectAnswer.bind(this));
+            this.answerButtonsElement.appendChild(button);
         });
     }
 
-    Array.from(answerButtonsElement.children).forEach(button => {
-        button.disabled = true;
-    });
+    // Handle answer selection
+    selectAnswer(e) {
+        const selectedButton = e.target;
+        const correct = selectedButton.dataset.correct;
+        const feedbackElement = document.getElementById('answer-feedback');
+    
+        // Ensure feedback is visible
+        feedbackElement.classList.remove('hide');
+        
+        if (correct) {
+            this.score++;
+            feedbackElement.innerHTML = `<span style="color: green;">&#10004; Correct:</span> ${this.questions[this.currentQuestionIndex].reason}`;
+        } else {
+            feedbackElement.innerHTML = `<span style="color: red;">&#10008; Incorrect:</span> ${this.questions[this.currentQuestionIndex].reason}`;
+        }
 
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButtonElement.classList.remove('hide');
-    } else {
-        nextButtonElement.innerText = 'Finish';  // Change button text to 'Finish'
-        nextButtonElement.classList.remove('hide');
-        nextButtonElement.addEventListener('click', finishQuiz);  // Add event listener to finish the quiz
+        Array.from(this.answerButtonsElement.children).forEach(button => {
+            const isCorrect = button.dataset.correct;
+            // Ensure buttons are colored accordingly
+            if (button === e.target) {
+                this.setStatusClass(button, isCorrect);
+            } else if (isCorrect) {
+                this.setStatusClass(button, true);
+            }
+            button.disabled = true;
+        });
+
+        if (this.questions.length > this.currentQuestionIndex + 1) {
+            this.nextButtonElement.classList.remove('hide');
+            this.nextButtonElement.removeEventListener('click', this.finishQuiz);
+            this.nextButtonElement.addEventListener('click', this.goToNextQuestion);
+        } else {
+            this.nextButtonElement.innerText = 'Finish';
+            this.nextButtonElement.classList.remove('hide');
+            this.nextButtonElement.removeEventListener('click', this.goToNextQuestion);
+            this.nextButtonElement.addEventListener('click', this.finishQuiz);
+        }
+    }
+
+    // Finalize the quiz and show the score
+    finishQuiz() {
+        this.showScore();
+        this.nextButtonElement.innerText = 'Next';
+        this.nextButtonElement.removeEventListener('click', this.goToNextQuestion);
+        this.nextButtonElement.removeEventListener('click', this.finishQuiz);
+    }
+
+    // Proceed to the next question or finish the quiz
+    goToNextQuestion() {
+        console.log('Going to next question, current index:', this.currentQuestionIndex);
+        if (this.questions.length > this.currentQuestionIndex + 1) {
+            this.currentQuestionIndex++;
+            this.setNextQuestion();
+        } else {
+            this.finishQuiz();
+        }
+    }
+
+    // Update the progress bar
+    updateProgressBar() {
+        document.getElementById('progress-bar').style.width = ((this.currentQuestionIndex + 1) / this.questions.length) * 100 + '%';
+    }
+
+    // Set the status of buttons (correct/incorrect)
+    setStatusClass(element, correct) {
+        element.classList.remove('correct', 'wrong'); 
+        element.classList.add(correct ? 'correct' : 'wrong');  
+    }
+
+    // Show the score
+    showScore() {
+        this.questionContainerElement.classList.add('hide');
+        this.resultContainerElement.classList.remove('hide');
+        let percentage = (this.score / this.questions.length) * 100;
+        let grade = this.getLetterGrade(percentage);
+        document.getElementById('progress-bar-container').classList.add('hide');
+        this.finalScoreElement.textContent = `Your score: ${this.score}/${this.questions.length} (${percentage}% - Grade: ${grade})`;
+    }
+
+    // Convert a score percentage into a letter grade
+    getLetterGrade(percentage) {
+        if (percentage >= 90) return 'A';
+        else if (percentage >= 80) return 'B';
+        else if (percentage >= 70) return 'C';
+        else if (percentage >= 60) return 'D';
+        else return 'F';
     }
 }
 
-function finishQuiz() {
-    showScore();
-    nextButtonElement.innerText = 'Next'; 
-    nextButtonElement.removeEventListener('click', finishQuiz);  
-}
+// Instantiate Quiz class and manage event listeners
+const quiz = new Quiz();
 
-function showScore() {
-    questionContainerElement.classList.add('hide');
-    resultContainerElement.classList.remove('hide');
-    let percentage = (score / shuffledQuestions.length) * 100;
-    let grade = getLetterGrade(percentage);
-    document.getElementById('progress-bar-container').classList.add('hide');
-    finalScoreElement.textContent = `Your score: ${score}/${shuffledQuestions.length} (${percentage}% - Grade: ${grade})`;  
-}
+window.onload = () => {
+    quiz.loadAndStartQuiz();
+};
 
-nextButtonElement.addEventListener('click', () => {
-    currentQuestionIndex++;
-    setNextQuestion();
-});
+quiz.nextButtonElement.addEventListener('click', quiz.goToNextQuestion);
 
-document.getElementById('back-to-lesson').addEventListener('click', () => {
+selectElement('back-to-lesson').addEventListener('click', () => {
     window.location.href = 'https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/README.md#quiz';
 });
 
-document.getElementById('restart').addEventListener('click', () => {
-    currentQuestionIndex = 0;
-    score = 0;
-    resultContainerElement.classList.add('hide');
-    questionContainerElement.classList.remove('hide');
-    startQuiz(shuffledQuestions);
+selectElement('restart').addEventListener('click', () => {
+    quiz.currentQuestionIndex = 0;
+    quiz.score = 0;
+    toggleClass('result-container', 'hide', true);
+    toggleClass('question-container', 'hide', false);
+    quiz.startQuiz(quiz.questions)
+    updateInnerHTML('next-button', 'Next');
+    quiz.nextButtonElement.removeEventListener('click', quiz.finishQuiz);
+    quiz.nextButtonElement.addEventListener('click', quiz.goToNextQuestion);
 });
