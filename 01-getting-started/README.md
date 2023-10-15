@@ -431,8 +431,8 @@ Use this interaction as a reference point while developing your own simulator to
 
 ### Let's Get Coding!
 
-- **Starting Point:** Leverage the code skeleton provided in the chapter's [`/code/`](./code/) folder as a solid foundation to build your Magic 8-Ball simulator.
-- **Solution:** After giving your best effort, if curiosity gets the better of you, or if you need a nudge in the right direction, sneak a peek into the [`/code/answer/`](./code/answer/) folder for one possible solution.
+- **Starting Point:** Leverage the code skeleton provided in the chapter's [`/code/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/code/magic-8-ball.py) folder as a solid foundation to build your Magic 8-Ball simulator.
+- **Solution:** After giving your best effort, if curiosity gets the better of you, or if you need a nudge in the right direction, sneak a peek into the [`/code/answer/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/01-getting-started/code/answer/magic-8-ball.py) folder for one possible solution.
 
 ### Tips
 

@@ -427,8 +427,8 @@ In this interaction, the program validates age input and crafts a personalized g
 
 ### Let's Get Coding!
 
-- **Starting Point:** Utilize the code skeleton in the chapter's [`/code/`](./code/) folder as a foundation for your greeting card generator.
-- **Solution:** Peek into the [`/code/answer/`](./code/answer/) folder if you're curious or want to compare your solution with ours.
+- **Starting Point:** Utilize the code skeleton in the chapter's [`/code/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/02-variables-and-data-types/code/greeting-card.py) folder as a foundation for your greeting card generator.
+- **Solution:** Peek into the [`/code/answer/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/02-variables-and-data-types/code/answer/greeting-card.py) folder if you're curious or want to compare your solution with ours.
 
 ### Tips
 
@@ -442,7 +442,7 @@ Congratulations on creating a personalized greeting card generator! Reflect on y
 
 ## Quiz
 
-Stay tuned! We'll be adding a quiz here to test your knowledge and understanding of the concepts learned in this chapter.
+Take our lesson one quiz [Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/02-variables-and-data-types/quiz/)
 
 ## Next Steps
 
