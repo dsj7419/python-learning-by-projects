@@ -101,5 +101,94 @@
             {"text": ".isupper()", "correct": false}
         ],
         "reason": "There is no string method named `.islowercase()` in Python."
+    },
+    {
+        "question": "What does the `input()` function automatically convert user input to?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Integer", "correct": false},
+            {"text": "Float", "correct": false},
+            {"text": "String", "correct": true},
+            {"text": "Boolean", "correct": false}
+        ],
+        "reason": "The `input()` function automatically converts user input to a string."
+    },
+    {
+        "question": "Which method can be used to generate a random integer within a specific range in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "random.int()", "correct": false},
+            {"text": "random.rangeint()", "correct": false},
+            {"text": "random.randint()", "correct": true},
+            {"text": "random.rangenum()", "correct": false}
+        ],
+        "reason": "`random.randint()` is used to generate a random integer within a specific range."
+    },
+    {
+        "question": "What is the purpose of using `random.seed()` in your code?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To ensure different random values every run", "correct": false},
+            {"text": "To ensure the same random values every run", "correct": true},
+            {"text": "To generate a random number", "correct": false},
+            {"text": "None of the above", "correct": false}
+        ],
+        "reason": "`random.seed()` is used to initialize the random number generator and ensures that the same random values are generated every run."
+    },
+    {
+        "question": "How can you concatenate strings in the `print()` function?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Using commas", "correct": true},
+            {"text": "Using plus (+) operator", "correct": true},
+            {"text": "Using minus (-) operator", "correct": false},
+            {"text": "Using multiplication (*) operator", "correct": false}
+        ],
+        "reason": "You can concatenate strings using both commas and the plus (+) operator in the `print()` function."
+    },
+    {
+        "question": "Which of the following can be used to check if the user input is alphabetical?",
+        "type": "multiple",
+        "answers": [
+            {"text": ".isalpha()", "correct": true},
+            {"text": ".isalnum()", "correct": false},
+            {"text": ".isdigit()", "correct": false},
+            {"text": ".isnumeric()", "correct": false}
+        ],
+        "reason": "The `.isalpha()` method checks whether the string consists of alphabetical characters only."
+    },
+    {
+        "question": "What will the following code snippet output?",
+        "code": "print('Hello', 'World', sep='_')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Hello World", "correct": false},
+            {"text": "Hello_World", "correct": true},
+            {"text": "HelloWorld", "correct": false},
+            {"text": "Hello-World", "correct": false}
+        ],
+        "reason": "The `sep` parameter in the `print()` function specifies the separator between the output values. In this case, it is an underscore."
+    },
+    {
+        "question": "How would you create an infinite loop that keeps asking for input until a numeric value is provided?",
+        "type": "multiple",
+        "answers": [
+            {"code": "while True:\n    user_input = input('Enter a number:')\n    if user_input.isnumeric():\n        break", "correct": true},
+            {"code": "while True:\n    user_input = input('Enter a number:')\n    if not user_input.isnumeric():\n        continue", "correct": false},
+            {"code": "while user_input.isnumeric():\n    user_input = input('Enter a number:')", "correct": false},
+            {"code": "while True:\n    user_input = input('Enter a number:')\n    if user_input.isalpha():\n        break", "correct": false}
+        ],
+        "reason": "Option a) will create an infinite loop that breaks only when the user input is numeric, ensuring valid input."
+    },
+    {
+        "question": "What will the following code snippet output?\n```python\nprint('Hello', 'World', end='!')```",
+        "type": "multiple",
+        "answers": [
+            {"text": "Hello World!", "correct": true},
+            {"text": "Hello! World", "correct": false},
+            {"text": "Hello World", "correct": false},
+            {"text": "HelloWorld!", "correct": false}
+        ],
+        "reason": "The `end` parameter in the `print()` function specifies the end string to print. In this case, it is '!'."
     }
 ]

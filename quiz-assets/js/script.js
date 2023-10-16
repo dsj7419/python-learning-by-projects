@@ -25,7 +25,9 @@ class Quiz {
 
     startQuiz(questions) {
         this.score = 0;
-        this.questions = questions.sort(() => Math.random() - 0.5);
+        const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+        // Take the first 10 questions from the shuffled array
+        this.questions = shuffledQuestions.slice(0, 10);
         this.currentQuestionIndex = 0;
         toggleClass('question-container', 'hide', false);
         toggleClass('progress-bar-container', 'hide', false);
@@ -50,7 +52,10 @@ class Quiz {
 
     showQuestion(question) {
         updateInnerHTML('question', question.question + (question.code ? `<pre><code>${question.code}</code></pre>` : ''));
-        question.answers.forEach(answer => {
+        
+        const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
+        
+        shuffledAnswers.forEach(answer => {
             const button = document.createElement('button');
             button.setAttribute('aria-label', answer.text);
             button.innerHTML = answer.code ? `<pre><code>${answer.code}</code></pre>` : answer.text;
