@@ -1,0 +1,114 @@
+[
+    {
+        "question": "What does the `break` statement do in a loop?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Stops the loop and continues to execute the next lines of code.", "correct": true},
+            {"text": "Breaks the computer.", "correct": false},
+            {"text": "Pauses the loop for a specified time.", "correct": false},
+            {"text": "Restarts the loop.", "correct": false}
+        ],
+        "reason": "The `break` statement terminates the loop and transfers execution to the next statement following the loop."
+    },
+    {
+        "question": "Which of the following is the correct syntax for a basic `for` loop?",
+        "type": "multiple",
+        "answers": [
+            {"code": "for i in range(5):\n    print(i)", "correct": true},
+            {"code": "for (i = 0; i < 5; i++):\n    print(i)", "correct": false},
+            {"code": "for i < 5:\n    print(i)", "correct": false},
+            {"code": "for i to 5:\n    print(i)", "correct": false}
+        ],
+        "reason": "In Python, `for i in range(5):` is the correct syntax to create a loop that iterates 5 times."
+    },
+    {
+        "question": "What will be the output of the following code snippet?",
+        "code": "for i in range(3):\n    print(i)",
+        "type": "multiple",
+        "answers": [
+            {"text": "1 2 3", "correct": false},
+            {"text": "0 1 2", "correct": true},
+            {"text": "3 2 1", "correct": false},
+            {"text": "2 1 0", "correct": false}
+        ],
+        "reason": "The `range(3)` function generates numbers starting from 0 up to (but not including) 3, so the loop prints 0, 1, and 2."
+    },
+    {
+        "question": "What is the main difference between a `while` loop and a `for` loop?",
+        "type": "multiple",
+        "answers": [
+            {"text": "`for` loop is used for sequential traversal.", "correct": false},
+            {"text": "`while` loop is used for iterative traversal.", "correct": false},
+            {"text": "`for` loop is used for looping through a sequence, `while` loop is used when a condition needs to be checked each iteration.", "correct": true},
+            {"text": "There is no difference between `for` and `while` loops.", "correct": false}
+        ],
+        "reason": "`for` loop is generally used for looping through sequences, whereas `while` loop continues iterating as long as a condition is True."
+    },
+    {
+        "question": "What is the output of the following code snippet?",
+        "code": "x = 0\nwhile x < 3:\n    print(x)\n    x += 1",
+        "type": "multiple",
+        "answers": [
+            {"text": "1 2 3", "correct": false},
+            {"text": "0 1 2", "correct": true},
+            {"text": "3 2 1", "correct": false},
+            {"text": "2 1 0", "correct": false}
+        ],
+        "reason": "The while loop prints `x` and increments it in each iteration, thus printing 0, 1, and 2."
+    },
+    {
+        "question": "Which of the following will cause an infinite loop?",
+        "type": "multiple",
+        "answers": [
+            {"code": "while True:\n    print('This is an infinite loop')", "correct": true},
+            {"code": "for i in range(5):\n    print(i)", "correct": false},
+            {"code": "while False:\n    print('This will not be printed')", "correct": false},
+            {"code": "for i in []:\n    print(i)", "correct": false}
+        ],
+        "reason": "Using `while True:` will cause an infinite loop because the condition is always true."
+    },
+    {
+        "question": "Which loop should be used when the number of iterations is known beforehand?",
+        "type": "multiple",
+        "answers": [
+            {"text": "`while` loop", "correct": false},
+            {"text": "`for` loop", "correct": true},
+            {"text": "Both `for` and `while` loops", "correct": false},
+            {"text": "Neither `for` nor `while` loops", "correct": false}
+        ],
+        "reason": "`for` loop is generally used when the number of iterations is known, because it iterates through a sequence of predefined length."
+    },
+    {
+        "question": "What is the purpose of the `continue` statement in loops?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It ends the loop prematurely.", "correct": false},
+            {"text": "It skips to the next iteration of the loop, ignoring the following lines of code in the current iteration.", "correct": true},
+            {"text": "It pauses the loop for a specified amount of time.", "correct": false},
+            {"text": "It causes the loop to repeat the current iteration.", "correct": false}
+        ],
+        "reason": "The `continue` statement in loops skips the rest of the code inside the loop for the current iteration and goes to the next iteration."
+    },
+    {
+        "question": "Which of the following `while` loops will run at least once?",
+        "type": "multiple",
+        "answers": [
+            {"code": "while True:\n    print('This will run at least once')\n    break", "correct": true},
+            {"code": "while False:\n    print('This will not run')", "correct": false},
+            {"code": "x = 5\nwhile x < 5:\n    print('This will not run')", "correct": false},
+            {"code": "x = 10\nwhile x > 15:\n    print('This will not run')", "correct": false}
+        ],
+        "reason": "The first code snippet uses `while True:` meaning the condition for the loop is always true, so it will run at least once. The `break` statement ensures it doesn't run infinitely."
+    },
+    {
+        "question": "Which code snippet correctly initializes a `for` loop that iterates over a list of fruits?",
+        "type": "multiple",
+        "answers": [
+            {"code": "for fruit in ['apple', 'banana', 'cherry']:\n    print(fruit)", "correct": true},
+            {"code": "for ['apple', 'banana', 'cherry'] as fruit:\n    print(fruit)", "correct": false},
+            {"code": "for fruit in list['apple', 'banana', 'cherry']:\n    print(fruit)", "correct": false},
+            {"code": "for fruit list['apple', 'banana', 'cherry']:\n    print(fruit)", "correct": false}
+        ],
+        "reason": "The first code snippet is the correct syntax for a `for` loop iterating over a list in Python."
+    }
+]

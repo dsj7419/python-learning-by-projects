@@ -3,20 +3,56 @@
 
 Welcome to the exciting journey of learning Python through hands-on projects! 🚀 In this initial chapter, we'll set up our Python development environment, write our first Python script, and dive into our first mini-project!
 
-## Table of Contents
+# Table of Contents
 
 - [Introduction](#introduction)
 - [Environment Setup](#environment-setup)
   - [Installing Python](#installing-python)
+    - Download Python
+    - Install Python
   - [Setting Up a Virtual Environment](#setting-up-a-virtual-environment)
+    - Install virtualenv
+    - Create a Virtual Environment
+    - Activate the Virtual Environment
   - [Installing an IDE](#installing-an-ide)
+    - Download and Install
+    - Install Python Extension
 - [Your First Python Script: Hello, World!](#your-first-python-script-hello-world)
+  - Create a File
+  - Write Code
+  - Save the File
+  - Run the Script
 - [Lesson Plan](#lesson-plan)
-   - [User Input](#1-user-input)
-   - [Random Selection](#2-random-selection)
-   - [Output to Console](#3-output-to-console)
-   - [Basic Input Validation](#4-basic-input-validation)
-- [Mini-Example: Bringing it all together](#mini-example-bringing-it-all-together)
+  - [1. User Input](#1-user-input)
+    - [Understanding `input()`](#understanding-input)
+    - [How `input()` Works](#how-input-works)
+    - [Handling User Input](#handling-user-input)
+    - [Practical Application](#practical-application)
+    - [Key Takeaways](#key-takeaways)
+  - [2. Random Selection](#2-random-selection)
+    - [Introduction to `random` Module](#introduction-to-random-module)
+    - [Using `random.choice()`](#using-randomchoice)
+    - [Random Numbers: `random.randint()`](#random-numbers-randomrandint)
+    - [Ensuring Randomness: Seed](#ensuring-randomness-seed)
+    - [Key Takeaways](#key-takeaways)
+  - [3. Output to Console](#3-output-to-console)
+    - [Utilizing `print()`](#utilizing-print)
+    - [Syntax of `print()`](#syntax-of-print)
+    - [Displaying Multiple Items](#displaying-multiple-items)
+    - [Customizing Output](#customizing-output)
+    - [Formatting Strings](#formatting-strings)
+    - [Key Takeaways](#key-takeaways)
+    - [Practical Application](#practical-application)
+  - [4. Basic Input Validation](#4-basic-input-validation)
+    - [Ensuring Appropriate User Input](#ensuring-appropriate-user-input)
+    - [The Necessity of Validation](#the-necessity-of-validation)
+    - [Utilizing `if` Statements for Validation](#utilizing-if-statements-for-validation)
+    - [Basic Syntax of `if` Statement](#basic-syntax-of-if-statement)
+    - [Example: Numeric Validation](#example-numeric-validation)
+    - [Implementing Loops for Continuous Validation](#implementing-loops-for-continuous-validation)
+    - [Example: Continuous Validation](#example-continuous-validation)
+    - [Key Takeaways](#key-takeaways)
+- [Mini-Example: Bringing It All Together](#mini-example-bringing-it-all-together)
 - [Project: Magic 8-Ball Simulator](#project-magic-8-ball-simulator)
   - [Objective](#objective)
   - [Requirements](#requirements)
