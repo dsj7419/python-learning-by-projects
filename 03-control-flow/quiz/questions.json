@@ -60,9 +60,9 @@
         "question": "Which of the following will cause an infinite loop?",
         "type": "multiple",
         "answers": [
-            {"code": "while True:\n    print('This is an infinite loop')", "correct": true},
+            {"code": "while True:\n    print('Loop this statement')", "correct": true},
             {"code": "for i in range(5):\n    print(i)", "correct": false},
-            {"code": "while False:\n    print('This will not be printed')", "correct": false},
+            {"code": "while False:\n    print('Loop this statement')", "correct": false},
             {"code": "for i in []:\n    print(i)", "correct": false}
         ],
         "reason": "Using `while True:` will cause an infinite loop because the condition is always true."
