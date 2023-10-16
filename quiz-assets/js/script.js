@@ -1,4 +1,4 @@
-import { fetchQuizData, selectElement, updateInnerHTML, toggleClass } from './utils.js';
+import { fetchQuizData, selectElement, updateInnerHTML, toggleClass, startTimer, resetTimer, getElapsedTime, formatTime } from './utils.js';
 
 class Quiz {
     constructor() {
@@ -11,6 +11,9 @@ class Quiz {
         this.finishQuiz = this.finishQuiz.bind(this);
         this.selectAnswer = this.selectAnswer.bind(this);
         this.goToNextQuestion = this.goToNextQuestion.bind(this);
+        this.startQuizButton = selectElement('start-quiz');
+        this.splashContainerElement = selectElement('splash-container');
+        this.elapsedTimeElement = selectElement('elapsed-time');
         this.questions = [];
         this.currentQuestionIndex = 0;
         this.score = 0;
@@ -26,12 +29,14 @@ class Quiz {
     startQuiz(questions) {
         this.score = 0;
         const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-        // Take the first 10 questions from the shuffled array
         this.questions = shuffledQuestions.slice(0, 10);
         this.currentQuestionIndex = 0;
         toggleClass('question-container', 'hide', false);
         toggleClass('progress-bar-container', 'hide', false);
         this.setNextQuestion();
+        this.splashContainerElement.classList.add('hide'); // Hide splash page
+        toggleClass('question-container', 'hide', false); // Show quiz container
+        startTimer();
     }
 
     setNextQuestion() {
@@ -113,7 +118,8 @@ class Quiz {
 
     // Finalize the quiz and show the score
     finishQuiz() {
-        this.showScore();
+        const elapsedTime = getElapsedTime();
+        this.showScore(elapsedTime);
         this.nextButtonElement.classList.add('hide');
         this.nextButtonElement.innerText = 'Next';
         this.nextButtonElement.removeEventListener('click', this.goToNextQuestion);
@@ -145,7 +151,7 @@ class Quiz {
     }
 
     // Show the score
-    showScore() {
+    showScore(elapsedTime) {
         this.questionContainerElement.classList.add('hide');
         this.resultContainerElement.classList.remove('hide');
         let percentage = (this.score / this.questions.length) * 100;
@@ -153,6 +159,7 @@ class Quiz {
         document.getElementById('progress-bar-container').classList.add('hide');
         this.finalScoreElement.setAttribute('aria-live', 'polite');
         this.finalScoreElement.textContent = `Your score: ${this.score}/${this.questions.length} (${percentage}% - Grade: ${grade})`;
+        updateInnerHTML('elapsed-time', formatTime(elapsedTime));
     }
 
     // Convert a score percentage into a letter grade
@@ -169,8 +176,17 @@ class Quiz {
 const quiz = new Quiz();
 
 window.onload = () => {
-    quiz.loadAndStartQuiz();
+    toggleClass('splash-page', 'hide', false);
+    toggleClass('question-container', 'hide', true);
+    selectElement('start-quiz').addEventListener('click', () => {
+        toggleClass('splash-page', 'hide', true);
+        quiz.loadAndStartQuiz();
+    });
 };
+
+quiz.startQuizButton.addEventListener('click', () => {
+    quiz.loadAndStartQuiz(); // Load questions only when "Start Quiz" is clicked
+});
 
 quiz.nextButtonElement.addEventListener('click', quiz.goToNextQuestion);
 
@@ -183,9 +199,9 @@ selectElement('restart').addEventListener('click', () => {
     quiz.currentQuestionIndex = 0;
     quiz.score = 0;
     toggleClass('result-container', 'hide', true);
-    toggleClass('question-container', 'hide', false);
-    quiz.loadAndStartQuiz();
-    updateInnerHTML('next-button', 'Next');
+    toggleClass('splash-container', 'hide', false); 
+    resetTimer(); 
     quiz.nextButtonElement.removeEventListener('click', quiz.finishQuiz);
-    quiz.nextButtonElement.addEventListener('click', quiz.goToNextQuestion);
+    quiz.nextButtonElement.removeEventListener('click', quiz.goToNextQuestion);
+    updateInnerHTML('next-button', 'Next');
 });

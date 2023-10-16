@@ -106,5 +106,115 @@
             {"text": "None of the above", "correct": false}
         ],
         "reason": "Strings are immutable in Python. Once a string is created, it cannot be changed."
+    },
+    {
+        "question": "Which of the following is a correct variable assignment?",
+        "type": "multiple",
+        "answers": [
+            {"text": "my_var == 10", "correct": false},
+            {"text": "10 = my_var", "correct": false},
+            {"text": "my_var = 10", "correct": true},
+            {"text": "my_var: 10", "correct": false}
+        ],
+        "reason": "In Python, a variable is assigned a value using the '=' operator."
+    },
+    {
+        "question": "What is the output of the following code snippet?",
+        "code": "print(round(5.76543, 2))",
+        "type": "multiple",
+        "answers": [
+            {"text": "5.77", "correct": true},
+            {"text": "5.76", "correct": false},
+            {"text": "6", "correct": false},
+            {"text": "5", "correct": false}
+        ],
+        "reason": "The round() function rounds 5.76543 to 5.77 because it is specified to round to 2 decimal places."
+    },
+    {
+        "question": "What does the following code return: type(5.0)?",
+        "type": "multiple",
+        "answers": [
+            {"text": "<class 'int'>", "correct": false},
+            {"text": "<class 'float'>", "correct": true},
+            {"text": "<class 'str'>", "correct": false},
+            {"text": "<class 'bool'>", "correct": false}
+        ],
+        "reason": "The number 5.0 is a floating-point number, so type(5.0) returns <class 'float'>."
+    },
+    {
+        "question": "What is the result of the following operation: 10 % 3?",
+        "type": "multiple",
+        "answers": [
+            {"text": "1", "correct": true},
+            {"text": "3", "correct": false},
+            {"text": "0", "correct": false},
+            {"text": "30", "correct": false}
+        ],
+        "reason": "The modulus operator (%) returns the remainder of the division of 10 by 3, which is 1."
+    },
+    {
+        "question": "Which of the following is NOT a fundamental data type in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": false},
+            {"text": "char", "correct": true},
+            {"text": "bool", "correct": false}
+        ],
+        "reason": "Python does not have a character ('char') data type. Characters are simply strings with a length of 1."
+    },
+    {
+        "question": "What will the following code snippet output?",
+        "code": "print(int('102', 3))",
+        "type": "multiple",
+        "answers": [
+            {"text": "102", "correct": false},
+            {"text": "35", "correct": false},
+            {"text": "11", "correct": true},
+            {"text": "Error", "correct": false}
+        ],
+        "reason": "The int() function with two arguments converts the first argument to an integer treating it as a number of the base provided as the second argument. Thus, '102' in base 3 is converted to 11 in base 10."
+    },
+    {
+        "question": "Is it possible to concatenate a string and an integer directly in Python?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "In Python, you cannot directly concatenate a string and an integer. You need to convert the integer to a string using str() before concatenation."
+    },
+    {
+        "question": "What is the result of the following operation: 2 ** 3?",
+        "type": "multiple",
+        "answers": [
+            {"text": "6", "correct": false},
+            {"text": "8", "correct": true},
+            {"text": "5", "correct": false},
+            {"text": "9", "correct": false}
+        ],
+        "reason": "The ** operator calculates the power of a number. So, 2 ** 3 equals 8."
+    },
+    {
+        "question": "Which of the following correctly represents a floating-point number?",
+        "type": "multiple",
+        "answers": [
+            {"text": "100", "correct": false},
+            {"text": "100.0", "correct": true},
+            {"text": "100.00.00", "correct": false},
+            {"text": "One Hundred", "correct": false}
+        ],
+        "reason": "100.0 is a valid representation of a floating-point number."
+    },
+    {
+        "question": "What does 'Dynamic Typing' mean in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Variables can change type after they have been set.", "correct": true},
+            {"text": "Variables must be declared before use.", "correct": false},
+            {"text": "Variables cannot change type once set.", "correct": false},
+            {"text": "Variables can only hold integer values.", "correct": false}
+        ],
+        "reason": "Dynamic Typing means that variables are allowed to change their type during the program execution."
     }
 ]

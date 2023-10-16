@@ -110,5 +110,107 @@
             {"code": "for fruit list['apple', 'banana', 'cherry']:\n    print(fruit)", "correct": false}
         ],
         "reason": "The first code snippet is the correct syntax for a `for` loop iterating over a list in Python."
+    },
+    {
+        "question": "How does a program handle decision-making in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Using conditional statements", "correct": true},
+            {"text": "Using loops", "correct": false},
+            {"text": "Using functions", "correct": false},
+            {"text": "Using classes", "correct": false}
+        ],
+        "reason": "Conditional statements (if, elif, and else) are used for decision-making in Python."
+    },
+    {
+        "question": "What will be the output of the following code?",
+        "code": "x = 15\ny = 12\nprint('Yes') if x > y else print('No')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Yes", "correct": true},
+            {"text": "No", "correct": false},
+            {"text": "Error", "correct": false},
+            {"text": "None", "correct": false}
+        ],
+        "reason": "The ternary operator checks if x is greater than y, and since 15 > 12, it prints 'Yes'."
+    },
+    {
+        "question": "Which of the following code snippets correctly uses the `enumerate` function in a `for` loop?",
+        "type": "multiple",
+        "answers": [
+            {"code": "for i, val in enumerate(['apple', 'banana', 'cherry']):\n    print(i, val)", "correct": true},
+            {"code": "for ['apple', 'banana', 'cherry'] as i, val:\n    print(i, val)", "correct": false},
+            {"code": "for i, val in ['apple', 'banana', 'cherry']:\n    print(i, val)", "correct": false},
+            {"code": "for enumerate(['apple', 'banana', 'cherry']) as i, val:\n    print(i, val)", "correct": false}
+        ],
+        "reason": "The enumerate function is used as `for i, val in enumerate(list):`, where `i` is the index and `val` is the value."
+    },
+    {
+        "question": "What is the output of the following code snippet?",
+        "code": "x = 10\nwhile x > 0:\n    x -= 1\n    if x == 5:\n        continue\n    print(x)",
+        "type": "multiple",
+        "answers": [
+            {"text": "9 8 7 6 4 3 2 1 0", "correct": true},
+            {"text": "9 8 7 6 5 4 3 2 1 0", "correct": false},
+            {"text": "10 9 8 7 6 4 3 2 1", "correct": false},
+            {"text": "10 9 8 7 6 5 4 3 2 1 0", "correct": false}
+        ],
+        "reason": "The `continue` statement causes the loop to skip printing the value 5."
+    },
+    {
+        "question": "Which of the following is NOT a logical operator in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "and", "correct": false},
+            {"text": "or", "correct": false},
+            {"text": "not", "correct": false},
+            {"text": "nand", "correct": true}
+        ],
+        "reason": "Python does not have a 'nand' logical operator. The logical operators are 'and', 'or', and 'not'."
+    },
+    {
+        "question": "How can you create an infinite loop using a `for` loop?",
+        "type": "multiple",
+        "answers": [
+            {"code": "for i in range(10):\n    pass", "correct": false},
+            {"code": "for i in iter(int, 1):\n    pass", "correct": true},
+            {"code": "for i in range(0):\n    pass", "correct": false},
+            {"code": "for i in []:\n    pass", "correct": false}
+        ],
+        "reason": "Using `for i in iter(int, 1):` will create an infinite loop because `iter(int, 1)` will keep producing `int` indefinitely."
+    },
+    {
+        "question": "What does the `else` clause in a Python `for` loop do?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It is executed once after the `for` loop completes.", "correct": true},
+            {"text": "It is executed once before the `for` loop starts.", "correct": false},
+            {"text": "It is executed whenever the `for` loop is running.", "correct": false},
+            {"text": "It is executed if the `for` loop is skipped.", "correct": false}
+        ],
+        "reason": "In Python, the `else` statement associated with a `for` loop is executed once the loop has completed."
+    },
+    {
+        "question": "What will be the output of the following code snippet?",
+        "code": "for i in range(5):\n    if i == 3:\n        break\nelse:\n    print('Loop finished')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Loop finished", "correct": false},
+            {"text": "No output", "correct": true},
+            {"text": "3", "correct": false},
+            {"text": "Error", "correct": false}
+        ],
+        "reason": "The `else` block following a loop is executed only if the loop ran to completion without encountering a `break` statement."
+    },
+    {
+        "question": "What is the primary purpose of nested conditionals?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To enhance the complexity of a program unnecessarily.", "correct": false},
+            {"text": "To check for another condition if one condition is true.", "correct": true},
+            {"text": "To repeat a block of code several times.", "correct": false},
+            {"text": "To avoid using loops in a program.", "correct": false}
+        ],
+        "reason": "Nested conditionals allow the program to check for another condition if the outer condition is true, allowing for more detailed decision-making."
     }
 ]
