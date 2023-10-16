@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../quiz-assets/css/style.css">
-    <title>Control Flow Quiz</title>
+    <title>Accessibility Quiz</title>
 </head>
 <body>
     <div id="quiz-container" role="main" aria-labelledby="quiz-heading">
-        <h1 id="quiz-heading" class="visually-hidden">Control Flow Quiz</h1>
+        <h1 id="quiz-heading" class="visually-hidden">Lesson 3 Quiz: Control Flow</h1>
         
+        <!-- Splash Page -->
+        <div id="splash-container">
+            <h2>Welcome to the Lesson 3 Quiz: Control Flow</h2>
+            <p>Test your knowledge of the topics we covered in this lesson! Click the button below to start.</p>
+            <button class="btn" id="start-quiz" role="button" aria-label="Start the quiz">Start Quiz</button>
+        </div>
+        +
+        <!-- Progress Bar -->
         <div id="progress-bar-container" class="hide" aria-labelledby="progress-text">
             <div id="progress-bar"></div>
             <p id="progress-text" class="visually-hidden"></p>
         </div>
 
-        <div id="question-container" aria-live="polite">
+        <!-- Question Container -->
+        <div id="question-container" class="hide" aria-live="polite">
             <p id="question-number"></p>
             <div id="question">Question text will go here</div>
             <div id="answer-buttons" class="btn-grid" role="region" aria-labelledby="question" aria-describedby="answer-feedback">
-                <button class="btn" role="button">Answer 1</button>
-                <button class="btn" role="button">Answer 2</button>
-                <button class="btn" role="button">Answer 3</button>
-                <button class="btn" role="button">Answer 4</button>
+                <!-- Answer buttons will be injected here -->
             </div>
             <div id="answer-feedback" class="hide" aria-live="assertive"></div>
         </div>
 
+        <!-- Result Container -->
         <div id="result-container" class="hide" aria-live="polite">
             <h2 id="final-score">Your score: </h2>
-            <button class="btn" id="restart" role="button">Restart</button>
+            <div id="time-container">Your time: <span id="elapsed-time">0</span> seconds</div>
+            <button class="btn" id="restart" role="button" aria-label="Restart the quiz">Restart</button>
             <button class="btn" id="back-to-lesson" data-lesson-url="https://dsj7419.github.io/python-learning-by-projects/03-control-flow/#quiz" role="button">Back to Lesson</button>
         </div>
 
