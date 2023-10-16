@@ -274,8 +274,8 @@ Construct a thrilling, text-based adventure game that leads the user through var
 
 ### Let's Get Coding!
 
-- **Starting Point:** Leverage the code skeleton provided in the chapter's [`/code/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/03-lesson/code/adventure-game.py) folder as a solid foundation to build your adventure game.
-- **Solution:** After giving it your best effort, if you're curious, or if you need a nudge in the right direction, sneak a peek into the [`/code/answer/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/03-lesson/code/answer/adventure-game.py) folder for one possible solution.
+- **Starting Point:** Leverage the code skeleton provided in the chapter's [`/code/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/03-control-flow/code/adventure-game.py) folder as a solid foundation to build your adventure game.
+- **Solution:** After giving it your best effort, if you're curious, or if you need a nudge in the right direction, sneak a peek into the [`/code/answer/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/03-control-flow/code/answer/adventure-game.py) folder for one possible solution.
 
 ### Note
 

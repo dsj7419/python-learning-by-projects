@@ -34,15 +34,15 @@
         "reason": "The `range(3)` function generates numbers starting from 0 up to (but not including) 3, so the loop prints 0, 1, and 2."
     },
     {
-        "question": "What is the main difference between a `while` loop and a `for` loop?",
+        "question": "Which statement accurately describes the primary distinction between a `for` loop and a `while` loop?",
         "type": "multiple",
         "answers": [
-            {"text": "`for` loop is used for sequential traversal.", "correct": false},
-            {"text": "`while` loop is used for iterative traversal.", "correct": false},
-            {"text": "`for` loop is used for looping through a sequence, `while` loop is used when a condition needs to be checked each iteration.", "correct": true},
-            {"text": "There is no difference between `for` and `while` loops.", "correct": false}
+            {"text": "`for` loops traverse through a predefined sequence.", "correct": false},
+            {"text": "`while` loops iterate based on a persistent condition.", "correct": false},
+            {"text": "`for` loops typically iterate through a sequence, while `while` loops iterate based on a condition being True.", "correct": true},
+            {"text": "No significant difference exists between `for` and `while` loops.", "correct": false}
         ],
-        "reason": "`for` loop is generally used for looping through sequences, whereas `while` loop continues iterating as long as a condition is True."
+        "reason": "Generally, `for` loops are used to iterate through sequences (like lists or ranges), whereas `while` loops continue iterating as long as a specified condition evaluates to True."
     },
     {
         "question": "What is the output of the following code snippet?",
@@ -94,9 +94,9 @@
         "type": "multiple",
         "answers": [
             {"code": "while True:\n    print('This will run at least once')\n    break", "correct": true},
-            {"code": "while False:\n    print('This will not run')", "correct": false},
-            {"code": "x = 5\nwhile x < 5:\n    print('This will not run')", "correct": false},
-            {"code": "x = 10\nwhile x > 15:\n    print('This will not run')", "correct": false}
+            {"code": "while False:\n    print('This will run at least once')", "correct": false},
+            {"code": "x = 5\nwhile x < 5:\n    print('This will run at least once')", "correct": false},
+            {"code": "x = 10\nwhile x > 15:\n    print('This will run at least once')", "correct": false}
         ],
         "reason": "The first code snippet uses `while True:` meaning the condition for the loop is always true, so it will run at least once. The `break` statement ensures it doesn't run infinitely."
     },
