@@ -272,6 +272,54 @@ Construct a thrilling, text-based adventure game that leads the user through var
 
 **Pro Tip:** Prioritize user experience by offering clear instructions and ensuring logical game flow. This project is a fantastic opportunity to apply your knowledge of loops and conditionals, creating an engaging application with your newfound Python skills!
 
+
+### Sample Interaction
+
+Envision the possible interaction that a user might experience while engaging with your Adventure Game:
+
+```plaintext
+Welcome to the Adventure Game!
+You find yourself in a dark room with two doors.
+Choose wisely, for one door leads to safety, and the other to doom.
+
+Do you go through door 1 or door 2?
+> 3
+Invalid choice. Please choose door 1 or door 2.
+
+Do you go through door 1 or door 2?
+> 1
+
+You find yourself in a sunny meadow filled with flowers.
+Congratulations! You found the way to safety.
+
+Would you like to play again? (yes/no)
+> maybe
+Invalid choice. Please answer with 'yes' or 'no'.
+
+Would you like to play again? (yes/no)
+> yes
+
+Welcome to the Adventure Game!
+You find yourself in a dark room with two doors.
+Choose wisely, for one door leads to safety, and the other to doom.
+
+Do you go through door 1 or door 2?
+> 2
+
+You are greeted by a hungry lion.
+Sorry, you will not make it out alive.
+
+Would you like to play again? (yes/no)
+> no
+Thank you for playing! Goodbye.
+```
+
+In this sample interaction:
+- The user first chooses an invalid door number ("3") and is prompted to choose again.
+- Upon selecting door "1", they are led to safety and then choose to play again.
+- In the next round, they select door "2" and meet a less fortunate fate.
+- The user decides not to play again, and the program thanks them and exits.
+
 ### Let's Get Coding!
 
 - **Starting Point:** Leverage the code skeleton provided in the chapter's [`/code/`](https://github.com/dsj7419/python-learning-by-projects/blob/main/03-control-flow/code/adventure-game.py) folder as a solid foundation to build your adventure game.

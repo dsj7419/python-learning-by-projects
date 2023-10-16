@@ -383,19 +383,19 @@ Develop a Python application that crafts a personalized greeting card! The progr
    - Utilize `input()` to request the user to input their name and age.
    - Validate the age input ensuring it’s a valid integer, providing feedback and re-prompting if necessary.
    - Example:
-     \```python
+     ```python
      name = input("Enter your name: ")
      age_str = input("Enter your age: ")
      while not age_str.isdigit() or int(age_str) < 0:
          print("Invalid input. Please enter a positive number.")
          age_str = input("Enter your age: ")
-     \```
+     ```
 
 2. **Crafting and Displaying a Personalized Message:**
    - Use string concatenation or f-string formatting to construct a personalized greeting.
    - Employ conditional statements to add additional messages suitable for various age ranges.
    - Example:
-     \```python
+     ```python
      age = int(age_str)
      print(f"\\n🎉 Happy Birthday, {name}! 🎉")
      print(f"Congratulations on turning {age}!")
@@ -405,14 +405,14 @@ Develop a Python application that crafts a personalized greeting card! The progr
          print("May your wisdom continue to grow!")
      else:
          print("Celebrate the wonderful journey so far!")
-     \```
+     ```
      Ensure messages are engaging, warm, and create a delightful user experience.
 
 ### Sample Interaction
 
 Consider how users might interact with your greeting card generator:
 
-\```
+```
 Enter your name: Taylor
 Enter your age: twenty
 Invalid input. Please enter a positive number.
@@ -421,7 +421,7 @@ Enter your age: 20
 🎉 Happy Birthday, Taylor! 🎉
 Congratulations on turning 20!
 May your wisdom continue to grow!
-\```
+```
 
 In this interaction, the program validates age input and crafts a personalized greeting card, providing a seamless and delightful user experience.
 
