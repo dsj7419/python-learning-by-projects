@@ -184,7 +184,7 @@ selectElement('restart').addEventListener('click', () => {
     quiz.score = 0;
     toggleClass('result-container', 'hide', true);
     toggleClass('question-container', 'hide', false);
-    quiz.startQuiz(quiz.questions)
+    quiz.loadAndStartQuiz();
     updateInnerHTML('next-button', 'Next');
     quiz.nextButtonElement.removeEventListener('click', quiz.finishQuiz);
     quiz.nextButtonElement.addEventListener('click', quiz.goToNextQuestion);

@@ -190,5 +190,16 @@
             {"text": "HelloWorld!", "correct": false}
         ],
         "reason": "The `end` parameter in the `print()` function specifies the end string to print. In this case, it is '!'."
-    }
+    },
+    {
+        "question": "Which of the following is a valid way to format strings in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Using f-strings: f'Hello {name}'", "correct": true},
+            {"text": "Using concatenation: 'Hello ' + name", "correct": true},
+            {"text": "Using placeholders: 'Hello {}'.format(name)", "correct": true},
+            {"text": "All of the above", "correct": true}
+        ],
+        "reason": "All three options are valid ways to format strings in Python: f-strings, concatenation, and placeholders with the format method."
+    }    
 ]
