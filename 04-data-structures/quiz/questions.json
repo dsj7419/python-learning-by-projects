@@ -1,0 +1,219 @@
+[
+    {
+        "question": "Which of the following is a valid list declaration in Python?",
+        "type": "multiple",
+        "answers": [
+            {"code": "my_list = [1, 2, 3, 'Python', True]", "correct": true},
+            {"code": "my_list = list[1, 2, 3]", "correct": false},
+            {"code": "my_list = {1: 'one', 2: 'two'}", "correct": false},
+            {"code": "my_list = (1, 2, 3)", "correct": false}
+        ],
+        "reason": "In Python, lists are declared using square brackets containing a comma-separated sequence of values."
+    },
+    {
+        "question": "What will the following list operation return? `['a', 'b', 'c'][1]`",
+        "type": "multiple",
+        "answers": [
+            {"text": "'a'", "correct": false},
+            {"text": "'b'", "correct": true},
+            {"text": "'c'", "correct": false},
+            {"text": "1", "correct": false}
+        ],
+        "reason": "Lists in Python use zero-based indexing. The item at index 1 is 'b'."
+    },
+    {
+        "question": "Which method can be used to add multiple items to a list?",
+        "type": "multiple",
+        "answers": [
+            {"text": "append()", "correct": false},
+            {"text": "add()", "correct": false},
+            {"text": "extend()", "correct": true},
+            {"text": "push()", "correct": false}
+        ],
+        "reason": "The `extend()` method is used to add multiple items to a list."
+    },
+    {
+        "question": "What is the primary characteristic of dictionaries in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "They are ordered collections of items.", "correct": false},
+            {"text": "They contain only unique items.", "correct": false},
+            {"text": "They store key-value pairs.", "correct": true},
+            {"text": "They are immutable.", "correct": false}
+        ],
+        "reason": "Dictionaries in Python are collections of key-value pairs."
+    },
+    {
+        "question": "What will the following dictionary operation return? `{'name': 'Alice', 'age': 30}['name']`",
+        "type": "multiple",
+        "answers": [
+            {"text": "Alice", "correct": true},
+            {"text": "30", "correct": false},
+            {"text": "name", "correct": false},
+            {"text": "age", "correct": false}
+        ],
+        "reason": "In dictionaries, values are accessed using their corresponding keys. The key 'name' maps to the value 'Alice'."
+    },
+    {
+        "question": "Which of the following methods will merge two dictionaries?",
+        "type": "multiple",
+        "answers": [
+            {"text": "append()", "correct": false},
+            {"text": "merge()", "correct": false},
+            {"text": "combine()", "correct": false},
+            {"text": "update()", "correct": true}
+        ],
+        "reason": "The `update()` method is used to merge the contents of one dictionary into another."
+    },
+    {
+        "question": "Sets in Python are:",
+        "type": "multiple",
+        "answers": [
+            {"text": "Ordered collections of items.", "correct": false},
+            {"text": "Unordered and indexed collections.", "correct": false},
+            {"text": "Unordered collections of unique items.", "correct": true},
+            {"text": "Immutable collections.", "correct": false}
+        ],
+        "reason": "Sets are unordered collections that ensure all items are unique."
+    },
+    {
+        "question": "Which method can be used to safely remove an item from a set without raising an error if the item doesn't exist?",
+        "type": "multiple",
+        "answers": [
+            {"text": "remove()", "correct": false},
+            {"text": "discard()", "correct": true},
+            {"text": "delete()", "correct": false},
+            {"text": "pop()", "correct": false}
+        ],
+        "reason": "The `discard()` method removes an item from a set without raising an error if the item isn't found."
+    },
+    {
+        "question": "Which of the following operations will return a set with elements common to two sets?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Union", "correct": false},
+            {"text": "Difference", "correct": false},
+            {"text": "Symmetric Difference", "correct": false},
+            {"text": "Intersection", "correct": true}
+        ],
+        "reason": "The Intersection operation returns a set containing elements that are common to both sets."
+    },
+    {
+        "question": "In Python, which data structure is especially useful for creating and managing to-do lists?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Tuples", "correct": false},
+            {"text": "Sets", "correct": false},
+            {"text": "Dictionaries", "correct": true},
+            {"text": "Queues", "correct": false}
+        ],
+        "reason": "Dictionaries, with their key-value pair structure, are particularly suitable for creating to-do lists where tasks can be linked with their status or other attributes."
+    },
+    {
+        "question": "Lists can have duplicate elements, but sets cannot. Additionally, lists are ordered, while sets are unordered. Is this statement true?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Lists can indeed have duplicate elements, and they maintain order. Sets, on the other hand, don't allow duplicates and don't guarantee any specific order."
+    },
+    {
+        "question": "Consider the following code:",
+        "code": "my_list = [10, 20, 30, 40]\nmy_list[1:3] = [25, 35]",
+        "type": "multiple",
+        "answers": [
+            {"text": "my_list becomes [10, 20, 30, 25, 35, 40]", "correct": false},
+            {"text": "my_list becomes [10, 25, 35, 40]", "correct": true},
+            {"text": "An error occurs.", "correct": false},
+            {"text": "my_list remains unchanged.", "correct": false}
+        ],
+        "reason": "The slice assignment replaces the portion of the list from index 1 to 3 with the new list, resulting in [10, 25, 35, 40]."
+    },
+    {
+        "question": "Dictionaries in Python are mutable.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Dictionaries in Python can be modified after their creation, making them mutable."
+    },
+    {
+        "question": "What does the following code return?",
+        "code": "{'apple': 5, 'banana': 3, 'cherry': 8}.get('mango', 0)",
+        "type": "multiple",
+        "answers": [
+            {"text": "5", "correct": false},
+            {"text": "3", "correct": false},
+            {"text": "0", "correct": true},
+            {"text": "None", "correct": false}
+        ],
+        "reason": "The `get()` method returns the value for the given key if it exists. If not, it returns the default value provided, which is 0 in this case."
+    },
+    {
+        "question": "Sets automatically remove any duplicate values added to them.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Sets are collections of unique elements. Any duplicate values added to a set are automatically removed."
+    },
+    {
+        "question": "How would you represent an empty set in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "{}", "correct": false},
+            {"text": "set()", "correct": true},
+            {"text": "[]", "correct": false},
+            {"text": "()", "correct": false}
+        ],
+        "reason": "An empty set is represented by set(). Using {} would create an empty dictionary."
+    },
+    {
+        "question": "What will the following code snippet return?",
+        "code": "my_set = {1, 2, 3, 4}\nmy_set.add(3)\nlen(my_set)",
+        "type": "multiple",
+        "answers": [
+            {"text": "3", "correct": false},
+            {"text": "4", "correct": true},
+            {"text": "5", "correct": false},
+            {"text": "6", "correct": false}
+        ],
+        "reason": "The `add()` method will not add a duplicate value to the set. Therefore, the size of the set remains 4."
+    },
+    {
+        "question": "Which of these is NOT a valid way to create a dictionary?",
+        "type": "multiple",
+        "answers": [
+            {"code": "dict(a=1, b=2, c=3)", "correct": false},
+            {"code": "{'a': 1, 'b': 2, 'c': 3}", "correct": false},
+            {"code": "dict(['a', 1], ['b', 2], ['c', 3])", "correct": true},
+            {"code": "dict([('a', 1), ('b', 2), ('c', 3)])", "correct": false}
+        ],
+        "reason": "The correct syntax for the `dict()` constructor with a list of pairs is `dict([('a', 1), ('b', 2), ('c', 3)])`."
+    },
+    {
+        "question": "If you use a mutable object like a list as a dictionary key, what will happen?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The dictionary will be created successfully.", "correct": false},
+            {"text": "A TypeError will be raised.", "correct": true},
+            {"text": "The list will be automatically converted to a tuple.", "correct": false},
+            {"text": "The dictionary will have a None key.", "correct": false}
+        ],
+        "reason": "Mutable objects like lists cannot be used as dictionary keys. Doing so will raise a TypeError."
+    },
+    {
+        "question": "Which of the following is a practical application for using a set in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Storing items in a specific order.", "correct": false},
+            {"text": "Removing duplicate items from a list.", "correct": true},
+            {"text": "Mapping keys to values.", "correct": false},
+            {"text": "Appending new items at specific indices.", "correct": false}
+        ],
+        "reason": "Sets are useful for ensuring that all items are unique, making them ideal for removing duplicates from a list."
+    }
+]

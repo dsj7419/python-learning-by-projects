@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../quiz-assets/css/style.css">
+    <title>Accessibility Quiz</title>
+</head>
+<body>
+    <div id="quiz-container" role="main" aria-labelledby="quiz-heading">
+        <h1 id="quiz-heading" class="visually-hidden">Lesson 4 Quiz: Data Structures</h1>
+        
+        <!-- Splash Page -->
+        <div id="splash-container">
+            <h2>Welcome to the Lesson 4 Quiz: Data Structures</h2>
+            <p>Test your knowledge of the topics we covered in this lesson! Click the button below to start.</p>
+            <button class="btn" id="start-quiz" role="button" aria-label="Start the quiz">Start Quiz</button>
+        </div>
+        +
+        <!-- Progress Bar -->
+        <div id="progress-bar-container" class="hide" aria-labelledby="progress-text">
+            <div id="progress-bar"></div>
+            <p id="progress-text" class="visually-hidden"></p>
+        </div>
+
+        <!-- Question Container -->
+        <div id="question-container" class="hide" aria-live="polite">
+            <p id="question-number"></p>
+            <div id="question">Question text will go here</div>
+            <div id="answer-buttons" class="btn-grid" role="region" aria-labelledby="question" aria-describedby="answer-feedback">
+                <!-- Answer buttons will be injected here -->
+            </div>
+            <div id="answer-feedback" class="hide" aria-live="assertive"></div>
+        </div>
+
+        <!-- Result Container -->
+        <div id="result-container" class="hide" aria-live="polite">
+            <h2 id="final-score">Your score: </h2>
+            <div id="time-container">Your time: <span id="elapsed-time">0</span> seconds</div>
+            <button class="btn" id="restart" role="button" aria-label="Restart the quiz">Restart</button>
+            <button class="btn" id="back-to-lesson" data-lesson-url="https://dsj7419.github.io/python-learning-by-projects/04-data-structures/#quiz" role="button">Back to Lesson</button>
+        </div>
+
+        <button id="next-button" class="btn hide" role="button">Next</button>
+    </div>
+    <script type="module" src="../../quiz-assets/js/script.js"></script>
+</body>
+</html>
