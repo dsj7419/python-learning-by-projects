@@ -1,0 +1,258 @@
+[
+    {
+        "question": "Why is modular programming beneficial?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It reduces code redundancy.", "correct": false},
+            {"text": "It makes collaboration among developers easier.", "correct": false},
+            {"text": "It improves the scalability of applications.", "correct": false},
+            {"text": "All of the above.", "correct": true}
+        ],
+        "reason": "Modular programming enhances reusability, maintainability, collaboration, and scalability of software projects."
+    },
+    {
+        "question": "Which of the following best describes the concept of 'Reusability' in modular programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Easily replacing parts of a program.", "correct": false},
+            {"text": "Using the same module in multiple programs.", "correct": true},
+            {"text": "Reducing memory usage.", "correct": false},
+            {"text": "Speeding up the program execution.", "correct": false}
+        ],
+        "reason": "Reusability in modular programming refers to the ability to use the same module across different parts of a program or even in different programs."
+    },
+    {
+        "question": "Which of the following is a key benefit of modular programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It complicates debugging.", "correct": false},
+            {"text": "It restricts code sharing.", "correct": false},
+            {"text": "It improves maintainability.", "correct": true},
+            {"text": "It slows down the development process.", "correct": false}
+        ],
+        "reason": "One of the primary advantages of modular programming is that it improves the maintainability of code by allowing for easier debugging, updating, and understanding."
+    },
+    {
+        "question": "What's the primary purpose of 'Importing Specific Attributes' from a module?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To reduce memory usage.", "correct": false},
+            {"text": "To use the entire module.", "correct": false},
+            {"text": "To use only specific functionalities from a module.", "correct": true},
+            {"text": "To rename the module.", "correct": false}
+        ],
+        "reason": "Importing specific attributes allows developers to bring in only the parts of a module they need, rather than the entire module."
+    },
+    {
+        "question": "Why might a developer choose to alias a module name?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To make the code more confusing.", "correct": false},
+            {"text": "To give the module a more descriptive name.", "correct": false},
+            {"text": "To make the code more concise and readable.", "correct": true},
+            {"text": "To change the module's functionality.", "correct": false}
+        ],
+        "reason": "Aliasing a module name can make the code more concise, especially if the original module name is lengthy or conflicts with another name in the code."
+    },
+    {
+        "question": "When you use the following code, what happens?",
+        "code": "import math",
+        "type": "multiple",
+        "answers": [
+            {"text": "It installs the 'math' module.", "correct": false},
+            {"text": "It brings all functions and attributes of the 'math' module into the current namespace.", "correct": true},
+            {"text": "It renames the 'math' module.", "correct": false},
+            {"text": "It deletes the 'math' module.", "correct": false}
+        ],
+        "reason": "Using 'import math' allows you to access all functions and attributes of the 'math' module in your current namespace."
+    },
+    {
+        "question": "Which line of code correctly imports only the 'sqrt' function from the 'math' module?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import math.sqrt", "correct": false},
+            {"code": "from math import sqrt", "correct": true},
+            {"code": "import sqrt from math", "correct": false},
+            {"code": "import math as sqrt", "correct": false}
+        ],
+        "reason": "The correct syntax to import a specific attribute or function from a module is 'from [module] import [attribute/function]'."
+    },
+    {
+        "question": "If you alias 'numpy' as 'np', how would you access the 'array' function from numpy?",
+        "type": "multiple",
+        "answers": [
+            {"code": "numpy.array()", "correct": false},
+            {"code": "np.array()", "correct": true},
+            {"code": "alias.array()", "correct": false},
+            {"code": "n.array()", "correct": false}
+        ],
+        "reason": "When 'numpy' is aliased as 'np', you can access its functions using the 'np' prefix."
+    },
+    {
+        "question": "What is the primary goal of modular design in programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To write longer code.", "correct": false},
+            {"text": "To make the program run faster.", "correct": false},
+            {"text": "To compartmentalize and organize code into logical, manageable pieces.", "correct": true},
+            {"text": "To use more memory.", "correct": false}
+        ],
+        "reason": "Modular design aims to break code into logical, manageable pieces or modules, making it easier to understand, maintain, and reuse."
+    },
+    {
+        "question": "In the context of modular programming, what is a module?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A function.", "correct": false},
+            {"text": "A type of loop.", "correct": false},
+            {"text": "A file containing Python definitions and statements.", "correct": true},
+            {"text": "A data type.", "correct": false}
+        ],
+        "reason": "In Python, a module is a file containing Python definitions and statements that can be imported into other modules or scripts."
+    },
+    {
+        "question": "Which of the following statements about modular programming is FALSE?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It allows for parallel development.", "correct": false},
+            {"text": "Modules can be used in multiple projects.", "correct": false},
+            {"text": "Each module should be focused on a single aspect of the desired functionality.", "correct": false},
+            {"text": "Modular programming makes code more monolithic and intertwined.", "correct": true}
+        ],
+        "reason": "Modular programming breaks code down into separate modules, making it less monolithic and intertwined, and more organized."
+    },
+    {
+        "question": "What will be the output of the following code snippet?",
+        "code": "import math as m\nprint(m.ceil(4.1))",
+        "type": "multiple",
+        "answers": [
+            {"text": "4", "correct": false},
+            {"text": "4.1", "correct": false},
+            {"text": "5", "correct": true},
+            {"text": "None of the above", "correct": false}
+        ],
+        "reason": "The 'ceil' function from the 'math' module rounds a number up to the nearest integer. Therefore, 4.1 is rounded up to 5."
+    },
+    {
+        "question": "Why is 'Aliasing Module Names' beneficial?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It provides a more descriptive name for the module.", "correct": false},
+            {"text": "It reduces the risk of naming conflicts in the code.", "correct": true},
+            {"text": "It changes the module's functionality.", "correct": false},
+            {"text": "It makes the module run faster.", "correct": false}
+        ],
+        "reason": "Aliasing can help avoid naming conflicts, especially when two modules have attributes with the same name. It can also make code more concise."
+    },
+    {
+        "question": "In the context of the project 'Modular Calculator', why is modular design important?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It makes the calculator more complex.", "correct": false},
+            {"text": "It allows for easy addition of new mathematical operations in the future.", "correct": true},
+            {"text": "It reduces the calculator's efficiency.", "correct": false},
+            {"text": "It changes the calculator's basic functionality.", "correct": false}
+        ],
+        "reason": "A modular design in the 'Modular Calculator' project would allow developers to easily add or modify mathematical operations without disturbing the existing functionality."
+    },
+    {
+        "question": "Which statement accurately describes the 'Import Entire Module' method?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It only imports a specific function from a module.", "correct": false},
+            {"text": "It brings all functions and attributes of a module into the current namespace.", "correct": true},
+            {"text": "It renames the module.", "correct": false},
+            {"text": "It deletes unnecessary functions from a module.", "correct": false}
+        ],
+        "reason": "Importing an entire module means bringing all its functions and attributes into the current namespace, allowing you to access them with a prefix."
+    },
+    {
+        "question": "When a module is imported multiple times in a script, Python:",
+        "type": "multiple",
+        "answers": [
+            {"text": "Reloads the module every time it's imported.", "correct": false},
+            {"text": "Only loads the module once to optimize performance.", "correct": true},
+            {"text": "Raises an error.", "correct": false},
+            {"text": "Crashes the script.", "correct": false}
+        ],
+        "reason": "Python optimizes performance by only loading a module once, even if it's imported multiple times in a script."
+    },
+    {
+        "question": "Which code snippet correctly aliases the 'math' module as 'm' and then calculates the square root of 16?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import math as m\nprint(m.sqrt(16))", "correct": true},
+            {"code": "alias math as m\nprint(m.sqrt(16))", "correct": false},
+            {"code": "from math import sqrt\nprint(sqrt(16))", "correct": false},
+            {"code": "import math\nprint(math.sqrt(16))", "correct": false}
+        ],
+        "reason": "The correct syntax for aliasing a module is 'import [module] as [alias]'. After aliasing, you use the alias as a prefix to access the module's functions."
+    },
+    {
+        "question": "In the context of the 'Modular Calculator' project, why is it beneficial to use modules?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It allows the calculator to perform more operations.", "correct": false},
+            {"text": "It makes the code more organized and manageable.", "correct": true},
+            {"text": "It makes the calculator run faster.", "correct": false},
+            {"text": "It changes the appearance of the calculator.", "correct": false}
+        ],
+        "reason": "Using modules in the 'Modular Calculator' project makes the code more organized by separating different functionalities into distinct modules. This makes the code more readable and maintainable."
+    },
+    {
+        "question": "What's the primary difference between 'Importing Specific Attributes' and 'Importing Entire Module'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The former imports the entire module while the latter imports specific functions.", "correct": false},
+            {"text": "The former renames the module while the latter does not.", "correct": false},
+            {"text": "The former brings in only specific parts of a module while the latter imports everything.", "correct": true},
+            {"text": "There's no difference; they serve the same purpose.", "correct": false}
+        ],
+        "reason": "Importing specific attributes allows you to use only certain parts of a module, whereas importing the entire module brings in all its functions and attributes."
+    },
+    {
+        "question": "In Python, modules can only be created using special software tools, and not just by creating a `.py` file.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "In Python, any `.py` file can act as a module. There's no need for special software tools to create a module."
+    },
+    {
+        "question": "Using the `as` keyword when importing a module forces all other scripts to use that alias as well.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "The `as` keyword creates an alias only in the scope of the script where the import is done. It doesn't affect other scripts."
+    },
+    {
+        "question": "It's always a good practice to import all functions from a module using the `from module_name import *` pattern.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "Using the `import *` pattern can lead to conflicts and ambiguities, especially if two modules have functions with the same name. It's better to be explicit about what you're importing."
+    },
+    {
+        "question": "When importing a module in Python, it's executed only once, even if it's imported multiple times in different parts of the script.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "A module is loaded and run only once, regardless of the number of times it's imported. This prevents repeated execution and is more efficient."
+    },
+    {
+        "question": "A module in Python can only contain functions, not classes or variables.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "A module in Python can contain functions, classes, and variables. It's essentially a `.py` file containing executable code."
+    }    
+]
