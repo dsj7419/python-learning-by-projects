@@ -396,6 +396,9 @@ Thank you for using the Modular Calculator!
 
 Now that you have a clear understanding of the project requirements and structure, it's time to start coding! Remember to test your application thoroughly and ensure each module functions as expected.
 
+- **Starting Point:** Utilize the code skeleton in the chapter's [`/code/`](https://github.com/05-modular-programming/code/) folder as a foundation for your Note-Keeping App.
+- **Solution:** If you find yourself stuck or simply curious about one possible implementation, peek into the [`/code/answer/`](https://github.com/05-module-programming/code/answer/) folder. Remember, there are multiple ways to solve programming challenges, and the provided solution is just one of them.
+
 ### Tips
 
 - Ensure you handle edge cases such as division by zero in your calculator module.

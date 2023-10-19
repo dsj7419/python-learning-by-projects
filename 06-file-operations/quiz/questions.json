@@ -1,0 +1,237 @@
+[
+    {
+        "question": "What is the primary purpose of File I/O in programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To manipulate images and videos.", "correct": false},
+            {"text": "To provide user interactivity in applications.", "correct": false},
+            {"text": "To read from and write to files.", "correct": true},
+            {"text": "To connect to the internet.", "correct": false}
+        ],
+        "reason": "File I/O stands for File Input/Output, which is primarily concerned with reading from and writing to files."
+    },
+    {
+        "question": "Which mode allows you to both read and write to a file without truncating it?",
+        "type": "multiple",
+        "answers": [
+            {"code": "'r'", "correct": false},
+            {"code": "'w'", "correct": false},
+            {"code": "'a'", "correct": false},
+            {"code": "'r+'", "correct": true}
+        ],
+        "reason": "The 'r+' mode allows you to read from and write to a file without truncating it."
+    },
+    {
+        "question": "When using the `open()` function, if the file does not exist and mode is:",
+        "code": "'w'",
+        "type": "multiple",
+        "answers": [
+            {"text": "An error is raised.", "correct": false},
+            {"text": "The file is created.", "correct": true},
+            {"text": "The operation is ignored.", "correct": false},
+            {"text": "Python exits.", "correct": false}
+        ],
+        "reason": "When using the 'w' mode with the `open()` function, if the file does not exist, it will be created."
+    },
+    {
+        "question": "How do you ensure that a file is properly closed after operations, even if an error occurs?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Using the `close()` method.", "correct": false},
+            {"text": "By setting the file reference to `None`.", "correct": false},
+            {"text": "Using a context manager with `with`.", "correct": true},
+            {"text": "By deleting the file object.", "correct": false}
+        ],
+        "reason": "Using a context manager with the `with` keyword ensures that the file is properly closed even if an error occurs during file operations."
+    },
+    {
+        "question": "Why are paths important in file operations?",
+        "type": "multiple",
+        "answers": [
+            {"text": "They specify the location of a file or directory.", "correct": true},
+            {"text": "They define the file type.", "correct": false},
+            {"text": "Paths increase the speed of file operations.", "correct": false},
+            {"text": "They provide network access to files.", "correct": false}
+        ],
+        "reason": "Paths are crucial because they specify the exact location of a file or directory on a filesystem."
+    },
+    {
+        "question": "Which module in Python is commonly used for path-related operations?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import os.path", "correct": true},
+            {"code": "import filepaths", "correct": false},
+            {"code": "import directory", "correct": false},
+            {"code": "import location", "correct": false}
+        ],
+        "reason": "The `os.path` module in Python provides functions and methods for path-related operations."
+    },
+    {
+        "question": "To ensure your file paths work across different operating systems, you should:",
+        "type": "multiple",
+        "answers": [
+            {"text": "Hardcode the file paths.", "correct": false},
+            {"text": "Use forward slashes only.", "correct": false},
+            {"text": "Use the `os.path` module to construct paths.", "correct": true},
+            {"text": "Always use absolute paths.", "correct": false}
+        ],
+        "reason": "Using the `os.path` module ensures that paths are constructed in a way that's compatible across different operating systems."
+    },
+    {
+        "question": "Which of the following is NOT a valid file mode in Python?",
+        "type": "multiple",
+        "answers": [
+            {"code": "'b'", "correct": false},
+            {"code": "'x'", "correct": false},
+            {"code": "'z'", "correct": true},
+            {"code": "'a+'", "correct": false}
+        ],
+        "reason": "The mode 'z' is not a valid file mode in Python."
+    },
+    {
+        "question": "In Python, how do you move the file cursor to the beginning of a file?",
+        "type": "multiple",
+        "answers": [
+            {"code": "file.seek(0)", "correct": true},
+            {"code": "file.reset()", "correct": false},
+            {"code": "file.begin()", "correct": false},
+            {"code": "file.rewind()", "correct": false}
+        ],
+        "reason": "The `seek(0)` method moves the file cursor to the beginning of the file."
+    },
+    {
+        "question": "To handle large files that cannot fit into memory, one should:",
+        "type": "multiple",
+        "answers": [
+            {"text": "Read the file all at once and hope for the best.", "correct": false},
+            {"text": "Read the file in chunks or lines.", "correct": true},
+            {"text": "Convert the file to a smaller format.", "correct": false},
+            {"text": "Use a faster computer.", "correct": false}
+        ],
+        "reason": "Reading large files in chunks or lines is an efficient way to process them without consuming too much memory."
+    },
+    {
+        "question": "When working with binary files in Python, you should open the file in:",
+        "type": "multiple",
+        "answers": [
+            {"code": "'b' mode", "correct": true},
+            {"code": "'t' mode", "correct": false},
+            {"code": "'bt' mode", "correct": false},
+            {"code": "'rb' mode", "correct": false}
+        ],
+        "reason": "The 'b' mode indicates binary mode, which should be used when working with binary files."
+    },
+    {
+        "question": "What does file metadata typically NOT include?",
+        "type": "multiple",
+        "answers": [
+            {"text": "File size.", "correct": false},
+            {"text": "File type.", "correct": true},
+            {"text": "Creation date.", "correct": false},
+            {"text": "Last modification date.", "correct": false}
+        ],
+        "reason": "While file metadata includes information like size, creation date, and last modification date, it typically doesn't specify the file type."
+    },
+    {
+        "question": "In Python, which module allows you to work with file permissions?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import os", "correct": true},
+            {"code": "import permissions", "correct": false},
+            {"code": "import chmod", "correct": false},
+            {"code": "import access", "correct": false}
+        ],
+        "reason": "The `os` module in Python provides functions to work with file permissions."
+    },
+    {
+        "question": "File compression is used to:",
+        "type": "multiple",
+        "answers": [
+            {"text": "Make files larger to use up free space.", "correct": false},
+            {"text": "Reduce the size of files for storage or transfer.", "correct": true},
+            {"text": "Change the file format without altering its size.", "correct": false},
+            {"text": "Encrypt files for security purposes.", "correct": false}
+        ],
+        "reason": "File compression reduces the size of files, making them more efficient for storage or transfer."
+    },
+    {
+        "question": "To create a directory in Python, which function can be used?",
+        "type": "multiple",
+        "answers": [
+            {"code": "os.mkdir('dirname')", "correct": true},
+            {"code": "os.create_directory('dirname')", "correct": false},
+            {"code": "os.new_folder('dirname')", "correct": false},
+            {"code": "os.add_dir('dirname')", "correct": false}
+        ],
+        "reason": "The `os.mkdir()` function is used to create a new directory in Python."
+    },
+    {
+        "question": "When reading a file in Python, the file has to be manually closed after reading.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "While you can manually close files, using a context manager (with statement) automatically closes the file after reading."
+    },
+    {
+        "question": "In Python, you can only read text files and not binary files.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "Python allows you to read both text and binary files by specifying the appropriate mode ('t' for text, 'b' for binary)."
+    },
+    {
+        "question": "In Python, paths are always represented using forward slashes (/) regardless of the operating system.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "While forward slashes can be used in Python, the actual representation might differ based on the operating system (e.g., backslashes \\ on Windows)."
+    },
+    {
+        "question": "File permissions only apply to UNIX-based systems and have no effect on Windows systems.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "File permissions are relevant for both UNIX-based and Windows systems, although they are implemented differently."
+    },
+    {
+        "question": "Temporary files in Python are automatically deleted when they are closed.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "The `tempfile` module in Python creates temporary files that are automatically deleted when closed."
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "with open('sample.txt', 'w') as f:\n    f.write('Hello, World!')",
+        "type": "multiple",
+        "answers": [
+            {"text": "It will display 'Hello, World!' on the screen.", "correct": false},
+            {"text": "It will write 'Hello, World!' to a file named 'sample.txt'.", "correct": true},
+            {"text": "It will raise a FileNotFoundError.", "correct": false},
+            {"text": "It will read and print the content of 'sample.txt'.", "correct": false}
+        ],
+        "reason": "The given code opens 'sample.txt' in write mode and writes 'Hello, World!' to it. It does not display anything on the screen."
+    },
+    {
+        "question": "What does the following code do?",
+        "code": "import tempfile\n\nwith tempfile.TemporaryFile() as tf:\n    tf.write(b'Some binary data')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Creates a temporary file and writes the string 'Some binary data' to it.", "correct": false},
+            {"text": "Raises a TypeError.", "correct": false},
+            {"text": "Creates a temporary file and writes the binary data 'Some binary data' to it.", "correct": true},
+            {"text": "Displays 'Some binary data' on the screen.", "correct": false}
+        ],
+        "reason": "The code creates a temporary file using the `tempfile` module and writes binary data to it. Temporary files are automatically deleted when closed."
+    }                            
+]
