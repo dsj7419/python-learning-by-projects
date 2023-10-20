@@ -27,22 +27,19 @@ Welcome to the exciting journey of learning Python through hands-on projects! ðŸ
     - [Understanding `input()`](#understanding-input)
     - [How `input()` Works](#how-input-works)
     - [Handling User Input](#handling-user-input)
-    - [Practical Application](#practical-application)
-    - [Key Takeaways](#key-takeaways)
+    - [Practical Application](#practical-application-1)
   - [2. Random Selection](#2-random-selection)
     - [Introduction to `random` Module](#introduction-to-random-module)
     - [Using `random.choice()`](#using-randomchoice)
     - [Random Numbers: `random.randint()`](#random-numbers-randomrandint)
     - [Ensuring Randomness: Seed](#ensuring-randomness-seed)
-    - [Key Takeaways](#key-takeaways)
   - [3. Output to Console](#3-output-to-console)
     - [Utilizing `print()`](#utilizing-print)
     - [Syntax of `print()`](#syntax-of-print)
     - [Displaying Multiple Items](#displaying-multiple-items)
     - [Customizing Output](#customizing-output)
     - [Formatting Strings](#formatting-strings)
-    - [Key Takeaways](#key-takeaways)
-    - [Practical Application](#practical-application)
+    - [Practical Application](#practical-application-2)
   - [4. Basic Input Validation](#4-basic-input-validation)
     - [Ensuring Appropriate User Input](#ensuring-appropriate-user-input)
     - [The Necessity of Validation](#the-necessity-of-validation)
@@ -51,7 +48,6 @@ Welcome to the exciting journey of learning Python through hands-on projects! ðŸ
     - [Example: Numeric Validation](#example-numeric-validation)
     - [Implementing Loops for Continuous Validation](#implementing-loops-for-continuous-validation)
     - [Example: Continuous Validation](#example-continuous-validation)
-    - [Key Takeaways](#key-takeaways)
 - [Mini-Example: Bringing It All Together](#mini-example-bringing-it-all-together)
 - [Project: Magic 8-Ball Simulator](#project-magic-8-ball-simulator)
   - [Objective](#objective)
@@ -155,7 +151,7 @@ while True:
 
 Here, a `while` loop is used to continuously prompt the user for input until a valid number is entered. The `try`...`except` block is utilized to catch any errors that occur if the input is not a valid integer, providing feedback and another chance to input a valid number.
 
-##### Practical Application
+##### Practical Application 1
 
 In practical applications, user input can be utilized to dynamically control the flow of the program, making decisions, and providing user-specific outputs and experiences. From simple scripts to complex applications, handling user input effectively and safely is fundamental to creating robust, user-friendly programs.
 
@@ -289,7 +285,7 @@ Both methods allow you to inject variables into a string, ensuring the output is
 - Leverage string formatting to create structured and clean outputs.
 - Employ `sep` and `end` to customize how the output is displayed.
 
-#### Practical Application
+#### Practical Application 2
 
 Imagine a scenario where you want to display a leaderboard for a game. Utilizing `print()` effectively allows you to format and present the data in a readable and appealing format, thereby enhancing user experience and interaction.
 
