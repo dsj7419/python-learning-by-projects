@@ -28,7 +28,7 @@ Welcome to Chapter 7, where we explore Regular Expressions in Python! 🎯 In th
 - [Project: Data Scraper](#project-data-scraper)
   - [Objective](#objective)
   - [Requirements](#requirements)
-  - [Guidance](#guidance)
+  - [Detailed Guidance](#detailed-guidance)
   - [Sample Interaction](#sample-interaction)
   - [Let's Get Coding!](#lets-get-coding)
   - [Tips](#tips)
@@ -269,36 +269,47 @@ This simple yet effective example demonstrates the flexibility and power of rege
 
 ### Objective
 
-Develop a Data Scraper that can extract meaningful information, specifically email addresses and phone numbers, from raw textual data using regular expressions. This will give you practical experience in using regex for pattern matching and data extraction.
+In today's interconnected world, data is abundant, often in unstructured formats. This project challenges you to create a data scraper capable of extracting specific information, such as email addresses and phone numbers, from a block of raw textual data. By leveraging the power of regular expressions, you'll hone your skills in pattern recognition and data extraction.
 
 ### Requirements
 
-- **Data Source**: You will be given a block of text with mixed content.
+- **Data Source**: Work with a textual block containing mixed content.
 - **Data Extraction**:
-  - Extract all email addresses present in the text.
-  - Extract all phone numbers present in the text.
-- **Pattern Matching**: Utilize regular expressions to identify and extract the required data.
-- **Data Presentation**: Display the extracted data in a user-friendly and structured format.
+  - Extract all email addresses embedded in the text.
+  - Extract all phone numbers interspersed within the text.
+- **Pattern Matching**: Harness the strength of regular expressions to detect and extract the targeted data.
+- **Data Presentation**: Ensure the extracted data is displayed in an organized and user-friendly manner.
 
-### Guidance
+### Detailed Guidance
 
-1. **Analyzing the Data**:
-   - Familiarize yourself with the given textual data. Identify the patterns of email addresses and phone numbers.
+1. **Data Analysis**:
+   - Start by examining the provided text block, discerning the patterns characterizing email addresses and phone numbers.
    
-2. **Crafting Regular Expressions**:
-   - Develop a regex pattern that matches email addresses.
-   - Develop a separate regex pattern that matches phone numbers.
-   - Test both regex patterns with various samples to ensure they're accurate.
+2. **Constructing Regular Expressions**:
+   - Formulate a regex pattern adept at capturing email addresses.
+   - Conceive a distinct regex pattern for pinpointing phone numbers.
+   - Validate both regex patterns using diverse sample inputs to ascertain their accuracy.
 
-3. **Extracting Data**:
-   - Use the `findall()` function to extract all email addresses and phone numbers matched by your regular expressions from the text.
-   - Store the results in separate lists for further processing or presentation.
+3. **Data Extraction**:
+   - Deploy the `findall()` method to mine all email addresses and phone numbers that your regex patterns can match from the text.
+   - Catalog the results in distinct lists for subsequent processing or display.
 
 ### Sample Interaction
 
-Given a block of text, the Data Scraper should output:
+```
+Given the following text:
 
-\```
+"Hello,
+
+You can reach out to us at support@example.com or call us at 555-1234. Alternatively, you can contact our sales team at sales@example.org or on their direct line 555-5678.
+
+In case of urgent inquiries during non-working hours, please contact emergency@example.com or call 555-9111.
+
+Thank you,
+Your Example Team"
+
+The Data Scraper should deduce:
+
 Extracted Email Addresses:
 - support@example.com
 - sales@example.org
@@ -308,26 +319,25 @@ Extracted Phone Numbers:
 - 555-1234
 - 555-5678
 - 555-9111
-\```
+```
 
 ### Let's Get Coding!
 
-With the guidelines and requirements in mind, it's time to put theory into practice!
+Equipped with the guidelines and stipulated requirements, it's coding time!
 
-- **Starting Point:** Utilize the code skeleton in the chapter's [`/code/`](https://github.com/07-regular-expressions/code/) folder as a foundation for your Data Scraper.
-- **Solution:** If you find yourself stuck or simply curious about one possible implementation, peek into the [`/code/answer/`](https://github.com/07-regular-expressions/code/answer/) folder. Remember, there are multiple ways to solve programming challenges, and the provided solution is just one of them.
+- **Starting Point**: Dive into the chapter's [`/code/`](https://github.com/07-regular-expressions/code/) directory and leverage the furnished code skeleton as a base for your Data Scraper.
+- **Solution**: If you hit a roadblock or are intrigued about a potential solution, you can glance at the [`/code/answer/`](https://github.com/07-regular-expressions/code/answer/) directory. Yet, keep in mind that multiple paths lead to the solution in programming, and the proffered solution is merely one route among many.
 
 ### Tips
 
-1. Start small. Initially, focus on extracting one type of data, either email or phone number.
-2. Test your regex patterns using online platforms like [Regex101](https://regex101.com/).
-3. Once you're confident about your regex patterns, integrate them into your Python script.
-4. Always validate the output to ensure you're extracting data as expected.
+1. Initiate with modest goals. First, concentrate on extracting one type of data, be it an email or phone number.
+2. Evaluate your regex patterns on platforms like [Regex101](https://regex101.com/) to confirm their efficacy.
+3. Upon attaining confidence in your regex patterns, incorporate them into your Python script.
+4. Always cross-check the output to ascertain correct data extraction.
 
 ### Closing Thoughts
 
-Regular expressions are a powerful tool, especially when it comes to extracting specific patterns from large blocks of text. This project allows you to see the practical applications of regex. As you move forward, you'll find numerous scenarios where regex can be an invaluable tool in your programming toolkit.
-
+Regular expressions, while intricate, present a formidable technique for pattern detection and data extraction in vast text chunks. This endeavor immerses you in the practical utility of regex. As you forge ahead, numerous situations will arise where regex emerges as a quintessential instrument in your developer's arsenal.
 
 ## Quiz
 
