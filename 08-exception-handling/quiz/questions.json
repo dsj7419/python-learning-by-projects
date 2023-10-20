@@ -1,0 +1,325 @@
+[
+    {
+        "question": "What is the primary purpose of exception handling in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To improve the speed of the program.", "correct": false},
+            {"text": "To enhance the user interface of the application.", "correct": false},
+            {"text": "To handle errors gracefully and prevent the program from crashing.", "correct": true},
+            {"text": "To bypass all errors and keep executing the program.", "correct": false}
+        ],
+        "reason": "Exception handling allows for the graceful handling of errors, ensuring the application doesn't terminate abruptly."
+    },
+    {
+        "question": "Which of the following is used to catch exceptions in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "catch", "correct": false},
+            {"text": "error", "correct": false},
+            {"text": "try", "correct": false},
+            {"text": "except", "correct": true}
+        ],
+        "reason": "In Python, the `except` keyword is used to catch exceptions."
+    },
+    {
+        "question": "What does the following code block do?",
+        "code": "try:\n    x = 1/0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero!')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Throws an error and crashes the program.", "correct": false},
+            {"text": "Prints 'Cannot divide by zero!' without crashing the program.", "correct": true},
+            {"text": "Ignores the error and continues executing the rest of the program.", "correct": false},
+            {"text": "Prints '1'.", "correct": false}
+        ],
+        "reason": "The code catches the ZeroDivisionError and prints 'Cannot divide by zero!' instead of crashing the program."
+    },
+    {
+        "question": "What is the use of the `else` clause in a try-except block?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To execute code if an error occurs in the try block.", "correct": false},
+            {"text": "To execute code if no error occurs in the try block.", "correct": true},
+            {"text": "To specify another exception type to catch.", "correct": false},
+            {"text": "To rethrow the caught exception.", "correct": false}
+        ],
+        "reason": "The `else` clause in a try-except block is used to specify a block of code to be executed if no errors were raised in the try block."
+    },
+    {
+        "question": "When is the code inside the `finally` block executed?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Only if there is no error in the try block.", "correct": false},
+            {"text": "Only if there is an error in the try block.", "correct": false},
+            {"text": "Always, regardless of whether there is an error in the try block or not.", "correct": true},
+            {"text": "Only if the except block is executed.", "correct": false}
+        ],
+        "reason": "The `finally` block is always executed, no matter if the try block raised an error or not."
+    },
+    {
+        "question": "Which of the following allows developers to generate their own exceptions in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "throw", "correct": false},
+            {"text": "raise", "correct": true},
+            {"text": "error", "correct": false},
+            {"text": "generate", "correct": false}
+        ],
+        "reason": "The `raise` keyword allows developers to throw their own exceptions in Python."
+    },
+    {
+        "question": "Why is it important to have meaningful error messages?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To confuse other developers.", "correct": false},
+            {"text": "To make the program look professional.", "correct": false},
+            {"text": "To help users understand what went wrong and possibly how to fix it.", "correct": true},
+            {"text": "Meaningful error messages are not important.", "correct": false}
+        ],
+        "reason": "Meaningful error messages guide users or developers in understanding the nature of the problem and might hint at possible solutions."
+    },
+    {
+        "question": "Which Python statement is used to assert a condition?",
+        "type": "multiple",
+        "answers": [
+            {"text": "assure", "correct": false},
+            {"text": "assert", "correct": true},
+            {"text": "check", "correct": false},
+            {"text": "confirm", "correct": false}
+        ],
+        "reason": "The `assert` statement is used in Python to declare that a condition is true. If it's not, an AssertionError will be raised."
+    },
+    {
+        "question": "Which of the following is NOT a reason to use custom exception classes?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To provide specific error information relevant to the application's domain.", "correct": false},
+            {"text": "To differentiate between application-specific errors and other Python errors.", "correct": false},
+            {"text": "To make the application run faster.", "correct": true},
+            {"text": "To have better control over the error handling flow of the application.", "correct": false}
+        ],
+        "reason": "Custom exceptions are not related to the speed of the application. Their main purpose is to provide specific error information and better control over error handling."
+    },
+    {
+        "question": "What happens when an assertion fails?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The program continues without any interruption.", "correct": false},
+            {"text": "An AssertionError is raised.", "correct": true},
+            {"text": "A special AssertionException is raised.", "correct": false},
+            {"text": "The Python interpreter crashes.", "correct": false}
+        ],
+        "reason": "When an assertion fails, Python raises an AssertionError."
+    },
+    {
+        "question": "Exception chaining in Python refers to a scenario where catching one exception leads to another exception being raised. Is this statement true or false?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "In Python, exception chaining can occur, especially when an exception caught in an `except` block leads to another exception. This can be further clarified using the `from` keyword."
+    },
+    {
+        "question": "Which of the following will catch ALL exceptions?",
+        "type": "multiple",
+        "answers": [
+            {"text": "except BaseException:", "correct": true},
+            {"text": "except Exception:", "correct": false},
+            {"text": "except Error:", "correct": false},
+            {"text": "except AllExceptions:", "correct": false}
+        ],
+        "reason": "In Python's exception hierarchy, BaseException is the base class for all built-in exceptions. Catching it will catch all exceptions, including system-exiting ones."
+    },
+    {
+        "question": "What is the purpose of the `else` clause in a try-except-else block?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The `else` clause runs if an exception was raised in the try block.", "correct": false},
+            {"text": "The `else` clause runs if no exceptions were raised in the try block.", "correct": true},
+            {"text": "The `else` clause runs regardless of whether an exception was raised.", "correct": false},
+            {"text": "The `else` clause catches any exception that wasn't caught by previous `except` clauses.", "correct": false}
+        ],
+        "reason": "The `else` clause in a try-except block will run if no exceptions were raised in the try block. It's often used to execute code that must run if the try block did not throw an exception."
+    },
+    {
+        "question": "In Python, custom exceptions should typically be derived from which class?",
+        "type": "multiple",
+        "answers": [
+            {"text": "BaseException", "correct": false},
+            {"text": "Error", "correct": false},
+            {"text": "Exception", "correct": true},
+            {"text": "CustomError", "correct": false}
+        ],
+        "reason": "In Python, user-defined exceptions should usually be derived from the Exception class or a subclass of it."
+    },
+    {
+        "question": "Which of the following is the correct way to raise a custom exception?",
+        "type": "multiple",
+        "answers": [
+            {"text": "throw CustomError('This is a custom error')", "correct": false},
+            {"text": "raise CustomError from None", "correct": false},
+            {"text": "raise CustomError('This is a custom error')", "correct": true},
+            {"text": "error CustomError('This is a custom error')", "correct": false}
+        ],
+        "reason": "In Python, the `raise` keyword is used to raise exceptions, including custom ones."
+    },
+    {
+        "question": "What will be the output of the following code?",
+        "code": "try:\n    x = 1\nexcept NameError:\n    print('Variable x is not defined')\nelse:\n    print('Variable x is defined')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Variable x is not defined", "correct": false},
+            {"text": "Variable x is defined", "correct": true},
+            {"text": "No output", "correct": false},
+            {"text": "An error occurs", "correct": false}
+        ],
+        "reason": "The code checks if the variable `x` is defined without any errors. Since it is, the else block will execute, printing 'Variable x is defined'."
+    },
+    {
+        "question": "What is the primary purpose of the `finally` block in Python's exception handling mechanism?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To handle any type of exception.", "correct": false},
+            {"text": "To execute code that must run regardless of whether an exception was raised or not.", "correct": true},
+            {"text": "To execute code only when an exception is raised.", "correct": false},
+            {"text": "To execute code only when no exceptions are raised.", "correct": false}
+        ],
+        "reason": "The `finally` block is intended to define cleanup actions that must be executed under all circumstances."
+    },
+    {
+        "question": "When creating a custom exception, it's a good practice to...",
+        "type": "multiple",
+        "answers": [
+            {"text": "Make it as general as possible so it can handle multiple types of errors.", "correct": false},
+            {"text": "Derive it from an existing built-in exception that closely matches its use-case.", "correct": false},
+            {"text": "Provide a descriptive name that indicates the kind of error it represents.", "correct": true},
+            {"text": "Include sensitive information in its error message.", "correct": false}
+        ],
+        "reason": "A custom exception's name should be descriptive enough to give developers a clear idea of its use-case, ensuring it's used appropriately."
+    },
+    {
+        "question": "In Python, how can you suppress an exception so that no traceback is printed?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Using the `suppress()` method.", "correct": false},
+            {"text": "By catching the exception and doing nothing in the except block.", "correct": true},
+            {"text": "By using the `no_traceback` keyword.", "correct": false},
+            {"text": "By setting the `__suppress__` attribute of the exception to True.", "correct": false}
+        ],
+        "reason": "In Python, you can suppress an exception by catching it and simply doing nothing in the except block."
+    },
+    {
+        "question": "Which of the following is not a built-in Python exception?",
+        "type": "multiple",
+        "answers": [
+            {"text": "ValueError", "correct": false},
+            {"text": "TypeError", "correct": false},
+            {"text": "DataError", "correct": true},
+            {"text": "IndexError", "correct": false}
+        ],
+        "reason": "DataError is not a built-in exception in Python. The others, such as ValueError, TypeError, and IndexError, are built-in exceptions."
+    },
+    {
+        "question": "In Python, you can handle multiple exceptions using a single `except` block.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "You can handle multiple exceptions by specifying them in a tuple after the `except` keyword."
+    },
+    {
+        "question": "Which of the following codes will raise a custom exception?",
+        "type": "multiple",
+        "answers": [
+            {"code": "raise Exception('This is a custom error message.')", "correct": true},
+            {"code": "exception Error:\n    pass", "correct": false},
+            {"code": "raise Error", "correct": false},
+            {"code": "throw Exception('Error occurred!')", "correct": false}
+        ],
+        "reason": "In Python, the `raise` keyword is used to throw an exception. The provided message will be printed when the exception is caught."
+    },
+    {
+        "question": "What is the role of the `finally` block in exception handling?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It executes after the `try` block but before the `except` block.", "correct": false},
+            {"text": "It executes only if an exception occurs.", "correct": false},
+            {"text": "It executes regardless of whether an exception occurred or not.", "correct": true},
+            {"text": "It handles any exceptions that weren't caught by `except` blocks.", "correct": false}
+        ],
+        "reason": "The `finally` block is always executed after the `try` and `except` blocks, regardless of whether an exception was raised or not."
+    },
+    {
+        "question": "In Python, an `AssertionError` is raised when an `assert` statement fails.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "An `assert` statement is used for debugging purposes. If the assert statement fails, Python uses `AssertionError` to stop the program."
+    },
+    {
+        "question": "Which of the following is a valid custom exception definition?",
+        "type": "multiple",
+        "answers": [
+            {"code": "class MyError(Exception):\n    pass", "correct": true},
+            {"code": "def MyError(Exception):\n    pass", "correct": false},
+            {"code": "class MyError:\n    raise Exception", "correct": false},
+            {"code": "exception MyError:\n    pass", "correct": false}
+        ],
+        "reason": "Custom exceptions in Python are typically derived from the base `Exception` class using class inheritance."
+    },
+    {
+        "question": "In Python, you can only use the `raise` keyword inside an `except` block.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "The `raise` keyword can be used anywhere in your code to manually raise an exception."
+    },
+    {
+        "question": "What is the output of the following code snippet?",
+        "code": "try:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero.')\nfinally:\n    print('End of code.')",
+        "type": "multiple",
+        "answers": [
+            {"text": "Cannot divide by zero.\nEnd of code.", "correct": true},
+            {"text": "End of code.", "correct": false},
+            {"text": "Cannot divide by zero.", "correct": false},
+            {"text": "No output", "correct": false}
+        ],
+        "reason": "First, the `ZeroDivisionError` is caught and its message is printed. After that, the `finally` block is executed, printing 'End of code.'."
+    },
+    {
+        "question": "When chaining exceptions, the `from` keyword is used to indicate which exception was directly caused by another.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Exception chaining can be explicitly done using the `raise ... from ...` syntax, which sets the `__cause__` attribute of the raised exception."
+    },
+    {
+        "question": "Which of the following pieces of code will NOT raise an exception?",
+        "type": "multiple",
+        "answers": [
+            {"code": "x = 'hello' + 'world'", "correct": true},
+            {"code": "x = 'hello' + 1", "correct": false},
+            {"code": "x = [1, 2, 3]\nx[5]", "correct": false},
+            {"code": "x = {'key': 'value'}\nprint(x['missing_key'])", "correct": false}
+        ],
+        "reason": "Only concatenating two strings using the `+` operator will not raise an exception. The other options have type mismatch and key errors."
+    },
+    {
+        "question": "What does the `assert` statement do in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It raises an `AssertionError` if a given condition is not True.", "correct": true},
+            {"text": "It checks if the code is running in debug mode.", "correct": false},
+            {"text": "It pauses the execution until the user presses a key.", "correct": false},
+            {"text": "It logs errors to a specified file.", "correct": false}
+        ],
+        "reason": "The `assert` statement is a debugging aid that tests a condition, and triggers an error if the condition is not true."
+    }
+]
