@@ -7,14 +7,32 @@ Welcome to Chapter 7, where we explore Regular Expressions in Python! 🎯 In th
 
 - [Introduction](#introduction)
 - [Lesson Plan](#lesson-plan)
-    - [Pattern Matching](#pattern-matching)
-    - [Data Extraction](#2-data-extraction)
-    - [RegEx in Python](#3-regex-in-python)
-- [Mini-Example: Basic Pattern Matching](#mini-example-basic-pattern-matching)
+  - [1. Basics of Regular Expressions](#1-basics-of-regular-expressions)
+    - [Understanding the Need for Regex](#understanding-the-need-for-regex)
+    - [Basic Regex Characters](#basic-regex-characters)
+    - [Quantifiers in Regex](#quantifiers-in-regex)
+    - [Key Takeaways](#key-takeaways)
+  - [2. Advanced Regular Expressions](#2-advanced-regular-expressions)
+    - [Lookaheads and Lookbehinds](#lookaheads-and-lookbehinds)
+    - [Word Boundaries](#word-boundaries)
+    - [Character Classes](#character-classes)
+    - [Flags in Regex](#flags-in-regex)
+    - [Key Takeaways](#key-takeaways)
+  - [3. Practical Applications of Regex](#3-practical-applications-of-regex)
+    - [Data Validation](#data-validation)
+    - [Data Extraction and Grouping](#data-extraction-and-grouping)
+    - [String Replacement](#string-replacement)
+    - [Real-world Scenarios](#real-world-scenarios)
+    - [Key Takeaways](#key-takeaways)
+- [Mini-Example: Extracting Phone Numbers with Regex](#mini-example-extracting-phone-numbers-with-regex)
 - [Project: Data Scraper](#project-data-scraper)
-    - [Objective](#objective)
-    - [Requirements](#requirements)
-    - [Guidance](#guidance)
+  - [Objective](#objective)
+  - [Requirements](#requirements)
+  - [Guidance](#guidance)
+  - [Sample Interaction](#sample-interaction)
+  - [Let's Get Coding!](#lets-get-coding)
+  - [Tips](#tips)
+  - [Closing Thoughts](#closing-thoughts)
 - [Quiz](#quiz)
 - [Next Steps](#next-steps)
 - [Additional Resources](#additional-resources)
@@ -25,236 +43,301 @@ Regular expressions (regex or regexp) are incredibly powerful, and a bit dauntin
 
 ## Lesson Plan
 
-### 1. Pattern Matching
+### 1. Basics of Regular Expressions
 
-#### Understanding Regular Expressions
+#### Understanding the Need for Regex
 
-A regular expression is a special sequence of characters that forms a search pattern. It can be used for everything from looking for specific patterns in a block of text to validating the format of email addresses or passwords.
+In our digital age, we are surrounded by vast amounts of text data. This data can be anything - from log files and configurations to web pages and manuscripts. Extracting specific information from these vast datasets can be like finding a needle in a haystack. This is where Regular Expressions (regex) shine.
 
-Here's a quick breakdown of some of the basic elements in a regular expression:
+Regular expressions offer a concise and flexible means to "match" strings of text, such as particular characters, words, or patterns of characters. For example, imagine having a large text file with thousands of email addresses, and you only wanted to retrieve the Gmail addresses. Regex provides a way to describe and parse this information efficiently.
 
-- **Literals**: Regular characters that match themselves (e.g., `a`, `1`).
-- **Metacharacters**: Characters that have a special meaning (e.g., `\d`, `\w`, `\s`, `.`).
-- **Quantifiers**: Specify the quantity of characters to match (e.g., `*`, `+`, `?`, `{m,n}`).
+#### Basic Regex Characters
 
-##### Basic Syntax
+Before diving deep into complex patterns, let's understand some basic characters in regex:
 
-In Python, the `re` module provides support for regular expressions. Here’s a quick example to get us started:
+- **Literals**: These are standard characters that match themselves exactly. For example, the regex `data` will match the string "data" in any given text.
+- **Dot `.`**: Represents any character except for a newline. So, `d.t` will match "dot", "dat", "d3t", and so on.
+- **Backslash `\`**: Used to escape a metacharacter. So, if you want to match a dot (.), you would use `\.` in your regex.
+- **^ and $**: These symbols match the start and end of a line, respectively. For example, `^data` will match any line that starts with "data".
 
-```python
-import re
-
-pattern = re.compile(r'\d{3}-\d{2}-\d{4}')  # A pattern for social security numbers
-match = pattern.match('123-45-6789')
-
-if match:
-    print('Pattern found:', match.group())
-else:
-    print('Pattern not found')
-```
-
-Here:
-- `re.compile(r'\d{3}-\d{2}-\d{4}')`: Compiles a regular expression pattern into a regex object.
-- `.match('123-45-6789')`: Tries to apply the pattern at the start of the string.
-- `match.group()`: Returns the string matched by the re.
-
-#### Utilizing Regex Functions
-
-- **`match()`**: Determine if the RE matches at the beginning of the string.
-- **`search()`**: Scan through a string, looking for any location where the RE matches.
-- **`findall()`**: Find all substrings where the RE matches, and returns them as a list.
-- **`finditer()`**: Find all substrings where the RE matches, and returns them as an iterator.
+Here's a basic example to help clarify:
 
 ```python
 import re
 
-pattern = re.compile(r'\b\w{4}\b')  # Words of 4 letters
-matches = pattern.findall('This is a regular expression test.')
-
-for match in matches:
-    print(match)
+pattern = re.compile(r'^a.b$')  # Matches any three-character string that starts with 'a' and ends with 'b'
 ```
 
-In the code snippet above:
-- `re.compile(r'\b\w{4}\b')`: Looks for words of exactly 4 letters.
-- `.findall('This is a regular expression test.')`: Returns all matches in the string as a list.
-- `for match in matches:`: Iterates over the matches, printing each one.
+#### Quantifiers in Regex
 
-### Key Takeaways
+Quantifiers determine how many instances of the preceding element in the regex pattern are a match.
 
-- Regular expressions provide a powerful mechanism for pattern matching and data extraction in textual data.
-- The `re` module in Python provides a rich and efficient way to work with regular expressions.
-- Utilize various regex functions like `match()`, `search()`, `findall()`, and `finditer()` to apply regular expressions in different contexts.
-
-### 2. Data Extraction
-
-#### Understanding Data Extraction
-
-Data extraction is the process of retrieving specific information from data sources, such as text files, web pages, or other forms of data storage. With regular expressions, you can define patterns to find specific strings or pieces of data amidst large amounts of text, enabling you to extract valuable information efficiently.
-
-##### Utilizing Groups
-
-- **Capturing Groups**: Enclosing a part of your regex in parentheses `()` allows you to extract specific parts of a matched string.
-
-  ```python
-  import re
-  
-  pattern = re.compile(r"(\d{3})-(\d{3}-\d{4})")
-  match = pattern.search("My number is 555-123-4567")
-  area_code = match.group(1)
-  main_number = match.group(2)
-  ```
-
-  In this example, `area_code` will hold `"555"` and `main_number` will hold `"123-4567"`.
-
-- **Non-Capturing Groups**: Use `(?: ... )` to define a group that should not capture the matched substring.
-
-  ```python
-  pattern = re.compile(r"(?:\d{3}-)?\d{3}-\d{4}")
-  ```
-
-  This pattern will match phone numbers with or without an area code, but it will not capture the area code.
-
-- **Named Groups**: You can name your groups for easier reference using `(?P<name> ... )`.
-
-  ```python
-  pattern = re.compile(r"(?P<areacode>\d{3})-(?P<mainnumber>\d{3}-\d{4})")
-  match = pattern.search("My number is 555-123-4567")
-  area_code = match.group("areacode")
-  main_number = match.group("mainnumber")
-  ```
-
-#### Practical Application
-
-Imagine creating a system that extracts email addresses from a document. With regex, you can define a pattern that matches most email formats, enabling you to extract all email addresses present in a text.
+- `*`: Matches zero or more repetitions of the preceding element. So, `ab*c` will match "ac", "abc", "abbc", and so on.
+- `+`: Matches one or more repetitions. `ab+c` will match "abc", "abbc", but not "ac".
+- `?`: Indicates zero or one repetition. `ab?c` will match "ac" and "abc", but not "abbc".
+- `{m}`: Specifies exactly m repetitions. `a{3}` will match "aaa".
+- `{m,n}`: Specifies between m and n repetitions. `a{2,3}` will match "aa" and "aaa".
 
 ```python
-import re
-
-def extract_emails(text):
-    pattern = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+")
-    return pattern.findall(text)
-
-document = "Contact us at support@example.com or help@mysite.org"
-emails = extract_emails(document)
+pattern = re.compile(r'ab{2,4}c')  # Matches 'abbc', 'abbbc', or 'abbbbc'
 ```
-
-In the function `extract_emails(text)`, `findall` returns all non-overlapping matches of pattern in string, as a list of strings. In this case, it would return `['support@example.com', 'help@mysite.org']`.
-
-### 3. Regex in Python
-
-#### Utilizing the `re` Module
-
-Python's `re` module offers a set of functions that allows us to search text for particular patterns, providing the functionality we need to work with regex:
-
-- **`re.search(pattern, string)`**: Scans through the string, looking for any location where this regex pattern produces a match.
-
-- **`re.match(pattern, string)`**: Determines if the regex matches at the beginning of the string.
-
-- **`re.findall(pattern, string)`**: Finds all the occurrences of the pattern in the given string.
-
-- **`re.sub(pattern, repl, string)`**: Replaces occurrences of the pattern with a replacement string.
-
-##### Flags
-
-Flags help you to control the behavior of the regex parser. Some of the commonly used flags are:
-
-- **`re.IGNORECASE` or `re.I`**: Ignore case while matching.
-- **`re.MULTILINE` or `re.M`**: Treats the input as a multiline string.
-
-#### Practical Application
-
-Consider a scenario where you want to replace all occurrences of certain words in a text with synonyms. Using `re.sub()`, you can efficiently achieve this with regex.
-
-```python
-import re
-
-def replace_synonyms(text):
-    synonyms = {
-        r"\bquick\b": "fast",
-        r"\bbrown\b": "chocolate",
-        r"\bfox\b": "wolf"
-    }
-    for word, synonym in synonyms.items():
-        text = re.sub(word, synonym, text, flags=re.IGNORECASE)
-    return text
-
-text = "The quick brown fox"
-new_text = replace_synonyms(text)
-```
-
-In the function `replace_synonyms(text)`, `re.sub()` is utilized to find occurrences of each word defined in the `synonyms` dictionary and replace them with the corresponding synonym, returning a text with the replaced words.
 
 #### Key Takeaways
 
-- Regular expressions are a powerful tool for pattern matching and data extraction.
-- Utilizing groups, you can extract specific segments of your matched data for further use.
-- Python’s `re` module provides a host of functions to work with regular expressions, enabling search, match, find, and substitution operations within text.
-- Be mindful of the complexity and readability of your regex patterns, ensuring maintainability and efficiency.
+- Regular expressions provide a powerful way to find specific patterns in text.
+- The basic characters in regex, like literals and metacharacters, form the foundation of pattern matching.
+- Quantifiers allow for flexibility in defining how many times an element should be present for a match.
 
-Feel free to experiment by creating your own patterns and trying to extract data from sample texts!
+### 2. Advanced Regular Expressions
 
-### Mini-Example: Validating Email Addresses
+#### Lookaheads and Lookbehinds
 
-Consider a scenario where we're validating email addresses. A basic, yet not fully RFC-compliant, regex pattern for email validation might look like this:
+These are specialized groups of characters in regex that allow you to match a pattern based on what comes before (lookbehind) or after (lookahead) a specific sequence.
+
+- **Positive Lookahead (?=...)**: Specifies a group that can look ahead to see if an element exists.
+  
+  ```python
+  pattern = re.compile(r'John(?= Smith)')  # Matches 'John' only if followed by ' Smith'
+  ```
+
+- **Negative Lookahead (?!...)**: Specifies a group that can look ahead to ensure an element doesn't exist.
+  
+  ```python
+  pattern = re.compile(r'John(?! Doe)')  # Matches 'John' only if NOT followed by ' Doe'
+  ```
+
+- **Positive Lookbehind (?<=...)**: Specifies a group that can look behind to see if an element exists.
+  
+  ```python
+  pattern = re.compile(r'(?<=Dr. )John')  # Matches 'John' only if preceded by 'Dr. '
+  ```
+
+- **Negative Lookbehind (?<!...)**: Specifies a group that can look behind to ensure an element doesn't exist.
+  
+  ```python
+  pattern = re.compile(r'(?<!Mr. )John')  # Matches 'John' only if NOT preceded by 'Mr. '
+  ```
+
+#### Word Boundaries
+
+Word boundaries `\b` are crucial when you want to ensure that a pattern represents a whole word. They match the position between a word character (as represented by `\w`) and a non-word character.
+
+```python
+pattern = re.compile(r'\bword\b')  # Matches 'word' but not 'swordfish' or 'password'
+```
+
+#### Character Classes
+
+Character classes are used to match any one of a specific set of characters. They are defined by enclosing a character set in square brackets `[]`.
+
+- `[abc]`: Matches any single character that is either 'a', 'b', or 'c'.
+- `[^abc]`: Matches any single character that is NOT 'a', 'b', or 'c'.
+
+Ranges can also be specified:
+
+- `[a-z]`: Matches any lowercase alphabetical character.
+- `[A-Z]`: Matches any uppercase alphabetical character.
+- `[0-9]`: Matches any single digit.
+
+```python
+pattern = re.compile(r'gr[ae]y')  # Matches 'gray' or 'grey'
+```
+
+#### Flags in Regex
+
+Regex flags modify how the matching operates.
+
+- **re.IGNORECASE (or re.I)**: Makes the match case-insensitive.
+  
+  ```python
+  pattern = re.compile(r'hello', re.I)  # Matches 'hello', 'Hello', 'HELLO', etc.
+  ```
+
+- **re.MULTILINE (or re.M)**: Modifies `^` and `$` to match the start and end of each line.
+  
+  ```python
+  pattern = re.compile(r'^text', re.M)  # Matches 'text' at the beginning of any line in a multiline string
+  ```
+
+- **re.DOTALL (or re.S)**: Makes `.` match any character, including a newline.
+
+#### Key Takeaways
+
+- Lookaheads and lookbehinds enable more refined and specific pattern matching based on context.
+- Word boundaries ensure that a pattern matches distinct words without being part of larger words.
+- Character classes offer flexibility in matching specific sets or ranges of characters.
+- Flags can modify the behavior of the regex engine for specific needs, such as case-insensitive matching or multiline mode.
+
+### 3. Practical Applications of Regex
+
+Regular expressions, with their flexibility and power, find their uses in various aspects of computing and data processing. In this section, we'll explore some common practical applications of regex.
+
+#### Data Validation
+
+One of the main uses of regex is to validate if data fits a certain pattern. This is commonly used in form validation.
+
+- **Email Validation**:
+
+  ```python
+  pattern = re.compile(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')
+  ```
+
+  This pattern ensures an input string roughly matches the structure of an email.
+
+- **URL Validation**:
+
+  ```python
+  pattern = re.compile(r'^(http://|https://)?(www\.)?[\w-]+\.[\w]{2,}$')
+  ```
+
+  This pattern matches web URLs, whether they start with `http://`, `https://`, or simply `www.`.
+
+#### Data Extraction and Grouping
+
+Regex can be used to extract specific portions of data from a larger text.
+
+- **Extract Date Components**:
+
+  ```python
+  pattern = re.compile(r'(?P<day>\d{2})/(?P<month>\d{2})/(?P<year>\d{4})')
+  match = pattern.search('The date is 15/04/2020.')
+  ```
+
+  Here, the day, month, and year are extracted as separate named groups from a date string.
+
+#### String Replacement
+
+Using regex, you can find and replace patterns within strings.
+
+- **Censoring Words**:
+
+  ```python
+  def censor(text):
+      pattern = re.compile(r'\b(badword1|badword2|badword3)\b', re.I)
+      return pattern.sub('****', text)
+  ```
+
+  This function replaces specified "bad words" in a text with asterisks, making the content family-friendly.
+
+#### Real-world Scenarios
+
+- **Log Analysis**: System administrators often use regex to parse logs, identifying anomalies or important events.
+- **Web Scraping**: Developers can use regex to extract specific data from web pages.
+- **Code Refactoring**: Programmers can use regex in IDEs to find and replace patterns in the code.
+- **Search Engines**: Many search functionalities use regex under the hood to deliver accurate results based on complex search patterns.
+
+#### Key Takeaways
+
+- Regular expressions are not just academic constructs but have numerous practical applications in real-world scenarios.
+- From validating user input to extracting specific data from large datasets, regex is a powerful tool in a developer's arsenal.
+- While regex is powerful, it's important to use it judiciously, especially in situations where performance is a concern, as complex regex operations can be resource-intensive.
+
+### Mini-Example: Extracting Phone Numbers with Regex
+
+Imagine you're given a block of text with mixed content, and you want to extract all phone numbers from it. Regular expressions can be the perfect tool for this task. Let's see how:
 
 ```python
 import re
 
-# A basic pattern for email validation
-pattern = re.compile(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+')
+# Sample text with phone numbers
+text_content = """
+John's contact: 123-456-7890
+Office landline: (123) 456-7890
+Jenny: 123.456.7890
+Emergency: 987-654-3210
+"""
 
-# Test strings
-emails = ['test.email@test.com', 'username@domain.com', 'invalid-email']
+# Regular expression pattern to extract phone numbers
+pattern = re.compile(r'(\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})')
 
-# Validate emails
-for email in emails:
-    if pattern.match(email):
-        print(f'Valid:   {email}')
-    else:
-        print(f'Invalid: {email}')
+# Extract phone numbers
+phone_numbers = pattern.findall(text_content)
+
+# Display the extracted phone numbers
+for number in phone_numbers:
+    print(number)
 ```
 
-In the above example, `pattern.match(email)` is utilized to validate email addresses against a specified pattern, providing a simple mechanism for basic email validation.
+In the above example:
+- We use the regex pattern `r'(\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})'` to match various phone number formats, such as `123-456-7890`, `(123) 456-7890`, and `123.456.7890`.
+- The `findall()` function extracts all matched phone numbers from the sample text.
+- The result would be a list of extracted phone numbers.
 
-Feel free to experiment by modifying the pattern to make it more robust or trying to validate different types of data!
+This simple yet effective example demonstrates the flexibility and power of regex in extracting specific patterns from textual data.
 
 ## Project: Data Scraper
 
 ### Objective
 
-Develop a Data Scraper that can extract meaningful information from raw textual data using regular expressions, demonstrating the practical application of pattern matching and data extraction.
+Develop a Data Scraper that can extract meaningful information, specifically email addresses and phone numbers, from raw textual data using regular expressions. This will give you practical experience in using regex for pattern matching and data extraction.
 
 ### Requirements
 
-- **Data Extraction**: Extract specific pieces of information from a block of text.
+- **Data Source**: You will be given a block of text with mixed content.
+- **Data Extraction**:
+  - Extract all email addresses present in the text.
+  - Extract all phone numbers present in the text.
 - **Pattern Matching**: Utilize regular expressions to identify and extract the required data.
 - **Data Presentation**: Display the extracted data in a user-friendly and structured format.
 
 ### Guidance
 
-1. **Identifying Patterns**:
-   - Analyze the text from which you need to extract data, identifying consistent patterns that can be targeted with regular expressions.
+1. **Analyzing the Data**:
+   - Familiarize yourself with the given textual data. Identify the patterns of email addresses and phone numbers.
    
 2. **Crafting Regular Expressions**:
-   - Develop regular expressions that accurately match the patterns identified in the text.
-   - Ensure to test your regular expressions with various samples of text to ensure accuracy and reliability.
+   - Develop a regex pattern that matches email addresses.
+   - Develop a separate regex pattern that matches phone numbers.
+   - Test both regex patterns with various samples to ensure they're accurate.
 
 3. **Extracting Data**:
-   - Utilize `findall()` or `finditer()` to extract the data matched by your regular expressions from the text.
-   - Ensure to manage the extracted data in a manner that facilitates easy and meaningful presentation.
+   - Use the `findall()` function to extract all email addresses and phone numbers matched by your regular expressions from the text.
+   - Store the results in separate lists for further processing or presentation.
 
-Feel free to refer to the code skeleton provided in the chapter's `/code/` folder to get started! An example solution is also provided in the `/code/answer/` folder to reference once you have attempted the project.
+### Sample Interaction
+
+Given a block of text, the Data Scraper should output:
+
+\```
+Extracted Email Addresses:
+- support@example.com
+- sales@example.org
+- emergency@example.com
+
+Extracted Phone Numbers:
+- 555-1234
+- 555-5678
+- 555-9111
+\```
+
+### Let's Get Coding!
+
+With the guidelines and requirements in mind, it's time to put theory into practice!
+
+- **Starting Point:** Utilize the code skeleton in the chapter's [`/code/`](https://github.com/07-regular-expressions/code/) folder as a foundation for your Data Scraper.
+- **Solution:** If you find yourself stuck or simply curious about one possible implementation, peek into the [`/code/answer/`](https://github.com/07-regular-expressions/code/answer/) folder. Remember, there are multiple ways to solve programming challenges, and the provided solution is just one of them.
+
+### Tips
+
+1. Start small. Initially, focus on extracting one type of data, either email or phone number.
+2. Test your regex patterns using online platforms like [Regex101](https://regex101.com/).
+3. Once you're confident about your regex patterns, integrate them into your Python script.
+4. Always validate the output to ensure you're extracting data as expected.
+
+### Closing Thoughts
+
+Regular expressions are a powerful tool, especially when it comes to extracting specific patterns from large blocks of text. This project allows you to see the practical applications of regex. As you move forward, you'll find numerous scenarios where regex can be an invaluable tool in your programming toolkit.
+
 
 ## Quiz
 
-Stay tuned! A quiz will be added here to assess your understanding of the concepts introduced in this chapter.
+Ready to test your knowledge? Take the Chapter 7 quiz [here](https://dsj7419.github.io/python-learning-by-projects/07-regular-expressions/quiz/).
 
 ## Next Steps
 
-Congrats on completing the chapter on Regular Expressions! 🎉 You've armed yourself with a powerful tool to manage and extract data from text, opening up vast possibilities in data processing and analysis.
+Congrats on completing the chapter on Regular Expressions! 🎉 With the power of regex, you've unlocked a sophisticated tool for text manipulation, search, and data extraction, allowing you to handle complex data processing tasks with ease.
 
-In the [next chapter](08-exception-handling/README.md), we’ll be talking about exception handling and how to handled unexpected events in your code.
+In the [next chapter](08-exception-handling/README.md), we will delve into exception handling, equipping you with the skills to manage unexpected events and errors in your code gracefully.
 
 ## Additional Resources
 
@@ -264,7 +347,7 @@ In the [next chapter](08-exception-handling/README.md), we’ll be talking about
 - [W3Schools: Python RegEx](https://www.w3schools.com/python/python_regex.asp)
 - [Real Python: Regular Expressions: Regex in Python](https://realpython.com/regex-python/)
 
-Feel free to explore and dive deep - regular expressions are a vast topic and there's always more to learn!
+Dive in and explore further. The world of regular expressions offers a plethora of patterns, techniques, and applications just waiting to be discovered!
 
 ---
 Happy Coding! 🚀

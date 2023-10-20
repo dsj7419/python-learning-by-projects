@@ -1,0 +1,266 @@
+[
+    {
+        "question": "What is the primary purpose of regular expressions?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Speeding up program execution", "correct": false},
+            {"text": "Pattern matching and text manipulation", "correct": true},
+            {"text": "Improving user interface design", "correct": false},
+            {"text": "Managing server connections", "correct": false}
+        ],
+        "reason": "Regular expressions are primarily used for pattern matching and text manipulation."
+    },
+    {
+        "question": "Which of the following is a basic regex character that matches any single character (except newline)?",
+        "type": "multiple",
+        "answers": [
+            {"text": ".", "correct": true},
+            {"text": "*", "correct": false},
+            {"text": "+", "correct": false},
+            {"text": "?", "correct": false}
+        ],
+        "reason": "In regex, the dot (.) matches any single character except newline."
+    },
+    {
+        "question": "What does the `*` quantifier denote in a regex pattern?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Matches the preceding element 0 or more times", "correct": true},
+            {"text": "Matches the preceding element 1 or more times", "correct": false},
+            {"text": "Matches the preceding element exactly once", "correct": false},
+            {"text": "Matches the preceding element 0 or 1 time", "correct": false}
+        ],
+        "reason": "The `*` quantifier matches the preceding element 0 or more times."
+    },
+    {
+        "question": "Which regex pattern will match words that start with 'a' and end with 'e'?",
+        "type": "multiple",
+        "answers": [
+            {"code": "^a.*e$", "correct": false},
+            {"code": "a.*e", "correct": true},
+            {"code": "^a.e$", "correct": false},
+            {"code": "a+e*", "correct": false}
+        ],
+        "reason": "The pattern `a.*e` will match words that start with 'a' and end with 'e'."
+    },
+    {
+        "question": "What do lookaheads in regex provide?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A way to look back at the preceding characters", "correct": false},
+            {"text": "A mechanism to assert a string follows after the current position without making a match", "correct": true},
+            {"text": "A method to replace characters", "correct": false},
+            {"text": "A way to escape special characters", "correct": false}
+        ],
+        "reason": "Lookaheads provide a mechanism to assert a string follows after the current position without actually matching it."
+    },
+    {
+        "question": "Which of the following is used to match the position between a word character and a non-word character?",
+        "type": "multiple",
+        "answers": [
+            {"text": "\\b", "correct": true},
+            {"text": "\\w", "correct": false},
+            {"text": "\\B", "correct": false},
+            {"text": "\\W", "correct": false}
+        ],
+        "reason": "The `\\b` metacharacter is used to match the position between a word character and a non-word character."
+    },
+    {
+        "question": "In regex, what does the flag 'i' denote?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Case-sensitive matching", "correct": false},
+            {"text": "Inverse matching", "correct": false},
+            {"text": "Case-insensitive matching", "correct": true},
+            {"text": "Iterative matching", "correct": false}
+        ],
+        "reason": "The 'i' flag denotes case-insensitive matching in regex."
+    },
+    {
+        "question": "Which regex pattern would be used to extract all email addresses from a text?",
+        "type": "multiple",
+        "answers": [
+            {"code": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+", "correct": true},
+            {"code": "[a-zA-Z0-9_.+-]@[a-zA-Z0-9-]\\.+", "correct": false},
+            {"code": "email@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+", "correct": false},
+            {"code": "[a-zA-Z0-9_.+-]+@domain\\.[a-zA-Z0-9-.]+", "correct": false}
+        ],
+        "reason": "The pattern `[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+` is a common regex to match email addresses."
+    },
+    {
+        "question": "What will the output be for the regex pattern `\\bword\\b` when applied to the string 'A word within words'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "word", "correct": true},
+            {"text": "words", "correct": false},
+            {"text": "No match", "correct": false},
+            {"text": "word, words", "correct": false}
+        ],
+        "reason": "The pattern `\\bword\\b` matches the word 'word' with word boundaries, ensuring it's not a part of another word."
+    },
+    {
+        "question": "For which of the following scenarios would you most likely use regex?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Rendering 3D graphics", "correct": false},
+            {"text": "Validating email addresses", "correct": true},
+            {"text": "Implementing multiplayer game networking", "correct": false},
+            {"text": "Developing mobile apps", "correct": false}
+        ],
+        "reason": "Regular expressions are typically used for text-related tasks like validating email addresses."
+    },
+    {
+        "question": "Which of the following patterns would match strings that both start and end with a number?",
+        "type": "multiple",
+        "answers": [
+            {"code": "^\\d.*\\d$", "correct": true},
+            {"code": "\\d+\\d", "correct": false},
+            {"code": "^\\d.*$", "correct": false},
+            {"code": ".*\\d.*", "correct": false}
+        ],
+        "reason": "The pattern `^\\d.*\\d$` ensures that the string starts and ends with a number."
+    },
+    {
+        "question": "What is the primary use of string replacement with regex?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Changing variable names", "correct": false},
+            {"text": "Refactoring code", "correct": false},
+            {"text": "Substituting patterns in text", "correct": true},
+            {"text": "Encrypting text", "correct": false}
+        ],
+        "reason": "String replacement with regex is primarily used to substitute patterns in text."
+    },
+    {
+        "question": "In the context of regular expressions, what does the term 'greedy' mean?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The regex consumes as much memory as possible", "correct": false},
+            {"text": "The regex tries to match the longest possible string", "correct": true},
+            {"text": "The regex is optimized for performance", "correct": false},
+            {"text": "The regex matches the first possible string", "correct": false}
+        ],
+        "reason": "In regex, 'greedy' means the pattern tries to match the longest possible string."
+    },
+    {
+        "question": "In which scenario would you use lookbehinds in regex?",
+        "type": "multiple",
+        "answers": [
+            {"text": "When you want to match a pattern that is preceded by another pattern", "correct": true},
+            {"text": "When you want to match a pattern at the start of a string", "correct": false},
+            {"text": "When you want to replace one pattern with another", "correct": false},
+            {"text": "When you want to match a pattern at the end of a string", "correct": false}
+        ],
+        "reason": "Lookbehinds in regex are used to assert that a pattern is preceded by another pattern without making a match."
+    },
+    {
+        "question": "In regex, the `^` character matches the start of a string.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "The `^` character is used in regex to match the start of a string."
+    },
+    {
+        "question": "What does the following regular expression match?",
+        "code": "^\\d{3}-\\d{2}-\\d{4}$",
+        "type": "multiple",
+        "answers": [
+            {"text": "A US phone number", "correct": false},
+            {"text": "A date in the format YYYY-MM-DD", "correct": false},
+            {"text": "A US social security number", "correct": true},
+            {"text": "An IP address", "correct": false}
+        ],
+        "reason": "The regular expression matches a pattern with three digits, a hyphen, two digits, another hyphen, and four digits, which is the format of a US social security number."
+    },
+    {
+        "question": "In regex, which quantifier matches zero or more of the preceding token?",
+        "type": "multiple",
+        "answers": [
+            {"text": "*", "correct": true},
+            {"text": "+", "correct": false},
+            {"text": "?", "correct": false},
+            {"text": "{0,}", "correct": false}
+        ],
+        "reason": "The `*` quantifier matches zero or more of the preceding token in regex."
+    },
+    {
+        "question": "What will the following regular expression match?",
+        "code": "\\b\\w+\\b",
+        "type": "multiple",
+        "answers": [
+            {"text": "Only the full words in a string", "correct": true},
+            {"text": "Words starting with a space", "correct": false},
+            {"text": "Words ending with a space", "correct": false},
+            {"text": "Words containing non-alphanumeric characters", "correct": false}
+        ],
+        "reason": "The regular expression will match full words in a string, bounded by word boundaries."
+    },
+    {
+        "question": "In the regex pattern `(?<=@)\\w+`, what does `(?<=@)` represent?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Matches the `@` symbol", "correct": false},
+            {"text": "Checks if there's an `@` symbol before the main pattern but doesn't match it", "correct": true},
+            {"text": "Negates the `@` symbol", "correct": false},
+            {"text": "Repeats the `@` symbol one or more times", "correct": false}
+        ],
+        "reason": "`(?<=@)` is a positive lookbehind that checks if there's an `@` symbol before the main pattern but doesn't include it in the match."
+    },
+    {
+        "question": "The dot `.` in regex will match any character, including newlines.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "By default, the dot `.` matches any character except a newline. However, with the `re.DOTALL` flag, it can match newlines as well."
+    },
+    {
+        "question": "What does the following regular expression match?",
+        "code": "\\d{2,4}",
+        "type": "multiple",
+        "answers": [
+            {"text": "Between 2 to 4 digits", "correct": true},
+            {"text": "Exactly 2 or 4 digits", "correct": false},
+            {"text": "At least 2 digits", "correct": false},
+            {"text": "At most 4 digits", "correct": false}
+        ],
+        "reason": "The regular expression `\\d{2,4}` matches sequences of 2, 3, or 4 digits."
+    },
+    {
+        "question": "To match any whitespace character in regex, which of the following can be used?",
+        "type": "multiple",
+        "answers": [
+            {"text": "\\s", "correct": true},
+            {"text": "\\w", "correct": false},
+            {"text": "\\d", "correct": false},
+            {"text": "\\b", "correct": false}
+        ],
+        "reason": "\\s matches any whitespace character in regex."
+    },
+    {
+        "question": "What will the following regular expression pattern match?",
+        "code": "(?i)hello",
+        "type": "multiple",
+        "answers": [
+            {"text": "Only 'hello'", "correct": false},
+            {"text": "'HELLO', 'Hello', 'hello', and other mixed-case variations", "correct": true},
+            {"text": "Strings ending with 'hello'", "correct": false},
+            {"text": "Strings starting with 'hello'", "correct": false}
+        ],
+        "reason": "The `(?i)` flag makes the pattern case-insensitive, so it will match 'hello' in any combination of uppercase and lowercase letters."
+    },
+    {
+        "question": "Which of the following patterns will match the string '99 balloons' but not '99 red balloons'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "^99 balloons$", "correct": true},
+            {"text": "99 balloons", "correct": false},
+            {"text": "99.*balloons", "correct": false},
+            {"text": "^99.*", "correct": false}
+        ],
+        "reason": "The `^99 balloons$` pattern ensures the string starts with '99' and ends with 'balloons' without any other characters in between."
+    } 
+]
