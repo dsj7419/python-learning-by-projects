@@ -13,12 +13,12 @@ Welcome to Chapter 6, where we delve into the world of file operations in Python
     - [Reading from Files](#reading-from-files)
     - [Writing to Files](#writing-to-files)
     - [Safeguarding File Operations with Context Managers](#safeguarding-file-operations-with-context-managers)
-    - [Key Takeaways](#key-takeaways)
+    - [File I/O Key Takeaways](#file-io-key-takeaways)
   - [2. Working with Paths](#2-working-with-paths)
     - [Understanding Paths in Python](#understanding-paths-in-python)
     - [Common Path Operations](#common-path-operations)
     - [Real-world Application: Ensuring Robust File Operations](#real-world-application-ensuring-robust-file-operations)
-    - [Key Takeaways](#key-takeaways)
+    - [Paths Key Takeaways](#paths-key-takeaways)
   - [3. Advanced File Operations](#3-advanced-file-operations)
     - [File Encodings](#file-encodings)
     - [Handling Large Files](#handling-large-files)
@@ -26,13 +26,13 @@ Welcome to Chapter 6, where we delve into the world of file operations in Python
     - [File Positioning](#file-positioning)
     - [Handling File Errors](#handling-file-errors)
     - [Binary Files](#binary-files)
-    - [Key Takeaways](#key-takeaways)
+    - [Advanced File Operations Key Takeaways](#advanced-file-operations-key-takeaways)
   - [4. File Metadata and Permissions](#4-file-metadata-and-permissions)
     - [File Metadata](#file-metadata)
     - [File Permissions](#file-permissions)
     - [Directory Operations](#directory-operations)
     - [File Compression](#file-compression)
-    - [Key Takeaways](#key-takeaways)
+    - [Metadata and Permissions Key Takeaways](#metadata-and-permissions-key-takeaways)
 - [Mini-Example: Enhanced File Operations](#mini-example-enhanced-file-operations)
 - [Project: Note-Keeping App](#project-note-keeping-app)
   - [Objective](#objective)
@@ -124,7 +124,7 @@ with open('data.txt', 'r') as file:
 
 By consistently using context managers, you ensure that your file operations are not only efficient but also less prone to common pitfalls like file leaks.
 
-##### Key Takeaways
+##### File I/O Key Takeaways
 
 - File I/O is a central aspect of programming, enabling data persistence and interaction.
 - Always ensure you open files in the appropriate mode to avoid unintentional data loss or corruption.
@@ -197,7 +197,7 @@ def write_log(log, path='logs/log.txt'):
 
 In this example, before attempting to write the log, the program ensures that the directory exists. If not, it creates the necessary directories. This approach guarantees that the file operations are resilient and reduces the risk of runtime errors.
 
-### Key Takeaways
+### Paths Key Takeaways
 
 - Paths are fundamental to file operations in Python, allowing us to specify the locations of files and directories.
 - The `os.path` module offers versatile tools to manipulate and query paths, ensuring cross-platform compatibility.
@@ -319,7 +319,7 @@ with open('binaryfile.bin', 'rb') as bin_file:
     print(data)
 ```
 
-#### Key Takeaways
+#### Advanced File Operations Key Takeaways
 
 - Always consider the encoding of a file, especially when working with non-ASCII characters.
 - For large files, consider reading the file line-by-line or in chunks to avoid memory issues.
@@ -443,7 +443,7 @@ with zipfile.ZipFile('files.zip', 'r') as zipf:
     zipf.extractall('extracted_files')
 ```
 
-#### Key Takeaways
+#### Metadata and Permissions Key Takeaways
 
 - File metadata provides a wealth of information about a file's attributes.
 - Proper file permissions are essential for security.

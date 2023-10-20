@@ -11,18 +11,18 @@ Welcome to Chapter 8, where we dive deep into Exception Handling in Python! 🚑
     - [Understanding Try/Except](#understanding-tryexcept)
     - [Handling Multiple Exceptions](#handling-multiple-exceptions)
     - [Using Else and Finally](#using-else-and-finally)
-    - [Key Takeaways](#key-takeaways)
+    - [Basics Key Takeaways](#basics-key-takeaways)
   - [2. Raising Exceptions](#2-raising-exceptions)
     - [Understanding Raising Exceptions](#understanding-raising-exceptions)
     - [Basic Usage of Raising Exceptions](#basic-usage-of-raising-exceptions)
     - [Utilizing Custom Exceptions](#utilizing-custom-exceptions)
     - [Importance of Meaningful Error Messages](#importance-of-meaningful-error-messages)
-    - [Key Takeaways](#key-takeaways)
+    - [Raising Key Takeaways](#raising-key-takeaways)
   - [3. Advanced Exception Handling Techniques](#3-advanced-exception-handling-techniques)
     - [Assertions in Python](#assertions-in-python)
     - [Chaining Exceptions](#chaining-exceptions)
     - [Customizing Exception Classes](#customizing-exception-classes)
-    - [Key Takeaways](#key-takeaways)
+    - [Advanced Key Takeaways](#advanced-key-takeaways)
 - [Mini-Example: Handling Exceptions in a Calculator](#mini-example-handling-exceptions-in-a-calculator)
 - [Project: Robust Data Entry System](#project-robust-data-entry-system)
   - [Objective](#objective)
@@ -110,7 +110,7 @@ finally:
     pass  # Replace with your code
 ```
 
-### Key Takeaways
+### Basics Key Takeaways
 
 - Exception handling is pivotal for creating resilient and user-friendly programs.
 - The `try`/`except` structure allows developers to anticipate and manage exceptions proactively.
@@ -180,7 +180,7 @@ While the type of exception gives a high-level idea of what went wrong, the acco
 - **User Guidance**: Clear, descriptive error messages can guide users, offering insights into the error's cause and potential solutions.
 - **Debugging**: For developers, a well-phrased error message can significantly streamline the debugging process, pinpointing the exact nature and location of the problem.
 
-### Key Takeaways
+### Raising Key Takeaways
 
 - The `raise` statement in Python enables developers to proactively trigger exceptions, ensuring code robustness.
 - Custom exceptions, tailored for specific error scenarios, enhance code clarity and maintainability.
@@ -252,7 +252,7 @@ class DatabaseError(Exception):
 
 In the example above, the custom `DatabaseError` exception not only stores an error message but also an error code. Additionally, a method `log_exception` is provided to log the error in a hypothetical logging mechanism.
 
-### Key Takeaways
+### Advanced Key Takeaways
 
 - Assertions provide a mechanism to declaratively state expected conditions in your code, raising exceptions when those conditions aren't met.
 - Exception chaining in Python allows for more detailed debugging by raising an exception as a direct result of another exception.

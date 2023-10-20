@@ -8,18 +8,18 @@ Welcome to Chapter 5, where we dive into modular programming in Python! 📁 In 
 - [Introduction](#introduction)
 - [Lesson Plan](#lesson-plan)
   - [1. Benefits of Modular Programming](#1-benefits-of-modular-programming)
-    - [Reusability](#1-reusability)
-    - [Maintainability](#2-maintainability)
-    - [Collaboration](#3-collaboration)
-    - [Scalability](#4-scalability)
+    - [Reusability](#reusability)
+    - [Maintainability](#maintainability)
+    - [Collaboration](#collaboration)
+    - [Scalability](#scalability)
   - [2. Creating Modules in Python](#2-creating-modules-in-python)
     - [Defining a Module](#defining-a-module)
     - [Importing a Module](#importing-a-module)
-    - [Importing Specific Attributes](#importing-specific-attributes)
+    - [Importing Specific Attributes](#importing-specific-attributes-from-a-module)
     - [Aliasing Module Names](#aliasing-module-names)
-  - [3. Importing Modules](#3-importing-modules)
+  - [3. Techniques for Importing Modules](#3-techniques-for-importing-modules)
     - [Import Entire Module](#import-entire-module)
-    - [Import Specific Attributes](#import-specific-attributes)
+    - [Import Specific Attributes](#import-specific-attributes-from-a-module)
     - [Alias Import](#alias-import)
 - [Mini-Example: Modular Design](#mini-example-modular-design)
 - [Project: Modular Calculator](#project-modular-calculator)
@@ -135,7 +135,7 @@ print(f"Sum: {result}")
 
 Notice how after importing `calculator`, we can access its functions using the `calculator.` prefix. This prefix ensures there's no ambiguity about which module's function we are calling, especially in larger scripts where multiple modules might be imported.
 
-#### Importing Specific Attributes
+#### Importing Specific Attributes from a Module
 
 In some scenarios, you might not want to import an entire module but only specific functions or attributes. Python provides an elegant way to handle this:
 
@@ -195,7 +195,7 @@ result = module_name.function_name()
 
 While this method ensures that you have access to all of a module's attributes, it requires using the module's name as a prefix, which can become verbose in some scenarios.
 
-#### Import Specific Attributes
+#### Import Specific Attributes from a Module
 
 If you're only interested in specific functions or classes from a module and wish to avoid the verbosity of prefixing with the module's name, Python offers a more targeted import approach:
 

@@ -11,19 +11,19 @@ Welcome to Chapter 7, where we explore Regular Expressions in Python! 🎯 In th
     - [Understanding the Need for Regex](#understanding-the-need-for-regex)
     - [Basic Regex Characters](#basic-regex-characters)
     - [Quantifiers in Regex](#quantifiers-in-regex)
-    - [Key Takeaways](#key-takeaways)
+    - [Basics Key Takeaways](#basics-key-takeaways)
   - [2. Advanced Regular Expressions](#2-advanced-regular-expressions)
     - [Lookaheads and Lookbehinds](#lookaheads-and-lookbehinds)
     - [Word Boundaries](#word-boundaries)
     - [Character Classes](#character-classes)
     - [Flags in Regex](#flags-in-regex)
-    - [Key Takeaways](#key-takeaways)
+    - [Advanced Key Takeaways](#advanced-key-takeaways)
   - [3. Practical Applications of Regex](#3-practical-applications-of-regex)
     - [Data Validation](#data-validation)
     - [Data Extraction and Grouping](#data-extraction-and-grouping)
     - [String Replacement](#string-replacement)
     - [Real-world Scenarios](#real-world-scenarios)
-    - [Key Takeaways](#key-takeaways)
+    - [Applications Key Takeaways](#applications-key-takeaways)
 - [Mini-Example: Extracting Phone Numbers with Regex](#mini-example-extracting-phone-numbers-with-regex)
 - [Project: Data Scraper](#project-data-scraper)
   - [Objective](#objective)
@@ -82,7 +82,7 @@ Quantifiers determine how many instances of the preceding element in the regex p
 pattern = re.compile(r'ab{2,4}c')  # Matches 'abbc', 'abbbc', or 'abbbbc'
 ```
 
-#### Key Takeaways
+#### Basics Key Takeaways
 
 - Regular expressions provide a powerful way to find specific patterns in text.
 - The basic characters in regex, like literals and metacharacters, form the foundation of pattern matching.
@@ -161,7 +161,7 @@ Regex flags modify how the matching operates.
 
 - **re.DOTALL (or re.S)**: Makes `.` match any character, including a newline.
 
-#### Key Takeaways
+#### Advanced Key Takeaways
 
 - Lookaheads and lookbehinds enable more refined and specific pattern matching based on context.
 - Word boundaries ensure that a pattern matches distinct words without being part of larger words.
@@ -226,7 +226,7 @@ Using regex, you can find and replace patterns within strings.
 - **Code Refactoring**: Programmers can use regex in IDEs to find and replace patterns in the code.
 - **Search Engines**: Many search functionalities use regex under the hood to deliver accurate results based on complex search patterns.
 
-#### Key Takeaways
+#### Applications Key Takeaways
 
 - Regular expressions are not just academic constructs but have numerous practical applications in real-world scenarios.
 - From validating user input to extracting specific data from large datasets, regex is a powerful tool in a developer's arsenal.
