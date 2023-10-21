@@ -1,0 +1,250 @@
+[
+    {
+        "question": "Which of the following best describes a class in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A blueprint for creating objects.", "correct": true},
+            {"text": "A function that can be instantiated.", "correct": false},
+            {"text": "A way to organize code in modules.", "correct": false},
+            {"text": "A specific instance of a function.", "correct": false}
+        ],
+        "reason": "A class serves as a blueprint for creating objects (instances) in object-oriented programming."
+    },
+    {
+        "question": "Which of the following best describes an object in the context of object-oriented programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A built-in Python datatype.", "correct": false},
+            {"text": "A function call.", "correct": false},
+            {"text": "An instance of a class.", "correct": true},
+            {"text": "A module or package.", "correct": false}
+        ],
+        "reason": "In object-oriented programming, an object is an instance of a class."
+    },
+    {
+        "question": "Consider the following Python code:\n\nclass Dog:\n    def bark(self):\n        return 'Woof!'\n\nfido = Dog()\n\nWhich of the following lines of code will correctly make Fido bark?",
+        "code": "class Dog:\n    def bark(self):\n        return 'Woof!'\n\nfido = Dog()",
+        "type": "multiple",
+        "answers": [
+            {"code": "fido.bark", "correct": false},
+            {"code": "Dog.bark()", "correct": false},
+            {"code": "fido.bark()", "correct": true},
+            {"code": "Dog().bark(fido)", "correct": false}
+        ],
+        "reason": "To call a method on an object, you use the object's name followed by the method name. In this case, `fido.bark()`."
+    },
+    {
+        "question": "Which of the following statements is true regarding class variables in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Class variables are shared across all instances of a class.", "correct": true},
+            {"text": "Class variables can only be accessed using the class name, not the instance.", "correct": false},
+            {"text": "Each instance of the class has its own copy of the class variable.", "correct": false},
+            {"text": "Class variables are defined inside methods.", "correct": false}
+        ],
+        "reason": "Class variables are shared among all instances of a class. They are defined outside any method and usually at the top of the class definition."
+    },
+    {
+        "question": "Which of the following best describes an attribute in object-oriented programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A function defined within a class.", "correct": false},
+            {"text": "A characteristic of an object, similar to a variable within a class.", "correct": true},
+            {"text": "A blueprint for creating objects.", "correct": false},
+            {"text": "A type of exception in Python.", "correct": false}
+        ],
+        "reason": "In object-oriented programming, an attribute refers to a characteristic or property of an object, which is essentially a variable defined within a class."
+    },
+    {
+        "question": "How are methods in a class different from regular functions in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Methods can't return values, while functions can.", "correct": false},
+            {"text": "Methods are defined outside a class, while functions are defined inside.", "correct": false},
+            {"text": "Methods can access and modify class state, while regular functions can't.", "correct": true},
+            {"text": "Methods and regular functions are essentially the same.", "correct": false}
+        ],
+        "reason": "Methods are associated with an object and can access and modify the data of that object, while regular functions operate independently of any specific object data."
+    },
+    {
+        "question": "What does inheritance allow you to do in object-oriented programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Create a new class based on the properties and methods of an existing class.", "correct": true},
+            {"text": "Increase the performance of your code.", "correct": false},
+            {"text": "Integrate multiple databases.", "correct": false},
+            {"text": "Ensure all methods have the same name in different classes.", "correct": false}
+        ],
+        "reason": "Inheritance allows a class (child or subclass) to inherit attributes and methods from another class (parent or base class)."
+    },
+    {
+        "question": "Which concept in OOP allows an object to take on many forms?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Encapsulation", "correct": false},
+            {"text": "Inheritance", "correct": false},
+            {"text": "Abstraction", "correct": false},
+            {"text": "Polymorphism", "correct": true}
+        ],
+        "reason": "Polymorphism refers to the ability of an object to take on many forms. It allows for defining methods in the child class with the same name as those in the parent class."
+    },
+    {
+        "question": "What does encapsulation refer to in object-oriented programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Making all methods and attributes public.", "correct": false},
+            {"text": "Bundling the data (attributes) and methods that operate on the data into a single unit or class.", "correct": true},
+            {"text": "Allowing an object to take on many forms.", "correct": false},
+            {"text": "Creating a blueprint for objects.", "correct": false}
+        ],
+        "reason": "Encapsulation refers to bundling data (attributes) and methods together, and restricting direct access to some of the object's components, promoting the concept of data hiding."
+    },
+    {
+        "question": "Abstraction in OOP allows developers to:",
+        "type": "multiple",
+        "answers": [
+            {"text": "Hide the complex implementation details and show only the essential features of an object.", "correct": true},
+            {"text": "Make all attributes and methods private.", "correct": false},
+            {"text": "Increase the speed of the application.", "correct": false},
+            {"text": "Use multiple databases concurrently.", "correct": false}
+        ],
+        "reason": "Abstraction means hiding the complex reality while exposing only the necessary parts. It provides a clear separation between what an object does and how it achieves what it does."
+    },
+    {
+        "question": "What is the primary purpose of an interface in object-oriented programming?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To provide a set of rules or protocols that a class must follow.", "correct": true},
+            {"text": "To speed up the execution of the program.", "correct": false},
+            {"text": "To define the data members of a class.", "correct": false},
+            {"text": "To serve as a blueprint for creating objects.", "correct": false}
+        ],
+        "reason": "An interface provides a contract that classes subscribing to the interface must follow. It defines a set of methods that the class must implement."
+    },
+    {
+        "question": "Which of the following best describes the 'S' in the SOLID principles?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Single Responsibility Principle", "correct": true},
+            {"text": "Solid State Principle", "correct": false},
+            {"text": "Substitution Principle", "correct": false},
+            {"text": "Synchronous Code Principle", "correct": false}
+        ],
+        "reason": "The 'S' in SOLID stands for Single Responsibility Principle, which states that a class should have only one reason to change."
+    },
+    {
+        "question": "In object-oriented design, what does cohesion refer to?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The level at which classes depend on each other.", "correct": false},
+            {"text": "The extent to which methods and data members within a class are related to each other.", "correct": true},
+            {"text": "The process of inheriting properties from a parent class.", "correct": false},
+            {"text": "The number of interfaces a class implements.", "correct": false}
+        ],
+        "reason": "Cohesion refers to how closely the responsibilities of a module or class are related to each other. High cohesion is desirable as it means that a class is well-focused, doing a specific job."
+    },
+    {
+        "question": "In Python, class attributes can be accessed both by the class itself and by its instances.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Class attributes are shared across the class and its instances. Thus, they can be accessed using the class name or the instance."
+    },
+    {
+        "question": "Which of the following code snippets correctly initializes a private attribute `_name` in a class?",
+        "type": "multiple",
+        "answers": [
+            {"code": "class Person:\n    def __init__(self):\n        self.name = 'John'", "correct": false},
+            {"code": "class Person:\n    def __init__(self):\n        self._name = 'John'", "correct": true},
+            {"code": "class Person:\n    name = 'John'", "correct": false},
+            {"code": "class Person:\n    __name = 'John'", "correct": false}
+        ],
+        "reason": "Private attributes in Python are indicated by a single underscore prefix. The double underscore prefix indicates name mangling, not strictly private."
+    },
+    {
+        "question": "Every class in Python implicitly inherits from which built-in class?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Base", "correct": false},
+            {"text": "Object", "correct": true},
+            {"text": "Super", "correct": false},
+            {"text": "Parent", "correct": false}
+        ],
+        "reason": "In Python, every class implicitly inherits from the built-in `object` class."
+    },
+    {
+        "question": "What does the following code snippet output?",
+        "code": "class A:\n    def show(self):\n        return 'A'\n\nclass B(A):\n    def show(self):\n        return 'B'\n\nobj = B()\nprint(obj.show())",
+        "type": "multiple",
+        "answers": [
+            {"code": "'A'", "correct": false},
+            {"code": "'B'", "correct": true},
+            {"code": "None", "correct": false},
+            {"code": "'AB'", "correct": false}
+        ],
+        "reason": "The `show` method in class `B` overrides the `show` method in class `A`. Thus, when it's called on an instance of `B`, it will return 'B'."
+    },
+    {
+        "question": "In Python, every method in a class implicitly takes an argument that refers to the instance of the class. What is the conventional name for this argument?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "The first argument of every method (including `__init__`) in a Python class is a reference to the instance. By convention, this argument is named `self`."
+    },
+    {
+        "question": "If a subclass does not have an `__init__` method, it will inherit the `__init__` method of its superclass if one exists.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "If a subclass does not provide an `__init__` method, the superclass's `__init__` method is invoked, if it exists."
+    },
+    {
+        "question": "Which of the following correctly describes polymorphism?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It's the ability of an object to change its type at runtime.", "correct": false},
+            {"text": "It's the process of bundling attributes and methods inside a class.", "correct": false},
+            {"text": "It's the ability of different objects to be treated as instances of the same class.", "correct": true},
+            {"text": "It's the mechanism of breaking a problem into smaller chunks.", "correct": false}
+        ],
+        "reason": "Polymorphism allows objects of different classes to be treated as objects of a common super class."
+    },
+    {
+        "question": "Consider the following code:\n\n`class Bird:\n    def fly(self):\n        return 'Can fly'\n\nclass Ostrich(Bird):\n    def fly(self):\n        return 'Cannot fly'`\n\nWhat is demonstrated here?",
+        "code": "class Bird:\n    def fly(self):\n        return 'Can fly'\n\nclass Ostrich(Bird):\n    def fly(self):\n        return 'Cannot fly'",
+        "type": "multiple",
+        "answers": [
+            {"text": "Encapsulation", "correct": false},
+            {"text": "Polymorphism", "correct": false},
+            {"text": "Method Overloading", "correct": false},
+            {"text": "Method Overriding", "correct": true}
+        ],
+        "reason": "Method Overriding occurs when a subclass has a method with the same name as in the parent class. Here, the `fly` method in the `Ostrich` class overrides the one in the `Bird` class."
+    },
+    {
+        "question": "Which of the following pieces of code will throw an error?",
+        "type": "multiple",
+        "answers": [
+            {"code": "class A:\n    pass\n\na = A()\nb = A()\nprint(a == b)", "correct": false},
+            {"code": "class A:\n    def __init__(self, x):\n        self.x = x\n\na = A(5)\nb = A(5)\nprint(a == b)", "correct": false},
+            {"code": "class A:\n    def __init__(self):\n        self.__x = 5\n\na = A()\nprint(a.__x)", "correct": true},
+            {"code": "class A:\n    x = 5\n\na = A()\nprint(a.x)", "correct": false}
+        ],
+        "reason": "Accessing the private variable `__x` directly from outside the class will throw an error. In Python, a name prefixed with an underscore (e.g., `_x`) is intended as 'protected' and a name prefixed with double underscores (e.g., `__x`) will be name-mangled to prevent direct access."
+    },
+    {
+        "question": "In object-oriented programming, composition involves creating complex objects by combining simpler ones. Is this statement true or false?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Composition is a design principle in OOP where complex objects are built by combining simpler, constituent objects. It allows for a 'has-a' relationship between objects."
+    }
+]
