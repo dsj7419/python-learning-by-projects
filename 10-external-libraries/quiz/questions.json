@@ -1,0 +1,254 @@
+[
+    {
+        "question": "What is the primary purpose of using libraries in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To show off your coding skills.", "correct": false},
+            {"text": "To reuse pre-existing code and functionalities, thereby reducing development time.", "correct": true},
+            {"text": "To make the code look more complicated.", "correct": false},
+            {"text": "To create new programming languages.", "correct": false}
+        ],
+        "reason": "Libraries are collections of pre-written code that developers can use to avoid 'reinventing the wheel', saving time and effort."
+    },
+    {
+        "question": "Which of the following is NOT a benefit of using libraries?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Reduced development time.", "correct": false},
+            {"text": "Standardized solutions.", "correct": false},
+            {"text": "Making code harder to understand.", "correct": true},
+            {"text": "Extending functionalities without extensive coding.", "correct": false}
+        ],
+        "reason": "Libraries are meant to simplify and speed up development, not make code harder to understand."
+    },
+    {
+        "question": "What command is used to install a library in Python?",
+        "type": "multiple",
+        "answers": [
+            {"code": "install library_name", "correct": false},
+            {"code": "library add library_name", "correct": false},
+            {"code": "python -m library_name", "correct": false},
+            {"code": "pip install library_name", "correct": true}
+        ],
+        "reason": "The `pip install` command is used to install Python libraries."
+    },
+    {
+        "question": "Which of the following is NOT a commonly used Python library?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Pandas", "correct": false},
+            {"text": "Numpy", "correct": false},
+            {"text": "Matplotlib", "correct": false},
+            {"text": "Hogwarts", "correct": true}
+        ],
+        "reason": "While Pandas, Numpy, and Matplotlib are popular Python libraries, 'Hogwarts' is not a Python library."
+    },
+    {
+        "question": "How can you make use of a function from a library after installing it?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Just call the function directly.", "correct": false},
+            {"text": "First import the library or specific function, then call it.", "correct": true},
+            {"text": "Send a request to the library's author.", "correct": false},
+            {"text": "Restart the computer.", "correct": false}
+        ],
+        "reason": "After installing a library, you need to import it (or the specific function) in your code to use it."
+    },
+    {
+        "question": "What is the primary goal of data visualization?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To create colorful charts.", "correct": false},
+            {"text": "To make data look complicated.", "correct": false},
+            {"text": "To communicate information clearly and efficiently using statistical graphics, plots, and information graphics.", "correct": true},
+            {"text": "To win art awards.", "correct": false}
+        ],
+        "reason": "The main purpose of data visualization is to communicate information clearly and efficiently to users."
+    },
+    {
+        "question": "Which Python library is primarily used for basic data visualizations like bar charts and line plots?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Seaborn", "correct": false},
+            {"text": "Plotly", "correct": false},
+            {"text": "Bokeh", "correct": false},
+            {"text": "Matplotlib", "correct": true}
+        ],
+        "reason": "Matplotlib is a widely-used Python library for creating static, interactive, and animated visualizations."
+    },
+    {
+        "question": "Which of the following can be visualized using a scatter plot?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Relationship between two numerical variables.", "correct": true},
+            {"text": "Distribution of a single numerical variable.", "correct": false},
+            {"text": "Ordered categories of data.", "correct": false},
+            {"text": "A sequence of events over time.", "correct": false}
+        ],
+        "reason": "Scatter plots are used to display the relationship or correlation between two numerical variables."
+    },
+    {
+        "question": "How can you customize the appearance of a plot in Matplotlib?",
+        "type": "multiple",
+        "answers": [
+            {"text": "By changing colors, labels, and styles.", "correct": true},
+            {"text": "By only changing the plot type.", "correct": false},
+            {"text": "By adjusting the size of the plot window.", "correct": false},
+            {"text": "You cannot customize plots in Matplotlib.", "correct": false}
+        ],
+        "reason": "Matplotlib offers various functionalities to customize the appearance of plots, including changing colors, labels, and styles."
+    },
+    {
+        "question": "Advanced visualization techniques do NOT include:",
+        "type": "multiple",
+        "answers": [
+            {"text": "3D Visualizations", "correct": false},
+            {"text": "Interactive Plots", "correct": false},
+            {"text": "Writing a novel", "correct": true},
+            {"text": "Integrating with Web Frameworks", "correct": false}
+        ],
+        "reason": "While 3D visualizations, interactive plots, and integration with web frameworks are advanced techniques, writing a novel is unrelated to data visualization."
+    },
+    {
+        "question": "What will be the output of the following code snippet?",
+        "code": "import numpy as np\nprint(np.__version__)",
+        "type": "multiple",
+        "answers": [
+            {"text": "A specific version number, e.g., '1.21.0'", "correct": true},
+            {"text": "An error message", "correct": false},
+            {"text": "'numpy'", "correct": false},
+            {"text": "0", "correct": false}
+        ],
+        "reason": "The code snippet imports the numpy library and prints its version number. The output will be a specific version number, depending on the installed numpy version."
+    },
+    {
+        "question": "In Matplotlib, what does the `plt.show()` function do?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Saves the plot to a file.", "correct": false},
+            {"text": "Displays the plot in a window.", "correct": true},
+            {"text": "Customizes the plot's appearance.", "correct": false},
+            {"text": "Closes the plot window.", "correct": false}
+        ],
+        "reason": "The `plt.show()` function in Matplotlib displays the plot in a window."
+    },
+    {
+        "question": "In data visualization, what is 'overplotting'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Creating too many plots at once.", "correct": false},
+            {"text": "Plotting too much data, making the plot unreadable.", "correct": true},
+            {"text": "Using too many colors in a single plot.", "correct": false},
+            {"text": "Failing to label your plots.", "correct": false}
+        ],
+        "reason": "Overplotting occurs when too much data is plotted in a single space, making the visualization cluttered and hard to interpret."
+    },
+    {
+        "question": "Which function is used to create a line plot in Matplotlib?",
+        "type": "multiple",
+        "answers": [
+            {"code": "plt.line()", "correct": false},
+            {"code": "plt.plot()", "correct": true},
+            {"code": "plt.scatter()", "correct": false},
+            {"code": "plt.bar()", "correct": false}
+        ],
+        "reason": "The `plt.plot()` function is used to create line plots in Matplotlib."
+    },
+    {
+        "question": "When using libraries, it is a good practice to import only the specific functions you need.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Importing only the specific functions you need can lead to cleaner code and can also reduce memory usage."
+    },
+    {
+        "question": "How can you change the size of a plot in Matplotlib?",
+        "type": "multiple",
+        "answers": [
+            {"code": "plt.figure(figsize=(width, height))", "correct": true},
+            {"code": "plt.size(width, height)", "correct": false},
+            {"code": "plt.set_size(width, height)", "correct": false},
+            {"code": "plt.resize(width, height)", "correct": false}
+        ],
+        "reason": "You can change the size of a plot in Matplotlib using the `plt.figure(figsize=(width, height))` function, where `width` and `height` are the dimensions of the plot."
+    },
+    {
+        "question": "Which of the following is true about external libraries in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "They are always included in Python by default.", "correct": false},
+            {"text": "They need to be installed and imported before use.", "correct": true},
+            {"text": "They cannot be used in commercial applications.", "correct": false},
+            {"text": "They are not supported in Python 3.", "correct": false}
+        ],
+        "reason": "External libraries are not included in Python by default and need to be installed and imported before they can be used."
+    },
+    {
+        "question": "What does the `pip freeze` command do?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Installs all the libraries listed in a requirements file.", "correct": false},
+            {"text": "Uninstalls all installed Python libraries.", "correct": false},
+            {"text": "Outputs the list of all installed Python libraries and their versions.", "correct": true},
+            {"text": "Freezes the Python interpreter.", "correct": false}
+        ],
+        "reason": "The `pip freeze` command outputs the list of all installed Python libraries along with their versions."
+    },
+    {
+        "question": "In the context of data visualization, what is a 'heatmap'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A plot showing temperature changes over time.", "correct": false},
+            {"text": "A 2D representation of data where values are represented by various shades of the same color.", "correct": true},
+            {"text": "A plot of the most popular areas on a website.", "correct": false},
+            {"text": "A visual representation of sound intensity.", "correct": false}
+        ],
+        "reason": "A heatmap is a data visualization technique where values in a matrix are represented as colors."
+    },
+    {
+        "question": "What is the purpose of the `plt.subplot()` function in Matplotlib?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To add a title to a plot.", "correct": false},
+            {"text": "To create a single plot.", "correct": false},
+            {"text": "To create multiple plots in a single figure.", "correct": true},
+            {"text": "To change the color of a plot.", "correct": false}
+        ],
+        "reason": "The `plt.subplot()` function is used to create multiple sub-plots within a single figure in Matplotlib."
+    },
+    {
+        "question": "Which of the following statements is true regarding Python's Standard Library?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It is a collection of modules that come pre-installed with Python and don't need external installation.", "correct": true},
+            {"text": "It needs to be installed separately using pip.", "correct": false},
+            {"text": "It contains libraries like Pandas and Matplotlib.", "correct": false},
+            {"text": "It is not officially supported by Python.", "correct": false}
+        ],
+        "reason": "Python's Standard Library comes pre-installed with Python and provides a wide range of functionalities without the need for external installation."
+    },
+    {
+        "question": "Why are interactive plots useful in data visualization?",
+        "type": "multiple",
+        "answers": [
+            {"text": "They allow users to interact with the data, enabling a deeper understanding.", "correct": true},
+            {"text": "They make the plots look more colorful.", "correct": false},
+            {"text": "They reduce the size of the data.", "correct": false},
+            {"text": "They make plots static and non-responsive.", "correct": false}
+        ],
+        "reason": "Interactive plots enable users to engage with the data, zoom, pan, and often get detailed information on demand, providing a more comprehensive understanding of the data."
+    },
+    {
+        "question": "Why might you want to integrate data visualizations with a web framework?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To make the visualizations accessible on a website.", "correct": true},
+            {"text": "To convert the visualizations into 3D models.", "correct": false},
+            {"text": "To delete the visualizations.", "correct": false},
+            {"text": "To change the programming language of the visualizations.", "correct": false}
+        ],
+        "reason": "Integrating data visualizations with web frameworks allows developers to embed and display the visualizations on web platforms, making them accessible to a wider audience."
+    }
+]
