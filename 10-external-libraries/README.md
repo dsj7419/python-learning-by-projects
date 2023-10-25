@@ -620,7 +620,7 @@ Embarking on this project, you've not only traversed our solar system but also d
 
 ## Quiz
 
-*Note: This section will be updated with a quiz to test your understanding of data visualization and using external libraries in Python.*
+Here is a quiz to test your understanding of data visualization and using external libraries in Python.
 
 [Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/10-external-libraries-and-visualization/quiz)
 

@@ -1,0 +1,296 @@
+[
+    {
+        "question": "Why are unit tests crucial in software development?",
+        "type": "multiple",
+        "answers": [
+            {"text": "They ensure new changes don't break existing features.", "correct": true},
+            {"text": "They automatically fix bugs in the code.", "correct": false},
+            {"text": "They make the software run faster.", "correct": false},
+            {"text": "They are required by all operating systems.", "correct": false}
+        ],
+        "reason": "Unit tests help in validating that each unit of the software performs as designed, ensuring reliability and stability of the software."
+    },
+    {
+        "question": "What does the following `unittest` method check?",
+        "code": "self.assertEqual(a, b)",
+        "type": "multiple",
+        "answers": [
+            {"text": "Whether `a` is less than `b`.", "correct": false},
+            {"text": "Whether `a` is not equal to `b`.", "correct": false},
+            {"text": "Whether `a` and `b` are the same object.", "correct": false},
+            {"text": "Whether `a` is equal to `b`.", "correct": true}
+        ],
+        "reason": "The `assertEqual` method in `unittest` checks if two values `a` and `b` are equal."
+    },
+    {
+        "question": "Which of the following is NOT a common debugging technique?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Setting breakpoints.", "correct": false},
+            {"text": "Using print statements.", "correct": false},
+            {"text": "Stepping through code.", "correct": false},
+            {"text": "Deleting random lines of code.", "correct": true}
+        ],
+        "reason": "Deleting random lines of code is not a recommended or common debugging technique. It can introduce more errors."
+    },
+    {
+        "question": "What does a debugger primarily help with?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Increasing the execution speed of the program.", "correct": false},
+            {"text": "Adding new features to the software.", "correct": false},
+            {"text": "Identifying and diagnosing issues in the code.", "correct": true},
+            {"text": "Connecting to databases.", "correct": false}
+        ],
+        "reason": "A debugger is a tool used by developers to identify, diagnose, and correct errors or bugs in a software program."
+    },
+    {
+        "question": "In the context of debugging, what is a 'breakpoint'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A point where the software breaks and crashes.", "correct": false},
+            {"text": "A specific location in the code where execution will pause during debugging.", "correct": true},
+            {"text": "A comment in the code indicating a break.", "correct": false},
+            {"text": "The main function or method in a program.", "correct": false}
+        ],
+        "reason": "A breakpoint is a marker set in the code where the debugger will pause execution, allowing the developer to inspect program state and control flow."
+    },
+    {
+        "question": "How do you execute a unit test in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Using the `run` keyword.", "correct": false},
+            {"text": "Using the `python test_filename.py` command.", "correct": true},
+            {"text": "By double-clicking the test file.", "correct": false},
+            {"text": "Using an external tool only.", "correct": false}
+        ],
+        "reason": "To execute a unit test in Python, you typically use the command `python test_filename.py` in the terminal or command prompt."
+    },
+    {
+        "question": "What is the primary purpose of Python's `pdb`?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It's a database management tool.", "correct": false},
+            {"text": "It's a performance booster for Python programs.", "correct": false},
+            {"text": "It's a built-in debugger for Python.", "correct": true},
+            {"text": "It's a Python package downloader.", "correct": false}
+        ],
+        "reason": "`pdb` stands for Python Debugger, and it is the built-in interactive debugger for the Python programming language."
+    },
+    {
+        "question": "Which command in `pdb` allows you to continue execution until the next breakpoint is encountered?",
+        "type": "multiple",
+        "answers": [
+            {"text": "next", "correct": false},
+            {"text": "break", "correct": false},
+            {"text": "continue", "correct": true},
+            {"text": "step", "correct": false}
+        ],
+        "reason": "In `pdb`, the `continue` command (or its abbreviation `c`) resumes program execution until a breakpoint is encountered."
+    },
+    {
+        "question": "Why are best practices important when writing unit tests?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Following best practices ensures that unit tests are effective, maintainable, and provide accurate results. It ensures tests are reliable and serve their purpose of validating code functionality."
+    },
+    {
+        "question": "All bugs can be detected and fixed using unit tests.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "While unit tests are valuable for catching many types of bugs, they can't guarantee the detection of every single bug. Integration tests, system tests, and other testing methodologies are also important."
+    },
+    {
+        "question": "Which of the following is the correct way to start a debugger session in Python?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import debug", "correct": false},
+            {"code": "import pdb; pdb.run()", "correct": false},
+            {"code": "import debug; debug.start()", "correct": false},
+            {"code": "import pdb; pdb.set_trace()", "correct": true}
+        ],
+        "reason": "The `pdb.set_trace()` command is used to start an interactive debugging session in Python."
+    },
+    {
+        "question": "What does the `unittest` method `assertRaises` check?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It checks if a specific exception is raised when a function is executed.", "correct": true},
+            {"text": "It asserts that two objects raise the same exceptions.", "correct": false},
+            {"text": "It raises an exception if a test fails.", "correct": false},
+            {"text": "It checks if any exception is raised, irrespective of its type.", "correct": false}
+        ],
+        "reason": "The `assertRaises` method in `unittest` checks if a specific exception is raised when the provided function is called."
+    },
+    {
+        "question": "What will be the output of the following code snippet?",
+        "code": "for i in range(5):\n    if i == 3:\n        continue\n    print(i)",
+        "type": "multiple",
+        "answers": [
+            {"text": "0 1 2 3 4", "correct": false},
+            {"text": "0 1 2 4", "correct": true},
+            {"text": "0 1 2", "correct": false},
+            {"text": "3 4", "correct": false}
+        ],
+        "reason": "The `continue` statement skips the current iteration of the loop. Thus, when `i` is 3, it skips the `print` statement, resulting in the output 0, 1, 2, and 4."
+    },
+    {
+        "question": "In unit testing, what's the primary purpose of a test fixture?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It's a replacement for the `unittest` module.", "correct": false},
+            {"text": "It's used to store global variables.", "correct": false},
+            {"text": "It provides a fixed baseline upon which tests can reliably and repeatedly execute.", "correct": true},
+            {"text": "It's a tool to debug failing tests.", "correct": false}
+        ],
+        "reason": "A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. It ensures a consistent and reliable environment for tests."
+    },
+    {
+        "question": "When should you use a debugger?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Only when there's a syntax error in your code.", "correct": false},
+            {"text": "When you want to improve the performance of your code.", "correct": false},
+            {"text": "When you want to understand the flow of your code or diagnose a logical error.", "correct": true},
+            {"text": "Before writing any line of code.", "correct": false}
+        ],
+        "reason": "Debuggers are primarily used to understand the flow of code execution, inspect variables, and diagnose logical errors or unexpected behaviors in the code."
+    },
+    {
+        "question": "Unit tests should be dependent on one another and should be executed in a specific sequence.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "Unit tests should be independent. The outcome of a test should not be dependent on whether other tests pass or fail."
+    },
+    {
+        "question": "The `pdb` command `list` does which of the following?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Lists all variables in the current scope.", "correct": false},
+            {"text": "Lists the source code around the current line.", "correct": true},
+            {"text": "Lists all available commands in the debugger.", "correct": false},
+            {"text": "Lists all breakpoints set in the code.", "correct": false}
+        ],
+        "reason": "In the `pdb` debugger, the `list` command displays the source code around the current line being executed."
+    },
+    {
+        "question": "Which of the following is NOT a benefit of unit testing?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Ensures code reliability.", "correct": false},
+            {"text": "Facilitates easier debugging.", "correct": false},
+            {"text": "Makes the codebase smaller.", "correct": true},
+            {"text": "Supports code refactoring.", "correct": false}
+        ],
+        "reason": "While unit tests add several benefits such as reliability, easier debugging, and support for refactoring, they do not make the codebase smaller. In fact, they add to the codebase since tests are additional code."
+    },
+    {
+        "question": "Which `pdb` command allows you to exit the debugger?",
+        "type": "multiple",
+        "answers": [
+            {"text": "exit", "correct": true},
+            {"text": "leave", "correct": false},
+            {"text": "stop", "correct": false},
+            {"text": "end", "correct": false}
+        ],
+        "reason": "In `pdb`, the `exit` command (or its abbreviation `q`) is used to terminate the debugging session."
+    },
+    {
+        "question": "What is a common pitfall when writing unit tests?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Writing tests after the code has been written.", "correct": false},
+            {"text": "Relying solely on unit tests and ignoring other forms of testing.", "correct": true},
+            {"text": "Running tests frequently.", "correct": false},
+            {"text": "Isolating tests from each other.", "correct": false}
+        ],
+        "reason": "While unit tests are valuable, relying solely on them and ignoring integration tests, system tests, etc., can be a pitfall. Different testing methodologies catch different types of issues."
+    },
+    {
+        "question": "The `unittest` module in Python requires you to manually execute each test function.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "The `unittest` module automatically identifies and runs methods that start with `test_` as test cases when you use `unittest.main()`."
+    },
+    {
+        "question": "In Python debugging, the `step` command in `pdb` allows you to execute the current line of code and stop at the first possible occasion.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "The `step` command, often abbreviated as `s`, executes the current line and stops as soon as possible, even if it's in a function that is called from the current line."
+    },
+    {
+        "question": "A well-written unit test should always test multiple functionalities of a program in a single test case.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "A well-written unit test typically tests a single piece of functionality. This ensures clarity and helps in pinpointing issues when a test fails."
+    },
+    {
+        "question": "When a Python script is paused in a debugger, you can modify variable values on the fly.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "In debugging mode, you can modify variable values in real-time. This can be helpful to test how different values might affect the execution."
+    },
+    {
+        "question": "Logging is used as a replacement for debugging in Python.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "Logging is not a replacement for debugging. While both provide insights into the code's behavior, logging captures events during the application's runtime, and debugging is an interactive process to diagnose issues."
+    },
+    {
+        "question": "Which of the following code snippets correctly defines a unit test class using the `unittest` module?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import unittest\nclass TestMyFunction(unittest.TestCase):\n    def test_sample(self):\n        self.assertEqual(5, 5)", "correct": true},
+            {"code": "class TestMyFunction:\n    def test_sample(self):\n        self.assertEqual(5, 5)", "correct": false},
+            {"code": "import unittest\nclass TestMyFunction:\n    def test_sample(self):\n        return 5 == 5", "correct": false},
+            {"code": "TestMyFunction(unittest.TestCase):\n    def test_sample(self):\n        self.assertTrue(5, 5)", "correct": false}
+        ],
+        "reason": "The correct way to define a unit test class in Python is to inherit from `unittest.TestCase` and use the appropriate assertion methods, such as `assertEqual`."
+    },
+    {
+        "question": "Which code snippet correctly sets a breakpoint using Python's `pdb` module?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import pdb\npdb.set_break()", "correct": false},
+            {"code": "import pdb\npdb.breakpoint()", "correct": false},
+            {"code": "breakpoint()", "correct": true},
+            {"code": "import pdb\npdb.set_trace()", "correct": true}
+        ],
+        "reason": "In Python 3.7 and above, you can use the built-in function `breakpoint()`. In earlier versions or for compatibility, `pdb.set_trace()` is used to set a breakpoint."
+    },
+    {
+        "question": "How do you correctly log an error message using Python's logging module?",
+        "type": "multiple",
+        "answers": [
+            {"code": "import logging\nlogging.error('This is an error message')", "correct": true},
+            {"code": "import logging\nlogging.log('This is an error message')", "correct": false},
+            {"code": "import logging\nlogging.print('Error: This is an error message')", "correct": false},
+            {"code": "import logging\nlogging.warning('Error: This is an error message')", "correct": false}
+        ],
+        "reason": "The correct way to log an error message using Python's logging module is by using the `error` method of the logging module."
+    }
+]

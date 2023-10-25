@@ -532,7 +532,7 @@ Building a Library Management System is a comprehensive exercise in object-orien
 
 ## Quiz
 
-*Note: This section will be updated with a quiz to test your understanding of object-oriented programming concepts.*
+Here is a quiz to test your understanding of object-oriented programming concepts.
 
 [Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/09-object-oriented-programming/quiz)
 
