@@ -1,0 +1,271 @@
+[
+    {
+        "question": "What is Git primarily used for?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Web browsing.", "correct": false},
+            {"text": "Graphics design.", "correct": false},
+            {"text": "Distributed version control.", "correct": true},
+            {"text": "Operating system.", "correct": false}
+        ],
+        "reason": "Git is a distributed version control system used to track changes in source code during software development."
+    },
+    {
+        "question": "Which command is used to identify yourself to Git after installation?",
+        "type": "multiple",
+        "answers": [
+            {"code": "git id", "correct": false},
+            {"code": "git user", "correct": false},
+            {"code": "git config --global user.name \"Your Name\"", "correct": true},
+            {"code": "git identify \"Your Name\"", "correct": false}
+        ],
+        "reason": "The `git config` command is used to set user-specific configuration values like email and username."
+    },
+    {
+        "question": "What does the following code snippet do?",
+        "code": "git init",
+        "type": "multiple",
+        "answers": [
+            {"text": "It initializes a new Git repository and begins tracking an existing directory.", "correct": true},
+            {"text": "It clones a remote repository.", "correct": false},
+            {"text": "It commits staged changes to the repository.", "correct": false},
+            {"text": "It merges two branches.", "correct": false}
+        ],
+        "reason": "The `git init` command is used to start a new repository."
+    },
+    {
+        "question": "What is the primary purpose of a branch in Git?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To fix bugs in the main branch.", "correct": false},
+            {"text": "To delete files from the repository.", "correct": false},
+            {"text": "To diverge from the main line of development and work without disrupting the primary branch.", "correct": true},
+            {"text": "To change the main branch's name.", "correct": false}
+        ],
+        "reason": "Branches allow developers to work on new features or fixes in isolation, ensuring that ongoing work doesn't disrupt the main line of development."
+    },
+    {
+        "question": "Which of the following commands is used to create a new branch and switch to it?",
+        "type": "multiple",
+        "answers": [
+            {"code": "git branch new-branch", "correct": false},
+            {"code": "git checkout new-branch", "correct": false},
+            {"code": "git checkout -b new-branch", "correct": true},
+            {"code": "git create new-branch", "correct": false}
+        ],
+        "reason": "The `git checkout -b` command creates a new branch and also switches to it."
+    },
+    {
+        "question": "On GitHub, what is a 'Fork'?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A tool to test software.", "correct": false},
+            {"text": "A personal copy of another user's repository.", "correct": true},
+            {"text": "A type of branch.", "correct": false},
+            {"text": "A specific type of merge conflict.", "correct": false}
+        ],
+        "reason": "Forking in GitHub creates a personal copy of another user's repository, allowing you to freely experiment without affecting the original project."
+    },
+    {
+        "question": "What is a Pull Request on GitHub?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A request to download a repository.", "correct": false},
+            {"text": "A request to delete a repository.", "correct": false},
+            {"text": "A mechanism to propose changes from one repository/branch to another.", "correct": true},
+            {"text": "A type of issue.", "correct": false}
+        ],
+        "reason": "A Pull Request (PR) is a way to inform others about the changes you've made, request code reviews, and merge changes to the main branch."
+    },
+    {
+        "question": "Which of the following is a feature of GitHub Actions?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Automatic code reviews.", "correct": false},
+            {"text": "Automation of workflows.", "correct": true},
+            {"text": "Real-time collaboration editing.", "correct": false},
+            {"text": "Cloud storage for personal files.", "correct": false}
+        ],
+        "reason": "GitHub Actions enable the automation of workflows, from software builds to deployments to issue triage."
+    },
+    {
+        "question": "In Git, which file is used to specify patterns of files or directories that should be ignored?",
+        "type": "multiple",
+        "answers": [
+            {"text": ".gitconfig", "correct": false},
+            {"text": ".gitignore", "correct": true},
+            {"text": ".gitkeep", "correct": false},
+            {"text": ".gitattributes", "correct": false}
+        ],
+        "reason": "The `.gitignore` file is used to specify patterns of files or directories that Git should intentionally ignore."
+    },
+    {
+        "question": "Commit messages should be vague and lengthy.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "Commit messages should be clear, concise, and descriptive, capturing the context in which changes were made."
+    },
+    {
+        "question": "Which command provides information about which files have changes that have not been committed yet?",
+        "type": "multiple",
+        "answers": [
+            {"code": "git status", "correct": true},
+            {"code": "git diff", "correct": false},
+            {"code": "git show", "correct": false},
+            {"code": "git info", "correct": false}
+        ],
+        "reason": "The `git status` command provides information about changes that have not been committed yet."
+    },
+    {
+        "question": "What does the following command do?",
+        "code": "git log --oneline --graph --decorate --all",
+        "type": "multiple",
+        "answers": [
+            {"text": "Displays a simple log of commits.", "correct": false},
+            {"text": "Displays a graph structure of the entire commit history in one line per commit format.", "correct": true},
+            {"text": "Clones a repository.", "correct": false},
+            {"text": "Merges two branches.", "correct": false}
+        ],
+        "reason": "The command provides a concise view of the commit history and shows branching and merging in a clear, colorful graph structure."
+    },
+    {
+        "question": "In the context of Git, a `HEAD` usually refers to:",
+        "type": "multiple",
+        "answers": [
+            {"text": "The top of your computer.", "correct": false},
+            {"text": "The first commit in your repository.", "correct": false},
+            {"text": "The last commit you've checked out.", "correct": true},
+            {"text": "The middle commit in your repository.", "correct": false}
+        ],
+        "reason": "In Git, `HEAD` is a special pointer or reference to the current commit (or the last commit) that you have checked out."
+    },
+    {
+        "question": "If two developers edit the same file at the same time, Git will always automatically merge their changes.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "Git will try to auto-merge changes, but if two developers edit the same part of a file, a merge conflict will arise, which needs manual intervention."
+    },
+    {
+        "question": "Which command is used to see commits by a specific author?",
+        "type": "multiple",
+        "answers": [
+            {"code": "git log --name=\"John Doe\"", "correct": false},
+            {"code": "git log --user=\"John Doe\"", "correct": false},
+            {"code": "git log --author=\"John Doe\"", "correct": true},
+            {"code": "git author=\"John Doe\"", "correct": false}
+        ],
+        "reason": "The `git log --author` command filters the commit history based on the author's name."
+    },
+    {
+        "question": "GitHub Actions are only used for Continuous Integration, not for Continuous Deployment.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "GitHub Actions can be used both for Continuous Integration (CI) and Continuous Deployment (CD)."
+    },
+    {
+        "question": "Which of the following is NOT a place where Git stores configuration data?",
+        "type": "multiple",
+        "answers": [
+            {"text": "system config", "correct": false},
+            {"text": "global config", "correct": false},
+            {"text": "local config", "correct": false},
+            {"text": "universal config", "correct": true}
+        ],
+        "reason": "Git stores configuration data in system config, global config, and local config. There's no 'universal config'."
+    },
+    {
+        "question": "What does the `.git` directory represent in a Git-initialized directory?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It's a backup of the project files.", "correct": false},
+            {"text": "It contains the entire history and metadata for the Git repository.", "correct": true},
+            {"text": "It's a temporary cache for Git operations.", "correct": false},
+            {"text": "It stores the global configuration settings of Git.", "correct": false}
+        ],
+        "reason": "The `.git` directory contains all the information that is necessary for the version control functionality provided by Git."
+    },
+    {
+        "question": "The longer the commit message, the better. Detailed explanations are always preferred in every commit.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "While context and details are important, commit messages should be concise and to the point. A short summary with an optional detailed explanation is the recommended format."
+    },
+    {
+        "question": "What is the main advantage of using a `.gitignore` file?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To specify which files should be tracked by Git.", "correct": false},
+            {"text": "To specify patterns of files or directories that Git should intentionally ignore.", "correct": true},
+            {"text": "To speed up Git operations.", "correct": false},
+            {"text": "To resolve merge conflicts.", "correct": false}
+        ],
+        "reason": "The `.gitignore` file is used to tell Git which files or patterns of files to ignore and not track in the repository."
+    },
+    {
+        "question": "In the context of Git, which of the following commands would discard changes in the working directory and restore the specified file to the state of the last commit?",
+        "type": "multiple",
+        "answers": [
+            {"code": "git restore --source=HEAD --staged --worktree [filename]", "correct": true},
+            {"code": "git reset HEAD [filename]", "correct": false},
+            {"code": "git revert HEAD [filename]", "correct": false},
+            {"code": "git checkout -- [filename]", "correct": false}
+        ],
+        "reason": "The `git restore` command with the specified flags would discard changes in both the working directory and staging area, restoring the file to the state of the last commit."
+    },
+    {
+        "question": "Which of the following scenarios is likely to result in a fast-forward merge in Git?",
+        "type": "multiple",
+        "answers": [
+            {"text": "When the feature branch has diverged from the main branch.", "correct": false},
+            {"text": "When the main branch has new commits that the feature branch doesn't have.", "correct": false},
+            {"text": "When the feature branch has new commits that the main branch doesn't have, and there's a linear path to the feature branch.", "correct": true},
+            {"text": "When there are conflicting changes in the two branches.", "correct": false}
+        ],
+        "reason": "A fast-forward merge is possible when the feature branch has new commits that the main branch doesn't have, and there's a linear path to the feature branch. In this case, the main branch pointer can simply be moved forward to point to the feature branch commit."
+    },
+    {
+        "question": "You've mistakenly added a file to Git's staging area. Which command will unstage the file but retain the changes in the working directory?",
+        "type": "multiple",
+        "answers": [
+            {"code": "git reset [filename]", "correct": true},
+            {"code": "git rm --cached [filename]", "correct": false},
+            {"code": "git clean [filename]", "correct": false},
+            {"code": "git checkout -- [filename]", "correct": false}
+        ],
+        "reason": "The `git reset` command will unstage the file but won't alter it in the working directory."
+    },
+    {
+        "question": "In the context of a rebase operation in Git, what does the `--onto` option specify?",
+        "type": "multiple",
+        "answers": [
+            {"text": "The branch that you're currently on.", "correct": false},
+            {"text": "The branch to which you want to apply the change.", "correct": true},
+            {"text": "The commit at which to start the rebasing process.", "correct": false},
+            {"text": "The commit which you want to exclude from the rebase.", "correct": false}
+        ],
+        "reason": "In the context of a rebase operation, the `--onto` option specifies the new base for the current branch."
+    },
+    {
+        "question": "Which of the following Git objects represents a single point in the Git history and contains a tree object that corresponds to the top directory of the stored snapshot?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Blob", "correct": false},
+            {"text": "Tree", "correct": false},
+            {"text": "Commit", "correct": true},
+            {"text": "Tag", "correct": false}
+        ],
+        "reason": "A commit object represents a single point in the Git history and contains a tree object that corresponds to the top directory of the stored snapshot, a pointer to the parent commit(s), and other metadata."
+    }
+]
