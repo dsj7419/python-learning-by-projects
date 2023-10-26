@@ -686,8 +686,6 @@ Now that you've delved deep into Git, GitHub, and collaborative workflows, it's 
 
 [Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/12-version-control/quiz)!
 
-(Note: The quiz link will be provided later.)
-
 ## Next Steps
 
 Fantastic work on navigating the intricacies of Git and GitHub! You're now equipped with the foundational skills necessary for collaborative software development. As we approach the end of this series, gear up for the culmination of your learning journey in the next chapter.
