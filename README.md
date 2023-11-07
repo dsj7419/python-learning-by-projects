@@ -2,7 +2,7 @@
 
 Welcome to the Project-Based Python Learning Course! This repository, curated by [dsj7419](https://github.com/dsj7419), is designed to provide a hands-on and engaging approach to learning Python through practical projects.
 
-<img src="./assets/images/PythonLearning.png" alt="Python Learning By Projects" width="200"/>
+![Python Learning By Projects](./assets/images/PythonLearning.png)
 
 ## About The Course
 
@@ -18,6 +18,8 @@ This course is structured into different modules, each focusing on a particular 
 [Start your Python journey here](https://dsj7419.github.io/python-learning-by-projects/01-getting-started/) by setting up your development environment and working on the first project!
 
 ## Course Structure
+
+### Beginning Python
 
 1. **[Getting Started](https://dsj7419.github.io/python-learning-by-projects/01-getting-started/)**
    - Environment Setup, Writing a Python Script
@@ -56,8 +58,8 @@ This course is structured into different modules, each focusing on a particular 
    - *Project: Library Management System*
 
 10. **[External Libraries and Visualization](https://dsj7419.github.io/python-learning-by-projects/10-external-libraries/)**
-   - Using Libraries, Basic Data Visualization
-   - *Project: Data Visualization with Matplotlib*
+    - Using Libraries, Basic Data Visualization
+    - *Project: Data Visualization with Matplotlib*
 
 11. **[Testing and Debugging](https://dsj7419.github.io/python-learning-by-projects/11-testing-debugging/)**
     - Unit Tests, Debugging Techniques
@@ -69,7 +71,84 @@ This course is structured into different modules, each focusing on a particular 
 
 13. **[Final Project](https://dsj7419.github.io/python-learning-by-projects/13-final-project/)**
     - Integrating Learned Concepts
-    - *Automated Report Generation and Distribution System*
+    - *Project: Automated Report Generation and Distribution System*
+
+### Intermediate Python
+
+1. **Advanced Data Types and Algorithms**
+   - In-depth comprehension, Iterators, Generators
+   - Sorting and Searching Algorithms
+   - *Project: Password Generator and Manager*
+
+2. **Functional Programming**
+   - First-Class Functions, Higher-Order Functions
+   - Lambda Functions, `map`, `filter`, `reduce`
+   - *Project: Batch File Renamer*
+
+3. **Decorators and Closures**
+   - Understanding and writing decorators
+   - Using closures for maintaining state
+   - *Project: User Authentication System*
+
+4. **Context Managers and the `with` Statement**
+   - Creating your own context managers
+   - Practical usage of context managers
+   - *Project: Resource Management Tool*
+
+5. **Advanced Object-Oriented Programming**
+   - MetaClasses, Abstract Base Classes
+   - Multiple Inheritance, Method Resolution Order
+   - *Project: Plugin System Design*
+
+6. **Advanced Control Flow**
+   - Advanced unpacking, `*args`, `**kwargs`
+   - The `itertools` and `operator` modules
+   - *Project: Command-line Calculator*
+
+7. **Exception Handling In-Depth**
+   - Creating custom exception classes
+   - Advanced exception handling techniques
+   - *Project: File Parser with Robust Error Handling*
+
+8. **File Operations and Data Serialization**
+   - Working with binary files
+   - JSON, YAML, Pickle
+   - *Project: Cross-Format Data Converter*
+
+9. **Database Interaction**
+   - Python DB-API
+   - ORM with SQLAlchemy
+   - *Project: Inventory Control System*
+
+10. **Network Programming**
+    - Basics of the `socket` module
+    - Client-server application development
+    - *Project: Peer-to-peer Chat Application*
+
+11. **Concurrency and Parallelism**
+    - Threading and Multiprocessing
+    - AsyncIO
+    - *Project: Asynchronous Web Scraper*
+
+12. **Web Development with Flask**
+    - Flask Framework Fundamentals
+    - Flask Extensions
+    - *Project: Personal Portfolio Website*
+
+13. **Testing and Debugging**
+    - Unit testing with `unittest` and `pytest`
+    - Debugging and Profiling
+    - *Project: Testing and Performance Optimization*
+
+14. **Automating Daily Tasks**
+    - Scripting for File System Management
+    - Task Scheduling
+    - *Project: System Backup and Task Scheduling*
+
+15. **[Final Intermediate Project](https://dsj7419.github.io/python-learning-by-projects/final-intermediate-project/)**
+    - An integration of the concepts covered
+    - Developing a web service with user authentication, database interaction, API and a front-end interface
+    - *Project: Full-stack Task Management Tool*
 
 ## Contributing
 
