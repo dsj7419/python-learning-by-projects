@@ -1,0 +1,347 @@
+[
+    {
+        "question": "What is an iterator in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A data type that can be iterated over.", "correct": false},
+            {"text": "A protocol that Python objects implement to return their next item.", "correct": true},
+            {"text": "A function that loops over an iterable.", "correct": false},
+            {"text": "A version of for loop in Python.", "correct": false}
+        ],
+        "reason": "An iterator is an object that implements the iterator protocol, which consists of the methods `__iter__()` and `__next__()`."
+    },
+    {
+        "question": "Which of the following is not a feature of generators in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Generators preserve the state between iterations.", "correct": false},
+            {"text": "Generators can only be used once.", "correct": false},
+            {"text": "Generators return a value using the return statement.", "correct": true},
+            {"text": "Generators use the yield statement to yield values.", "correct": false}
+        ],
+        "reason": "Generators yield values using the yield statement; they do not return values using the return statement, which actually stops generation."
+    },
+    {
+        "question": "How does the `next()` function work?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It schedules the next function to run in an application.", "correct": false},
+            {"text": "It retrieves the next element from an iterator.", "correct": true},
+            {"text": "It moves to the next line of code outside a loop.", "correct": false},
+            {"text": "It increments a number by one.", "correct": false}
+        ],
+        "reason": "The `next()` function retrieves the next item from an iterator by internally calling its `__next__()` method."
+    },
+    {
+        "question": "What will the following code snippet output?\n\n```python\nnumbers = [1, 2, 3]\niterator = iter(numbers)\nprint(next(iterator))\nprint(next(iterator))\n```",
+        "type": "multiple",
+        "answers": [
+            {"text": "1 2", "correct": true},
+            {"text": "1 2 3", "correct": false},
+            {"text": "Error", "correct": false},
+            {"text": "2 3", "correct": false}
+        ],
+        "reason": "The `next()` function is called twice on the iterator, so it will output the first two elements of the list: 1 and 2."
+    },
+    {
+        "question": "What is a generator expression?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A high-level expression that generates code.", "correct": false},
+            {"text": "A compact generator notation similar to list comprehensions.", "correct": true},
+            {"text": "An expression that generates random numbers.", "correct": false},
+            {"text": "A syntax error in Python.", "correct": false}
+        ],
+        "reason": "A generator expression is a concise way to create a generator without the need for a function, similar to list comprehensions."
+    },
+    {
+        "question": "Which sorting algorithm is generally fastest for large datasets?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Bubble Sort", "correct": false},
+            {"text": "Merge Sort", "correct": true},
+            {"text": "Insertion Sort", "correct": false},
+            {"text": "Selection Sort", "correct": false}
+        ],
+        "reason": "Merge Sort is generally considered efficient for large datasets due to its O(n log n) time complexity."
+    },
+    {
+        "question": "What does 'in-place' sorting mean?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Sorting the elements by physically rearranging them in memory.", "correct": true},
+            {"text": "Sorting the data within a new array.", "correct": false},
+            {"text": "Sorting that is done in the same place where the function was called.", "correct": false},
+            {"text": "A sorting method that doesn't move elements, but instead swaps their values.", "correct": false}
+        ],
+        "reason": "In-place sorting algorithms sort the data within the same array and require no extra storage."
+    },
+    {
+        "question": "What is the worst-case time complexity of QuickSort?",
+        "type": "multiple",
+        "answers": [
+            {"text": "O(n^2)", "correct": true},
+            {"text": "O(n log n)", "correct": false},
+            {"text": "O(log n)", "correct": false},
+            {"text": "O(n)", "correct": false}
+        ],
+        "reason": "The worst-case time complexity of QuickSort is O(n^2), which occurs when the pivot selection is poor, such as with an already sorted array."
+    },
+    {
+        "question": "Why is it important to handle errors in algorithms?",
+        "type": "multiple",
+        "answers": [
+            {"text": "To prevent the program from crashing.", "correct": true},
+            {"text": "Error handling is not important in algorithms.", "correct": false},
+            {"text": "To make the algorithm run faster.", "correct": false},
+            {"text": "To use less memory.", "correct": false}
+        ],
+        "reason": "Handling errors is crucial to prevent unexpected termination of the program and ensure it behaves predictably under all conditions."
+    },
+    {
+        "question": "Which of the following is a correct way to implement a linear search?",
+        "type": "multiple",
+        "answers": [
+            {"code": "for i in range(len(array)):\n    if array[i] == target:\n        return i", "correct": true},
+            {"code": "return array.index(target)", "correct": false},
+            {"code": "for i in array:\n    if i == target:\n        break\nreturn i", "correct": false},
+            {"code": "while left <= right:\n    mid = (left + right) // 2\n    if array[mid] == target:\n        return mid\n    elif array[mid] < target:\n        left = mid + 1\n    else:\n        right = mid - 1", "correct": false}
+        ],
+        "reason": "The provided code is a basic for loop that checks each element until the target is found, which is the principle of linear search."
+    },
+    {
+        "question": "What is Big O Notation?",
+        "type": "multiple",
+        "answers": [
+            {"text": "A way to measure how well you wrote your code.", "correct": false},
+            {"text": "A mathematical notation that describes the limiting behavior of a function.", "correct": true},
+            {"text": "A special function in Python for big numbers.", "correct": false},
+            {"text": "An operator in Python for object-oriented programming.", "correct": false}
+        ],
+        "reason": "Big O Notation is used in Computer Science to describe the performance or complexity of an algorithm."
+    },
+    {
+        "question": "Which of the following is true about the `yield` statement?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It is used to end a function.", "correct": false},
+            {"text": "It is used to pause a function saving its states.", "correct": true},
+            {"text": "It immediately exits the program.", "correct": false},
+            {"text": "It cannot be used in loops.", "correct": false}
+        ],
+        "reason": "The `yield` statement is used by generators to pause the function and return a value to the caller while retaining its state."
+    },
+    {
+        "question": "What are the benefits of using a generator?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Generators consume more memory for faster execution.", "correct": false},
+            {"text": "Generators enable multi-threading capabilities.", "correct": false},
+            {"text": "Generators provide a convenient way to implement iterators.", "correct": true},
+            {"text": "Generators enhance the security of Python code.", "correct": false}
+        ],
+        "reason": "Generators provide a simple and powerful tool for creating iterators without the overhead of class-based iteration methods."
+    },
+    {
+        "question": "How do you test a sorting algorithm in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "By using the `assert` statement to compare the sorted output with a known correct result.", "correct": true},
+            {"text": "By printing out the sorted array and visually inspecting it.", "correct": false},
+            {"text": "By measuring the time it takes to run the algorithm.", "correct": false},
+            {"text": "By verifying the length of the output array matches the input array.", "correct": false}
+        ],
+        "reason": "Using assertions is a way to programmatically verify that the output of the sorting algorithm matches the expected result."
+    },
+    {
+        "question": "What does the `iter()` function do?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It converts a sequence into an integer.", "correct": false},
+            {"text": "It creates an iterator object from an iterable.", "correct": true},
+            {"text": "It generates a range of numbers.", "correct": false},
+            {"text": "It iterates over a function indefinitely.", "correct": false}
+        ],
+        "reason": "The `iter()` function takes an iterable object and returns an iterator for it."
+    },
+    {
+        "question": "Which of the following will likely result in a runtime error?",
+        "type": "multiple",
+        "answers": [
+            {"code": "sorted_list = sorted(['a', 'b', 'c'])\nbinary_search(sorted_list, 'b')", "correct": false},
+            {"code": "binary_search(['a', 'b', 'c'], 'd')", "correct": true},
+            {"code": "merge_sort([3, 1, 4, 1, 5, 9])", "correct": false},
+            {"code": "bubble_sort([8, 6, 7, 5, 3, 0, 9])", "correct": false}
+        ],
+        "reason": "Attempting a binary search for 'd' in an array that does not contain it without proper handling will cause a runtime error."
+    },
+    {
+        "question": "Select the true statement about space complexity.",
+        "type": "multiple",
+        "answers": [
+            {"text": "It measures the maximum space required by an algorithm as the size of input data increases.", "correct": true},
+            {"text": "Space complexity is not important if time complexity is optimized.", "correct": false},
+            {"text": "All sorting algorithms have the same space complexity.", "correct": false},
+            {"text": "Space complexity can only be reduced by using external storage.", "correct": false}
+        ],
+        "reason": "Space complexity refers to the amount of memory space needed by an algorithm in its life cycle, given the problem size."
+    },
+    {
+        "question": "Which of the following algorithms is not a comparison-based sort?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Bubble Sort", "correct": false},
+            {"text": "Counting Sort", "correct": true},
+            {"text": "QuickSort", "correct": false},
+            {"text": "Merge Sort", "correct": false}
+        ],
+        "reason": "Counting sort is not a comparison-based sorting algorithm; it counts the number of objects having distinct key values."
+    },
+    {
+        "question": "What will happen if you use a `yield` inside a list comprehension in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It will create a generator object.", "correct": true},
+            {"text": "It will result in a SyntaxError.", "correct": false},
+            {"text": "It will yield all values in the list at once.", "correct": false},
+            {"text": "It will ignore the yield and create a list.", "correct": false}
+        ],
+        "reason": "Using `yield` inside a list comprehension converts the comprehension into a generator expression."
+    },
+    {
+        "question": "What is the primary advantage of a Merge Sort over QuickSort?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Merge Sort is always faster than QuickSort.", "correct": false},
+            {"text": "Merge Sort has better worst-case time complexity.", "correct": true},
+            {"text": "Merge Sort uses a more complex algorithm.", "correct": false},
+            {"text": "Merge Sort is easier to implement.", "correct": false}
+        ],
+        "reason": "Merge Sort has a guaranteed time complexity of O(n log n), which is better than the worst-case time complexity of QuickSort, which is O(n^2)."
+    },
+    {
+        "question": "Which algorithm would you likely choose for a small dataset that is mostly sorted?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Bubble Sort with a flag to detect no-swaps.", "correct": true},
+            {"text": "Heapsort, due to its complexity.", "correct": false},
+            {"text": "Merge Sort for its stability.", "correct": false},
+            {"text": "QuickSort for its average-case efficiency.", "correct": false}
+        ],
+        "reason": "Bubble Sort can be efficient for small, mostly sorted datasets, especially if optimized to stop when no swaps have occurred on a pass."
+    },
+    {
+        "question": "What is a potential downside of using recursion in an algorithm?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Recursion can be slower due to the overhead of function calls.", "correct": false},
+            {"text": "Recursion simplifies the code and makes it easier to understand, with no downsides.", "correct": false},
+            {"text": "Recursion can lead to stack overflow if the recursion depth is too high.", "correct": true},
+            {"text": "Recursion can only be used in sorting algorithms.", "correct": false}
+        ],
+        "reason": "Using recursion can lead to a stack overflow if the recursive calls are too deep, as each call consumes stack space."
+    },
+    {
+        "question": "An iterator in Python is an object that contains a countable number of values.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "An iterator is indeed an object that contains a countable number of values and can be iterated over."
+    },
+    {
+        "question": "Which of these is a feature of a generator in Python?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It can only be used once.", "correct": true},
+            {"text": "It stores all the values in memory at once.", "correct": false},
+            {"text": "It executes faster than an equivalent function with a return statement.", "correct": false},
+            {"text": "It cannot yield multiple values in a single function.", "correct": false}
+        ],
+        "reason": "Generators are iterators that generate values on the fly and can only be used once as they do not store all the values in memory."
+    },
+    {
+        "question": "What will be the output of the following code snippet?",
+        "code": "def counter():\n    yield '1'\n    return '2'\n    yield '3'\nc = counter()\nprint(next(c))\nprint(next(c))",
+        "type": "multiple",
+        "answers": [
+            {"text": "1 followed by a StopIteration error with value '2'", "correct": true},
+            {"text": "1 2 3", "correct": false},
+            {"text": "1 followed by 2 without errors", "correct": false},
+            {"text": "1 3", "correct": false}
+        ],
+        "reason": "The generator function will yield '1', and then the return statement will terminate the generator causing a StopIteration error with the value '2'."
+    },
+    {
+        "question": "Can iterators be used to perform actions at each step of iteration, such as updating a database record?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Iterators can be designed to perform any action during iteration, including updating a database record."
+    },
+    {
+        "question": "Is 'Big O Notation' used to describe the space complexity of an algorithm?",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": true},
+            {"text": "False", "correct": false}
+        ],
+        "reason": "Big O Notation is used to classify algorithms according to their running time or space requirement in the worst-case scenario."
+    },
+    {
+        "question": "Which Python code block correctly demonstrates a generator expression?",
+        "type": "multiple",
+        "answers": [
+            {"code": "(x*x for x in range(3))", "correct": true},
+            {"code": "[x*x for x in range(3)]", "correct": false},
+            {"code": "{x*x for x in range(3)}", "correct": false},
+            {"code": "x*x for x in range(3)", "correct": false}
+        ],
+        "reason": "A generator expression is written similarly to a list comprehension, but with parentheses instead of square brackets."
+    },
+    {
+        "question": "The 'yield' statement is used to end the execution of a function call and returns a result to the caller.",
+        "type": "truefalse",
+        "answers": [
+            {"text": "True", "correct": false},
+            {"text": "False", "correct": true}
+        ],
+        "reason": "The 'yield' statement pauses the function saving its states and later continues from there on successive calls."
+    },
+    {
+        "question": "What does the 'next()' function do when called on an iterator?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It returns the next value from the iterator.", "correct": true},
+            {"text": "It resets the iterator to the initial state.", "correct": false},
+            {"text": "It prints all remaining values in the iterator.", "correct": false},
+            {"text": "It duplicates the current value in the iterator.", "correct": false}
+        ],
+        "reason": "The 'next()' function is used to manually get the next value from an iterator."
+    },
+    {
+        "question": "When implementing a bubble sort, the algorithm can be optimized by recognizing that the list is sorted early. What is this optimization called?",
+        "type": "multiple",
+        "answers": [
+            {"text": "Early stop", "correct": false},
+            {"text": "Optimized bubble", "correct": false},
+            {"text": "Short circuit", "correct": false},
+            {"text": "Short bubble", "correct": true}
+        ],
+        "reason": "This optimization, known as 'short bubble', stops the algorithm if it finds that the list is already sorted before the end of the passes."
+    },
+    {
+        "question": "Which statement is true about the binary search algorithm?",
+        "type": "multiple",
+        "answers": [
+            {"text": "It can only be used on sorted lists.", "correct": true},
+            {"text": "It is less efficient than linear search on sorted lists.", "correct": false},
+            {"text": "It does not require an ordered list.", "correct": false},
+            {"text": "It performs worse than linear search as the size of the list decreases.", "correct": false}
+        ],
+        "reason": "Binary search is an efficient algorithm for finding an item from a sorted list of items and works on the principle of divide and conquer."
+    }
+]
