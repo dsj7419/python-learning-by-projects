@@ -74,8 +74,7 @@ This course is structured into different modules, each focusing on a particular 
     - *Project: Automated Report Generation and Distribution System*
 
 ### Intermediate Python
-
-1. **Advanced Data Types and Algorithms**
+1. **[Advanced Data Types and Algorithms](https://dsj7419.github.io/python-learning-by-projects/14-advanced-data-types-and-algorithms/)**
    - In-depth comprehension, Iterators, Generators
    - Sorting and Searching Algorithms
    - *Project: Password Generator and Manager*
