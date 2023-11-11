@@ -703,7 +703,7 @@ Building this password manager will not only enhance your understanding of Pytho
 
 Test your knowledge on advanced data types and algorithms with this chapter's quiz. Challenge yourself to see how well you've understood the concepts covered.
 
-[Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/advanced-data-types-and-algorithms/quiz/)
+[Take the Quiz](https://dsj7419.github.io/python-learning-by-projects/14-advanced-data-types-and-algorithms/quiz/)
 
 # Next Steps
 
