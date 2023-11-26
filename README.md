@@ -163,4 +163,4 @@ This project is licensed under the [MIT License](https://github.com/dsj7419/pyth
 - [Join our Discussions](https://github.com/dsj7419/python-learning-by-projects/discussions)
 - [Report Issues or Request Features](https://github.com/dsj7419/python-learning-by-projects/issues)
 
-Happy Coding and Learning! 🚀
+Happy Coding! 🚀
